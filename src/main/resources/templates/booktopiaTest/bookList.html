@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <link rel="stylesheet" th:href="@{/dist/css/bookList.css}">
+        <div class="wrap">
+            <div class="booklistwrap">
+                <div class="book-list-contain">
+                    <div class="bestbooklistwrap">
+                        <div class="booktopiabigtitle">당신을 만나고 싶어 하는 책은?</div>
+                        <div class="book-taste"> <!--취향 도서 list-->
+                            <div th:each="book, iterStat : ${blist}">
+                                <div class='taste book1'>
+                                    <a href="#">
+                                        <div class="rankNumdiv"><em>[[${iterStat.index +1}]]</em></div>
+                                            <img th:src="@{|/image/book2/${book.bookImg}|}"
+                                                 th:class="'imgaction' + ${iterStat.index + 1}">
+                                    </a>
+                                    <div style="display:none;">
+                                        <p>[[${book.bookTitle}]]</p>
+                                        <p>[[${book.bookWriter}]]</p>
+                                        <p>[[${book.bookStory}]]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="testResult" th:href="@{/subscribe/info}">지금 구독하러 가기</a>
+                    <div class="bestbooklistwrap">
+                        <div class="booktopiabigtitle">이달의 인기도서</div>
+                        <div class="book-popul"> <!--인기 도서 list-->
+                            <div th:each="book, iterStat : ${popblist}">
+                                <div class='taste book1'>
+                                    <img th:src="@{|/image/book2/${book.bookImg}|}"
+                                         th:class="'imgaction' + ${iterStat.index + 1}">
+                                    <div style="display:none;">
+                                        <p>[[${book.bookTitle}]]</p>
+                                        <p>[[${book.bookWriter}]]</p>
+                                        <p>[[${book.bookStory}]]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bestbooklistwrap">
+                        <div class="booktopiabigtitle">이달의 추천도서</div>
+                        <div class="book-recom"> <!--추천 도서 list-->
+                            <div th:each="book, iterStat : ${newblist}">
+                                <div class='taste book1'>
+                                    <img th:src="@{|/image/book2/${book.bookImg}|}"
+                                         th:class="'imgaction' + ${iterStat.index + 1}">
+                                    <div style="display:none;">
+                                        <p>[[${book.bookTitle}]]</p>
+                                        <p>[[${book.bookWriter}]]</p>
+                                        <p>[[${book.bookStory}]]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </th:block>
+</th:block>

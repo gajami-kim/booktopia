@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/dist/css/login.css}">
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css}">
+
+<script type="text/javascript" th:src="@{/dist/js/login.js}"></script>
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <div class="wrap" style="background-image: url(../image/loginmain.jpg);">
+            <div class="loginWrapPage">
+                <div class="loginAllPage">
+                    <form action="/user/login" method="post">
+                        <input type="text" name="id"placeholder="아이디를 입력해주세요." id="loginId"><br>
+                        <input type="password" name="pwd" placeholder="비밀번호를 입력해주세요." id="loginPwd">
+                        <i class="fa fa-eye fa-lg" id="eye"></i>
+                        <br>
+                        <div class="loginLoginBtn">
+                            <button type="submit">로그인</button>
+                        </div>
+                    </form>
+                    <div class="loginLostWrap">
+<!--                        이름입력으로-->
+                        <div class="loginLostLogin loginFindDiv">
+                            <a th:href="@{/user/findId}"><button type="button" id="loginLost" class="loginFind">아이디 찾기</button></a>
+                        </div>
+<!--                        아이디 입력으로-->
+                        <div class="loginLostPwd loginFindDiv">
+                            <a th:href="@{/user/findPw}"><button type="button" id="pwdLost" class="loginFind">비밀번호 찾기</button></a>
+                        </div>
+                    </div>
+                    <div class="loginSocialBtn">
+                        <div class="loginKakaoBtn">
+                            <a th:href="@{/oauth2/authorization/naver?mode=login}" class="test">
+                                <img th:src="@{/image/naverLogin.png}" alt="네이버 로그인 버튼" />
+                            </a>
+                        </div>
+                        <div class="loginNaverBtn">
+                            <a th:href="@{/oauth2/authorization/kakao?mode=login}" class="test">
+                                <img th:src="@{/image/kakaoLogin.png}" alt="카카오 로그인 버튼" />
+                            </a>
+                        </div>
+                        <div class="loginGoogleBtn">
+                            <a th:href="@{/oauth2/authorization/google?mode=login}" class="test">
+                                <img th:src="@{/image/googleLogin.jpg}" alt="구글 로그인 버튼" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+            const msg = /*[[${msg != null ?  msg  : '""'}]]*/ '';
+            console.log('Message:', msg); // msg 값 확인을 위해 콘솔에 출력
+            if (msg && msg.includes('가입')) {
+                alert(msg);
+            }
+            /*]]>*/
+        </script>
+        <script th:inline="javascript">
+            window.onload = function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('error')) {
+                    alert('로그인 후 이용 가능합니다.');
+                }else if(urlParams.has('false')){
+                    alert('아이디와 비밀번호를 확인해주세요.');
+                }
+            };
+        </script>
+        <!— 비밀번호 보이게 하는 코드 —>
+        <script th:inline="javascript">
+            document.addEventListener("DOMContentLoaded", function() {
+                const eyeIcons = document.querySelectorAll('.loginAllPage i');
+
+                eyeIcons.forEach(icon => {
+                    icon.addEventListener('click', function() {
+                        const input = this.previousElementSibling;
+                        input.classList.toggle('active');
+                        if (input.classList.contains('active')) {
+                            this.className = "fa fa-eye-slash fa-lg";
+                            input.type = "text";
+                        } else {
+                            this.className = "fa fa-eye fa-lg";
+                            input.type = "password";
+                        }
+                    });
+                });
+            });
+        </script>
+
+    </th:block>
+</th:block>
+

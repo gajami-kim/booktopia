@@ -1,0 +1,223 @@
+.admin-contain{
+    width: 1300px;
+    margin: 0 auto;
+}
+.admin{
+    margin: 30px 0 30px 15px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.admin-cate {
+    width: 200px;
+    margin: 10px;
+    float: left;
+}
+button {
+    background-color: white;
+    display: block;
+    width: 200px;
+    height: 46px;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 15px;
+    border-radius: 3px;
+    border: 1px solid #005c87;
+    cursor: pointer;
+}
+
+.cate-detail{
+    width: 1050px;
+    height: 1000px;
+    margin: 10px;
+    float: right;
+}
+
+th, td {
+    border: 1px solid black;
+    white-space: nowrap;
+    padding: 10px;
+}
+th{
+    font-size: 15px;
+    font-weight: 700;
+}
+td{
+    font-size: 14px;
+}
+
+.adminCommuDiv > button {
+    display: inline;
+}
+
+.adminCouponAdd > p {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.adminCouponAdd > .couponaddTable > .coupondiv {
+    margin-bottom: 15px;
+}
+.adminCouponAdd > .couponaddTable > .coupondiv > span {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 30px;
+    width: 105px;
+}
+
+.adminCouponAdd > .couponaddTable > .coupondiv > input{
+    background-color: #ededed;
+    width: 300px;
+    height: 35px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.adminCouponAdd > .couponaddTable > .coupondiv > #postCoupon{
+    margin-left: 30px;
+    text-align: center;
+    width: 100px;
+    padding: 0;
+    display: inline;
+    height: 33px;
+}
+.adminCouponAdd > .couponaddTable > .coupondiv > #postCoupon:hover {
+    background-color: #005c87;
+    color: white;
+    font-weight: 700;
+}
+
+.couponList{
+    margin-top: 50px;
+}
+
+.adminapproval{
+    width: 105px;
+    height: 31px;
+    background-color: #005c87;
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    display: inline;
+    padding: 0;
+}
+
+#boardDel, #boardModiy{
+    width: 70px;
+    text-align: center;
+    display: inline;
+    padding: 0;
+}
+
+.bookTopia-user, .delivery{
+    text-align: center;
+}
+
+.commuBoard > thead > tr > th:nth-of-type(2) {
+    width: 50px;
+}
+.commuBoard > thead > tr > th:nth-of-type(3),
+.commuBoard > thead > tr > th:nth-of-type(4) {
+    width: 150px;
+}
+
+.commuBoard > tbody > tr > td.adcontent {
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.adcontentArea{
+    width: 250px;
+    height: 80px;
+}
+
+.adcontentArea img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: -135px 0 -113px 0;
+}
+
+.boardDel, .commentDel {
+    width: 60px;
+    height: 35px;
+}
+.boardDel:hover, .commentDel:hover{
+    background-color: #005c87;
+    color: white;
+    font-weight: 700;
+}
+.commentDel {
+    margin: 0 auto;
+}
+
+.qnaStatus{
+    width: 100px;
+    height: 31px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0;
+    background-color: #005c87;
+    color: white;
+    margin: 0 auto;
+}
+.qnadetail{
+    margin-right: 30px;
+}
+
+.adminQnaTitle{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.bottom{
+    margin-bottom: 15px;
+}
+#adminQnA, #adminQnA_answer{
+    width: 965px;
+    border: 1px solid #dadada;
+    padding: 25px 25px 20px 25px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.adminsAnswer{
+    display: block;
+    border: none;
+    resize: none;
+    width: 922px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    font-size: 15px;
+    font-family: 'SCDream3';
+
+}
+.adminsAnswer:focus {
+    outline: none;
+}
+.answerBtn, .qnaClose{
+    text-align: center;
+    padding: 0;
+    width: 98px;
+    margin-left: 862px;
+}
+.answerBtn:hover, .qnaClose:hover{
+    background-color: #005c87;
+    color: white;
+    font-weight: 700;
+}
+
+.moreBtnBottom, .qnaCotain{
+    padding-bottom: 31px;
+}
+.adcontent {
+    white-space: normal;
+    width: 300px;
+    line-height: 20px;
+}

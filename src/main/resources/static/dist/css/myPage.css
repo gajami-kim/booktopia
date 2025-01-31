@@ -1,0 +1,564 @@
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+.wrap{
+font-family:SCDream4;
+}
+.myPageInfoWrap{
+    width: 1400px;
+    height:900px;
+    padding-top: 100px;
+
+}
+
+.myPageInfoWrap2{
+    width: 1300px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.myPageInfoLeftWrap{
+    float: left;
+    display:flex;
+    align-items : center;
+    flex-direction: column;
+}
+
+.myPageLeftUp{
+    width: 400px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 9px 1px #c6e7ad;
+        border-radius: 7px;
+}
+
+.myPageLeftDown{
+    width: 600px;
+    height: 500px;
+
+}
+
+.myPageUserInfoWrap{
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.myPageLeftUpInfo{
+display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 34px;
+    line-height: 50px;
+    margin-right: 19px;
+}
+
+.myPageLeftUpInfoName{
+    font-size: 20px;
+}
+
+.myPageLeftUpInfoImg{
+    margin-right: 10px;
+}
+
+.myPageLeftUpInfoImg>img{
+    width: 50px;
+    height: 50px;
+    line-height: 100px;
+}
+
+.myPageSubInfo {
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    left: 222px;
+}
+.myPageSubWrap{
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.myPageSubMoveLink{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.myPageLeftDownWrap{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.myPageLeftDownWrap2{
+    width: 400px;
+    height: 450px;
+    display: flex;
+    margin: auto auto;
+}
+
+.myPageLeftDownWrap3{
+    width: 300px;
+    height: 400px;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.myPageLeftDownWrap4 {
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto;
+    border-bottom: 1px solid black;
+    box-shadow: 1px 0px 3px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer
+    }
+
+.myPageLeftDownWrap4Img>img{
+    width: 55px;
+    height: 45px;
+}
+
+
+.bi{
+    width: 50px;
+    height: 50px;
+}
+
+.myPageLeftDownWrap4Status>a{
+    line-height: 40px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.myPageRight{
+    display: flex;
+    width: 600px;
+    height: 700px;
+}
+
+.myPageInfoRightWrap{
+    display: flex;
+    width: 600px;
+    height: 800px;
+}
+
+.myPageRightWrap{
+        width: 500px;
+        height: 750px;
+}
+
+
+.mypagetitle{
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    font-size: 2em;
+    border: 1px solid;
+    line-height: 50px;
+}
+
+.mypageMsg{
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    border: 1px solid;
+    margin: 160px auto;
+}
+
+#payInfoWrap{
+    background-color: #99c87a73;
+    height: 143px;
+    width: 363px;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px;
+    margin-bottom: 16px;
+}
+.payInfoBooktopia {
+    font-size: 12px;
+    color: gray;
+    padding-left: 20px;
+    padding-top: 13px;
+    text-align: left;
+}
+.payInfoLeft{
+    display: inline-block;
+    height: 100px;
+    width: 363px;
+    margin-left: -15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.payInfomerchantUid{
+    width: 100%;
+    height: 50px;
+    line-height: 65px;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+#payInfoTitle {
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: 700;
+    color: #4c8d6f;
+    padding: 15px 0 0 11px;
+}
+#payInfoapprovedAt{
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 21px;
+    text-align: left;
+    padding-left: 32px;
+}
+
+#payInfoAmount{
+    width: 100%;
+    font-size: 13px;
+    padding-top: 10px;
+    margin: -10px 0 10px;
+    text-align: left;
+    padding-left: 32px;
+}
+
+#payInfoDelivery{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    float: right;
+    background-color: #4c8d6fc4;
+    padding: 8px;
+    position: absolute;
+    bottom: 8px;
+    right: 9px;
+    border-radius: 5px;
+    color: white;
+}
+
+.myPageRightWrapInfoModWrap{
+    width: 520px;
+    height: 700px;
+    display: flex;
+    border-radius: 10px;
+    padding-top: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.myPageRightWrapForm{
+    display: flex;
+    justify-content: center;
+    margin: 14px auto 0;
+    padding-top: 30px;
+    overflow: auto;
+    width: 450px;
+    height: 600px;
+}
+
+.myPageRightWrapForm::-webkit-scrollbar {
+    width: 5px;
+}
+.myPageRightWrapForm::-webkit-scrollbar-thumb {
+    border-radius: 18px;
+    width: 5px;
+    background-color: #c8c8c8;
+}
+
+.myPageRightWrapForm::-webkit-scrollbar-track {
+    background-color: #b2b2b200;
+    box-shadow: inset 0 0 5px #c8c8c8;
+    border-radius: 10px;
+}
+
+.myPageModInputFormWrap{
+    width: 400px;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 2px;
+}
+
+.myPageModInputFormText{
+    font-size: 17px;
+    margin-bottom : 10px;
+    padding-left: 10px;
+}
+.mypageModInputFormData {
+    padding-left: 10px;
+}
+
+
+.mypageModInputFormData>input{
+    width: 250px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 2px;
+    font-size: 20px;
+}
+
+.mypageModInputFormData>input:focus{
+    outline : none;
+}
+
+.addrphoneNum{
+    margin-top: 70px;
+}
+
+.myPageModInputFormWrapBtn{
+    width: 147px;
+        height: 50px;
+        float: right;
+        margin-top: 20px;
+        background-position: top;
+        background-repeat: no-repeat;
+        text-align: center;
+        border-radius: 30px;
+}
+
+.myPageModInputFormWrapBtn:hover{
+    box-shadow : 1px 1px 1px 1px black;
+}
+
+.myPageModInputFormWrapBtn>button{
+    height: 50px;
+}
+
+#myPageSubWrap{
+    display:flex;
+    flex-direction :column;
+    align-items :center;
+    width:330px;
+}
+
+.myPageModBtn{
+    width: 130px;
+    height: 35px;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.myPageModBtn:hover:enabled{
+    color : #068ec5;
+}
+
+
+
+.pencil{
+    width : 350px;
+    height : 17px;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+li{
+    position: relative;
+}
+
+.couponWrap{
+    background-color: #c2e3f7;
+    height: 143px;
+    width: 363px;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px;
+    margin-bottom: 16px;
+}
+.circle.circle2 {
+    left: 339px;
+}
+.circle {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: white;
+    z-index: 1;
+    border-radius: 100px;
+    top: 33px;
+    left: -57px;
+}
+
+.couponInfoLeft{
+    display: inline-block;
+    float: left;
+    height: 100px;
+    width: 282px;
+    margin-top: 5px;
+    padding-left: 23px;
+    margin-left: -15px;
+}
+
+.couponInName{
+    width: 281px;
+    font-size: 12px;
+    padding-left: 16px;
+    text-align: center;
+    padding-top: 14px;
+    margin-left: -15px;
+    font-weight: bold;
+}
+.couponInfoRight{
+    height: 100%;
+    width: 82px;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    border-left: 4px dashed #068ec54d;
+}
+
+#couponInfoTitle{
+    font-size: 48px;
+    font-weight: 700;
+    color: #077aa8;
+    text-align: center;
+    padding-top: 14px;
+}
+
+#couponInfoGarrent{
+    font-size: 12px;
+    margin-top: 21px;
+    text-align: center;
+}
+
+#couponInfoAt{
+    font-size: 15px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 63px;
+}
+
+.nocouponinfo,.noPayinfo{
+font-size: 25px;
+}
+
+#oneanswerdiv{
+text-align: center;
+margin-top: -30px;
+margin-bottom: 30px;
+}
+#oneanswer{
+text-decoration: underline;
+}
+
+.qnarightform {
+  width: 400px;
+  margin-top: 8px;
+}
+
+.qnaWrap{
+    border: 3px solid black;
+    margin-bottom: 15px;
+    border-radius : 10px;
+}
+
+.qnatitlediv{
+    width: 390px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    border-bottom: 3px dashed;
+}
+
+.qnatitlediv>p{
+    padding-left: 10px;
+}
+
+.qnacontentdiv{
+    width: 390px;
+    height: 200px;
+    line-height: 20px;
+    border-bottom: 3px dashed ;
+}
+
+.qnacontentdiv>p{
+    width: 380px;
+    padding: 10px 10px 0 10px;
+    text-align: justify;
+}
+
+.qnanoanswerdiv{
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+.qnaanswerdiv{
+    width: 400px;
+    height: 150px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.qnanoanswerdiv>p{
+    width: 325px;
+    color: #068ec5;
+    height: 60px;
+    float: right;
+}
+
+.qnaanswerdiv>p{
+    width: 340px;
+    color: #7171fd;
+    padding: 20px 20px 0 10px;
+    height: 200px;
+    float: right;
+    text-align: justify;
+
+
+
+}
+
+.qnaregatdiv{
+    text-align: right;
+    margin-top: 8px;
+    padding-right: 8px;
+}
+
+.QnaResultListDiv{
+font-size:25px;
+text-align:center;
+}
+
+.delmembertype{
+margin-bottom : 30px;
+}
+
+.answerIcon{
+    height: 200px;
+    float: left;
+
+}
+
+.answernoIcon{
+    height: 60px;
+    float: left;
+
+}
+
+.answerIcon>img,.answernoIcon>img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 10px;
+
+}
+
+
+

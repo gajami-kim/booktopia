@@ -1,0 +1,2247 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <link rel="stylesheet" th:href="@{/dist/css/bookDetail.css}">
+        <div class="wrap">
+            <div class="bookDe" th:each="book:${blist}">
+                <div class="bkimg">
+                    <img th:with="img=${book.bookImg}" th:src="@{|/image/book2/${img}|}">
+                </div>
+                <div class="bkRight bkr1" th:if="${book.bookCode==1}">
+                    <div class="bkCate bkc1">소설</div>
+                    <div class="bkTitle bkt1">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw1">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl1">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=276400004&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/99111756">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000000610645">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks1">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd1">
+                        <p>2006년 데뷔한 야구선수 류현진은 프로야구 역사상 처음으로 MVP와 신인왕을 동시에 거머쥐었고 그 기록은 아직 류현진의 것이 유일하다. 시즌은 매해 치러지고 신인왕은 매해 탄생하지만, 이른바 '괴물 신인'의 출현은 (안타깝지만) 매 해 있는 사건은 아니다. 신인작가 장류진의 첫 소설집 &lt;일의 기쁨과 슬픔&gt;의 출간 역시 매 해 찾아오는 유형의 사건은 아니었다. 판도를 뒤흔든 한 권의 책. 화제의 작가 장류진이 장편소설로 독자를 찾았다.</p>
+                        <p>초코밤으로 유명한 마론 제과에 입사한 세 여성. 각자의 이유로 자신의 팀에서 겉돌고 있다. 스낵팀의 다해, 구매팀의 은상, 회계팀의 지송. 인사평가는 늘 '무난'을 넘지 못하고, 상사는 존경할 만한 구석이 없다. 자신의 월급은 모두 모으고 부모님의 지원으로 생활을 할 수 있는 사람들 특유의 '해맑음'과는 다른 낯빛을 지닌 그들. 디테일을 잘 알아보는 구석진 곳에 선 이들, "우리 같은 애들"(193쪽)은 자연스럽게 서로를 알아보고 친구가 된다. 이 우정을 이끌어나가던 언니, '은상 장군'이 어느 날 탑승한 코인 열차, '이더리움'의 등락과 함께 이들의 우정도 거대한 낙차에 휘말리게 되는데.</p>
+                        <p>'달까지' 라는 표현은 차트 급상승을 기원하는 코인 시장 참여자들의 은어라고 한다. 2017년의 코인 열풍을 배경으로 한 이 이야기를 읽는 동안 이더리움의 5년 간의 차트를 펼쳐놓고 시점을 맞추어가며 '팔아야 해, 팔면 안 돼' 이들을 응원하며 이 이야기를 읽었다. "우리 어디까지 간다고?" 이 외침이 서늘하게 들리는 것은 일확천금이 아니고선 '모든 게 유려하고 우아'(179쪽)한 다른 세계로 진입하는 열차가 영영 오지 않을지도 모르기 때문. 소설가 정세랑은 "장류진을 따라 하고 싶은 사람은 많겠지만 아무도 따라 하지 못할 것이다. 장류진이 쓰는 소설은 장류진만 쓸 수 있다."라고 이 소설을 이야기한다. 적절하게 달고 적절하게 쓰다. 이 미묘한 맛의 배합은 장류진만이 할 수 있다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>1부<br>
+                            2부<br>
+                            3부<br><br>
+                            해설 한영인<br>
+                            작가의 말</p>
+                    </div>
+                </div>
+                <div class="bkRight bkr2" th:if="${book.bookCode==2}">
+                    <div class="bkCate bkc2">소설</div>
+                    <div class="bkTitle bkt2">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw2">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl2">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298069174">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/103916738">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000000781143">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks2">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd2">
+                        <p>때론 소설가 '영'이었던 이들. 박상영의 소설 속 주인공들은 대체로 너무도 바쁜 삶을 살았다. 2NE1의 노래처럼 '아름다운 서울 시티'를 질주하는 BPM. 평일에는 일하고, 주말에는 사랑하며. 수시로 농담하고, 취한 채 노래방에서 케이팝을 부르던 사람들. 시끄러운 도시의 밤에도 소음과 소음이 멈추는 적요한 순간이 있다. 그 찰나를 놓치지 않는 날렵함으로 박상영은 퀴어적인 무표정을 살폈다.</p>
+                        <p>&lt;대도시의 사랑법&gt; 박상영의 첫 장편소설이 '박상영 월드'의 출발점에 깃발을 꽂는다. 2002 월드컵의 열기와는 상관없는 세계, D시의 수성구의 퀴어 소년 '나'는 어른이 되어 이 도시를 떠날 생각뿐이다. 아버지의 실패한 사업과 어머니의 열렬한 신앙과 누추한 아파트와 털이 많은 몸, 그러니까 자신을 둘러싼 모든 것을 감추고 싶다는 욕망뿐이던 그가 도윤도를 사랑하게 된 순간 세상이 흔들린다. 학원에서, 쪽방에서, 오토바이 뒷좌석에서, 수영장에서 그는 향기와 촉감을 지닌 한 인간을 사랑하는 순간을 경험한다. </p>
+                        <p>상담 전문가가 된 현재의 내게 도착한 인스타그램 DM(수성못에서 발견된 시신을 상기시키는)을 통해 과거의 내가 내게 도착한다. 자우림의 음악을 듣고 싸이월드에 교환일기를 쓰던 그 시절. 나의 과거는 캔모아의 무한리필 생크림 토스트가 혀에 닿는 순간이기도 했고, 1등부터 523등의 성적이 중앙 현관에 나부끼는 야만이기도 했다. 박상영은 과거의 어느 한 면도 부정하지 않고 세밀하게 그 시절을 직조한다. 이 소설에서 소설가 정세랑은 '우리를 할퀴었던 감정들'을 읽어냈고, 영화감독 변영주는 '그 순간의 절망적인 행복감'을 기억해냈다. 나 역시 이 소설을 읽은 후엔 어쩐지 잠을 이룰 수 없었다. 박상영의 소설과 함께 당신도 잠들지 못할 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>과거로부터 온 편지 1<br>
+                            1장_ 밸런타인데이 | 캔모아 | 우리의 최선<br>
+                            과거로부터 온 편지 2<br>
+                            2장_ 머큐리랜드 | 오늘의 방문자 | 스포일드 차일드 | 화이트데이 | 베스트 프렌드 | 하복의 계절<br>
+                            과거로부터 온 편지 3<br>
+                            3장_ 해피 투게더 | 다시, 캔모아 | 열여덟의 우울 | 축제의 날 | 개교기념일<br>
+                            과거로부터 온 편지 4<br>
+                            4장_ 천사가 아니야<br>
+                            과거로부터 온 편지 5<br>
+                            5장_ 대학가요제<br>
+                            두고 온 것들<br></p>
+                    </div>
+                </div>
+                <div class="bkRight bkr3" th:if="${book.bookCode==3}">
+                    <div class="bkCate bkc3">소설</div>
+                    <div class="bkTitle bkt3">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw3">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl3">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74920336&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/23991704">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000000779506">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks3">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd3">
+                        <p>국내 굴지의 문학상 후보로 거듭 거론되며 한국 문단의 중심에서 묵직한 존재감을 발산하고 있는 소설가 윤이형의 세번째 소설집. 기발한 상상력을 바탕으로 "인간의 고통을 외면하지 않고 꼼꼼하게 응시하면서 그 치유의 대화적 지평"을 모색한 &lt;셋을 위한 왈츠&gt;, "견고한 현실의 장벽에 대응하여 환상의 공간을 한껏 확장시키는 모험의 서사"를 펼친 &lt;큰 늑대 파랑&gt; 이후 꼭 5년 만에 묶어낸 단편들이다.</p>
+                        <p>2011년부터 2014년까지 발표된 총 8편의 수록작 중에는, 제5회 젊은작가상 수상작 '쿤의 여행', 제6회 젊은작가상과 제5회 문지문학상 수상작 '루카' 등 일찍이 그 탁월함을 인정받은 작품들이 포함되어 있어 더욱 기대를 모은다.</p>
+                        <p>그간 짧지 않은 공백기를 거치며, 윤이형의 집요한 시선은 '지금 여기'에 맺히게 된 듯하다. 언제부턴가 윤이형 소설의 주요한 특징으로 자리잡았던 SF적 상상력은 이제 작품을 이끌어나가는 도저한 사유의 실마리로서 삽입된다. 그리고 작가는 사람 사이의 관계 속에서 포착되는 미묘한 순간들, 인간 내면의 사소한 변화들을 따라가보는 일에 그 어느 때보다 몰두하고 있다.</p>
+                        <p>지금까지 독자들은 윤이형의 소설을 읽고자 마음먹을 때면 기상천외하고도 잔혹한 '윤이형 월드'로 튕겨나가기 전에 저도 모르게 정신의 안전벨트부터 채웠을 터. 그런 우리에게 현실이라는 지면에 최대한 가깝게 저공비행하는 윤이형의 이번 소설집은 또다른 의미로 신선함을 안겨준다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>대니 _7<br>
+                        굿바이 _49<br>
+                        쿤의 여행 _83<br>
+                        루카 _115<br>
+                        러브 레플리카 _151<br>
+                        핍 _189<br>
+                        캠프 루비에 있었다 _235<br>
+                            엘로 _287</p>
+                    </div>
+                </div>
+                <div class="bkRight bkr4" th:if="${book.bookCode==4}">
+                    <div class="bkCate bkc4">소설</div>
+                    <div class="bkTitle bkt4">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw4">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl4">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=193591681&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/105776606">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001935245">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks4"> 무엇이 우리를 그럼에도 불구하고, 혐오와 차별, 모순으로 <br> 가득 찬 세계를 분투하며 살아가게 하는가!</div>
+                    <div class="bkStoryDetail bksd4">
+                        <p>2017년 &lt;관내분실&gt;로 제2회 한국과학문학상 중단편부문 대상을, &lt;우리가 빛의 속도로 갈 수 없다면&gt;으로 가작을 동시 수상하며 작품활동을 시작한 김초엽의 첫 소설집. &lt;관내분실&gt;은 도서관에서 잃어버린 엄마의 기록을 찾아 나선 딸의 이야기를 독창적인 방식으로 전개하는 소설이다. '마인드 업로딩'이 가능해져 엄마의 일부를 도서관에 저장할 수 있는 시대에 관한 상상력과 '지민이 기억하는 한 엄마는 엄마였으므로, 그녀가 그냥 '김은하'였던 시절은 깊이 생각해본 적이 없'다는 인식이 어우러져 새롭고도 보편적인 이야기가 탄생한다.</p>
+                        <p>'완벽한' 유전자의 선택이 가능해진 미래, 완벽함의 범주에 속하지 못하는 사람들은 경계 밖으로 밀려난다. (&lt;순례자들은 왜 돌아오지 않는가)&gt;, '할머니' 과학자는 아득한 우주에서 가족과의 재회를 위해 고군분투한다. (&lt;우리가 빛의..&gt;) 부당한 경계짓기를 미워하는 마음, 광활한 우주 너머의 가족을 그리워하는 마음. 과학도인 소설가는 이렇듯 우리가 함께 읽고 나누고 싶은 이야기를, 우리가 가닿지 못한 곳을 상상하는 방식으로 만들어 낸다. 여전히 우리 모두의 '마음'에 있을 무언가에 대한 이야기. 김보영, 김연수, 배명훈, 정세랑 등의 작가가 추천했다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>순례자들은 왜 돌아오지 않는가 007<br>
+                        스펙트럼 057<br>
+                        공생 가설 097<br>
+                        우리가 빛의 속도로 갈 수 없다면 145<br>
+                        감정의 물성 189<br>
+                        관내분실 219<br>
+                        나의 우주 영웅에 관하여 273</p>
+                    </div>
+                </div>
+                <div class="bkRight bkr5" th:if="${book.bookCode==5}">
+                    <div class="bkCate bkc5">소설</div>
+                    <div class="bkTitle bkt5">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw5">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl5">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290457417&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/99308021">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001803157">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks5">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd5">
+                        <p>&lt;망원동 브라더스&gt;의 작가 김호연의 '동네이야기' 시즌 2. 청파동 골목 모퉁이에 자리 잡은 작은 편의점을 무대로 힘겨운 시대를 살아가는 우리 이웃들의 삶의 속내와 희로애락을 따뜻하고 유머러스하게 담아냈다. &lt;망원동 브라더스&gt;에서 망원동이라는 공간의 체험적 지리지를 잘 활용해 유쾌한 재미와 공감을 이끌어냈듯 이번에는 서울의 오래된 동네 청파동에 대한 공감각을 생생하게 포착해 또 하나의 흥미진진한 ‘동네 이야기’를 탄생시켰다.</p>
+                        <p>서울역에서 노숙인 생활을 하던 독고라는 남자가 어느 날 70대 여성의 지갑을 찾아준 인연으로 그녀가 운영하는 편의점에서 야간 아르바이트를 하며 이야기가 시작된다. 덩치가 곰 같은 이 사내는 알코올성 치매로 과거를 기억하지 못하는 데다 말도 어눌하고 행동도 굼떠 과연 손님을 제대로 상대할 수 있을까 의구심을 갖게 하는데 웬걸, 의외로 그는 일을 꽤 잘해낼 뿐 아니라 주변 사람들을 묘하게 사로잡으면서 편의점의 밤을 지키는 든든한 일꾼이 되어간다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>산해진미 도시락<br>
+                            제이에스 오브 제이에스<br>
+                            삼각김밥의 용도<br>
+                            원 플러스 원<br>
+                            불편한 편의점<br>
+                            네 캔에 만 원<br>
+                            폐기 상품이지만 아직 괜찮아<br>
+                            ALWAYS</p>
+                        <p>감사의 글</p>
+                    </div>
+                </div>
+                <div class="bkRight bkr6" th:if="${book.bookCode==6}">
+                    <div class="bkCate bkc6">소설</div>
+                    <div class="bkTitle bkt6">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw6">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl6">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318677116&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/119577650">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000202657202">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks6">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd6">
+                        <p>불행을 파는 대신 원하는 행복을 살 수 있는 가게가 있다면? 듣기만 해도 방문하고 싶어지는, 비가 오면 열리는 수상한 상점에 초대된 여고생 세린이 안내묘 잇샤, 사람의 마음을 훔치는 도깨비들과 함께 펼치는 감동 모험 판타지.</p>
+                        <p>『비가 오면 열리는 상점』은 출간 전부터 많은 독자에게 입소문이 자자했던 작품이다. 처음 텀블벅에서 소개됐을 때부터 2000만 원에 가까운 후원금을 모금하며, 베스트셀러 『달러구트 꿈 백화점』과 『죽고 싶지만 떡볶이는 먹고 싶어』의 금액을 넘어섰다.</p>
+                        <p>무엇보다 2023년 4월에 열린 런던도서전에서도 화제가 되면서, 출간 전부터 해외 6개국(폴란드, 포르투갈, 이탈리아, 일본, 대만, 러시아)에 판권을 먼저 수출하는 놀라운 성과를 거두었다. 국내 출판 역사상 최초의 일로, 그야말로 ‘괴물 신인 작가’의 탄생이라 할 수 있다. 도대체 이 소설에 어떤 매력이 있기에 국적과 언어를 초월해 큰 기대를 받는 것일까?</p>
+                        <p>“해리포터 시리즈와 지브리 애니메이션이 만났다.” “더 열심히 살아갈 용기와 위로를 얻었다.” “놀랄 정도로 잘 읽힌다.” “너무 감동적인 이야기라 여운이 오래 남을 것 같다.” 작품을 먼저 읽은 독자들의 말처럼, 이 소설이 재미와 감동 그리고 의미를 모두 잡았기 때문이다. 마치 영상을 보는 것과 같은 생생한 묘사와 속도감 있는 문체, 판타지와 성장소설의 결합, 무엇보다 따스한 시선으로 희망과 용기를 건네는 작가의 진정성과 작품의 메시지가 언어와 문화를 훌쩍 뛰어넘은 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>Prologue</p>
+                        <p>괴소문<br>
+                        수상한 편지<br>
+                        무더위<br>
+                        장마 전야<br>
+                        문지기 토리야<br>
+                        장마상점<br>
+                        베르나의 불행 전당포<br>
+                        듀로프의 안내 데스크<br>
+                        엠마의 헤어 살롱<br>
+                        마타의 서점<br>
+                        니콜의 향수 공방<br>
+                        포포의 화원<br>
+                        보르도 & 보르모의 레스토랑<br>
+                        하쿠의 고물상<br>
+                        그롬의 카지노<br>
+                        지하 미로 감옥<br>
+                        얀의 라운지 바<br>
+                        펜트하우스<br>
+                        안내묘 잇샤<br>
+                        보물창고<br>
+                            무지개</p>
+                        <p>Epilogue</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr7" th:if="${book.bookCode==7}">
+                    <div class="bkCate bkc7">시/에세이</div>
+                    <div class="bkTitle bkt7">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw7">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl7">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=283477947&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/105158676">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001848017">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks7">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd7">
+                        <p>나태주, 반칠환, 서정춘, 윤효, 함민복. 한국 시단에서 탁월한 이미지스트로 자리매김을 하며 각자 개성 있는 서정의 세계를 탁월한 문체의 시로 꽃피워 냈던 다섯 명의 시인이‘한 조각 짧은 시’모음집을 펴냈다. 다섯 시인들은 서정시의 가장 짧은 형식을 통해 독자의 뇌리에 오래도록 남는 인상 깊은 시를 쓴 시인들이기도 하다.</p>
+                        <p>다섯 시인들은 애틋한 서정성과 풍부한 상상력으로 저마다 언어에 생명의 숨결을 불어 넣었던 아름다운 감성의 소유자들이기도 하다. 이들 시인들의 쉽게 찾아보기 힘든 주옥같은 시편들을 모아 &lt;일편단시(一片短詩)&gt;한 권에 담았다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p class="p">서문</p>
+                        <p class="p"><span class="bold">나태주 편_ 안부: 오래 보고 싶었다</span><br>
+                        제비꽃<br>
+                        앉은뱅이꽃<br>
+                        가로등<br>
+                        잠들기 전 기도<br>
+                        풀꽃 1<br>
+                        풀꽃 2<br>
+                        풀꽃 3<br>
+                        두 여자<br>
+                        좋은 날<br>
+                        좋다<br>
+                        그리움 1<br>
+                        이 가을에<br>
+                        그리움 2<br>
+                        사는 법<br>
+                        11월<br>
+                        행복<br>
+                        꽃그늘<br>
+                        생명<br>
+                        여행<br>
+                        묘비명<br>
+                        산책<br>
+                        오늘의 꽃<br>
+                        무인도<br>
+                        안부<br>
+                        집<br>
+                        시<br>
+                        연애<br>
+                        동행<br>
+                        이 봄날에<br>
+                            여행의 끝</p>
+
+                        <p class="p"><span class="bold">반칠환 편_ 사랑: 시리지 않다</span><br>
+                        새해 첫 기적<br>
+                        봄<br>
+                        노랑제비꽃<br>
+                        웃음의 힘<br>
+                        두근거려 보니 알겠다<br>
+                        새 2<br>
+                        호두과자<br>
+                        박꽃<br>
+                        무인도<br>
+                        생명, 그 아름다운 천형<br>
+                        호수의 손금<br>
+                        갈치조림을 먹으며<br>
+                        야심<br>
+                        때 1<br>
+                        문蚊 의사<br>
+                        사마귀<br>
+                        세계관<br>
+                        기적 1<br>
+                        가뭄<br>
+                        수평선<br>
+                        사랑<br>
+                        바퀴를 보면 세우고 싶다<br>
+                        딱따구리<br>
+                        목격<br>
+                        사라진 길앞잡이<br>
+                        상여놀이<br>
+                        한 걸음<br>
+                        까치집<br>
+                        하늘을 가진 손<br>
+                            삶</p>
+
+                        <p class="p"><span class="bold">서정춘 편_ 수평선 보며: 나는 하늘 아래 밑줄만 그읏고 살았다</span><br>
+                        죽편竹篇 1<br>
+                        귀<br>
+                        단풍놀이<br>
+                        하모니카<br>
+                        첫 사랑<br>
+                        전설<br>
+                        미소전微笑展<br>
+                        첫 꽃<br>
+                        새<br>
+                        고추잠자리<br>
+                        새벽<br>
+                        돛<br>
+                        구름<br>
+                        휴休<br>
+                        난蘭<br>
+                        대나무 2<br>
+                        꽁초꽃<br>
+                        소리 1<br>
+                        소리 2<br>
+                        낙차落差<br>
+                        자를 빌려 쓰다<br>
+                        달팽이와 놀다<br>
+                        하류下流<br>
+                        고요살이 1번지<br>
+                        달 귤 서귀포<br>
+                        30년 전<br>
+                        봄, 파르티잔<br>
+                        기념일<br>
+                        허시虛詩<br>
+                            수평선 보며</p>
+
+                        <p class="p"><span class="bold">윤효 편_ 홍시: 빨갛게 남아 있었다</span><br>
+                        자존自尊<br>
+                        원추리<br>
+                        한국정신사<br>
+                        우리나라 꽃들은<br>
+                        아, 바다<br>
+                        굴뚝새<br>
+                        함박눈<br>
+                        완생完生<br>
+                        홍시<br>
+                        따뜻한 얼음<br>
+                        빙어축제<br>
+                        생명선<br>
+                        가족<br>
+                        부끄러움<br>
+                        세차<br>
+                        시인<br>
+                        흙꽃<br>
+                        그리움 8<br>
+                        어떤 개인 날<br>
+                        유정천리<br>
+                        봄 편지<br>
+                        울어라 새여<br>
+                        남행<br>
+                        아름다운 학교 1<br>
+                        아름다운 학교 14<br>
+                        내가 졌다<br>
+                        김영태 선생님<br>
+                        죽비<br>
+                        응시<br>
+                            못</p>
+
+                        <p class="p"><span class="bold">함민복 편_ 그리움: 지워지지 않는다</span><br>
+                        달력<br>
+                        가을<br>
+                        상현上絃달<br>
+                        농촌 노총각<br>
+                        마흔 번째 봄<br>
+                        그리움<br>
+                        매미 2<br>
+                        곡선<br>
+                        다리의 사랑 4<br>
+                        산<br>
+                        그릇<br>
+                        마음은행<br>
+                        다리의 사랑 9<br>
+                        그늘 학습<br>
+                        나를 위로하며<br>
+                        섬<br>
+                        40대<br>
+                        유리<br>
+                        목련나무<br>
+                        숨꽃<br>
+                        성선설<br>
+                        저 달장아찌 누가 박아 놓았나<br>
+                        광화문 촛불바다<br>
+                        연못<br>
+                        그림자<br>
+                        대전엑스포<br>
+                        반성<br>
+                        밴댕이<br>
+                        갈대<br>
+                            꽃봇대</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr8" th:if="${book.bookCode==8}">
+                    <div class="bkCate bkc8">시/에세이</div>
+                    <div class="bkTitle bkt8">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw8">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl8">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=72369420&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/23599602">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000213555337">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks8">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd8">
+                        <p>“죽는 날까지 하늘을 우르러 한 점 부끄럼이 없기를...”</p>
+                        <p>일본 유학 중 독립운동 및 한글창작 혐의로 체포, 조사 과정에서 이를 부인하지 않고 옥중에서 요절한 민족시인 청년 윤동주. 직접 지은 시처럼 짧지만 한 점 부끄럼 없는 삶을 살다 그는 끝내 별이 되었다. 일제의 탄압이 극에 달하고 한국어 사용과 창작이 금지되었던 1941년, 우리말 시집 출간을 추진하였으나 무산되고 일생의 문우 강처중과 정병욱에게 남긴 육필 원고가 기적적으로 보존, 그의 사후인 1948년에 친지들의 도움으로 &lt;하늘과 바람과 별과 詩&gt;은 마침내 출간되었다. 해방을 불과 반 년 앞둔 1945년 늦겨울, 차디찬 형무소 바닥에 누워 외마디 고함을 끝으로 숨을 거둔 지 꼭 3년 만의 일이다.</p>
+                        <p>서거 10주기를 기념하여 1955년 발행된 이 증보판에는 몰락한 조국을 마음으로 지켜낸 한 청년, 아아... 그리운 동주! 그의 뜨거운 마음이 고스란히 담겨 있다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>序詩<br>
+                        하늘과 바람과 별과 詩<br>
+                        自畵像 / 少年 / 눈 오는 地圖 / 돌아와 보는 밤 / 病院 / 새로운 길 / 看板 없는 거리 / 太初의 아츰 / 또 太初의 아츰 / 새벽이 올때 까지
+                            / 무서운 時間 / 十字架 / 바람이 불어 / 슬픈 族屬 / 눈 감고 간다 / 또 다른 故鄕 / 길 / 별 헤는 밤</p>
+
+                        <p>흰 그림자<br>
+                            흰 그림자 / 사랑스런 追憶 / 흐르는 거리 / 쉽게 씨워진 詩 / 봄</p>
+
+                        <p>밤<br>
+                            밤 / 遺言 / 아우의 印象畵 / 慰勞 / 肝 / 산골물 / 懺悔錄</p>
+                    </div>
+                </div>
+                <div class="bkRight bkr9" th:if="${book.bookCode==9}">
+                    <div class="bkCate bkc9">시/에세이</div>
+                    <div class="bkTitle bkt9">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw9">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl9">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260106966&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/96652580">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001835666">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks9">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd9">
+                        <p>아이부터 노인까지 누구나 공감할 수 있는 시의 언어로 80만 독자를 사로잡은 나태주 시인이 특별한 테마시집으로 독자를 만나러 왔다. 신작 『사랑만이 남는다』는 나태주 시인이 세상의 모든 애인들에게 보내는 매우 특별한 러브레터다. 시인으로 살아온 50여 년, 그동안 쓴 수천 편의 시들 가운데서 뽑은 사랑의 시편과 신작으로 꾸민 시집이다. 전체 3부로 구성됐으며, 세상의 모든 애인들과 아내들과 딸들에게 보내는 시 142편을 수록했다.</p>
+                        <p>이 책에서 시인은 설렘과 기쁨으로 출렁이는 사랑, 초조함에 뒤척이는 사랑, 그리고 묵묵히 지켜보며 응원하는 사랑에 이르기까지, 사랑의 다양한 얼굴을 보여준다. 80년 가까운 생을 통해서 노시인이 느끼고 깨달은 인생이란 바로 ‘사랑’이다. 그는 우리가 우울하고 슬프고 불안하고 불행한 것은 “사랑하지 못해서”라고 말한다.</p>
+                        <p>일상이 불안함 속에서 흔들리는 순간, 시인은 따뜻한 축복과 응원을 아끼지 않으며 우리와 동행한다. 그리하여 이 순간을 살아가는 모두가 사랑만은 놓치지 않기를 바라는 간절한 마음을 전한다. 힘들거나 외로울 때, 우리가 시와 함께 숨 쉴 수 있다면 어떤 순간에도 마음이 무너지거나 무뎌지는 일은 없을 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p class="bold">1부 남몰래 혼자 부르고 싶은 이름</p>
+                        <p class="bold">_세상의 모든 애인들에게</p>
+
+                        <p>사랑이 올 때 ｜ 창문을 연다 ｜ 너 보고 싶은 날 ｜ 사랑 1 ｜ 약속 ｜ 가을편지 ｜ 강변 ｜ 나의 소망 ｜ 단순한 사랑 ｜ 바로 말해요 ｜ 몽환 ｜ 살아갈 이유
+                            ｜ 태풍 소식 ｜ 그러므로 ｜ 별 ｜ 떠난 자리 ｜ 비밀일기 1 ｜ 휘청 ｜ 너도 그러냐 ｜ 황홀극치 ｜ 나무 ｜ 사무쳐요 ｜ 하나님만 아시는 일
+                            ｜ 사랑은 언제나 서툴다 ｜ 개양귀비 ｜ 그 말 ｜ 사랑은 ｜ 사는 법 ｜ 근황 ｜ 나 오늘 왜 이러죠 ｜ 이별 ｜ 가슴에 남아 보석입니다 ｜ 섬
+                            ｜ 가슴이 콱 막힐 때 ｜ 진종일 ｜ 들국화 1 ｜ 전화선을 타고 ｜ 어떤 문장 ｜ 가을의 약속 ｜ 그리운 사람 너무 멀리에 있다 ｜ 바람이 분다 ｜ 별리
+                            ｜ 말은 그렇게 한다 ｜ 오늘도 그대는 멀리 있다 ｜ 겨울 차창 ｜ 언제까지 ｜ 오늘의 약속 ｜ 하나님께 ｜ 너를 알고 난 다음부터 ｜ 떠나는 사람에게
+                            ｜ 꽃피는 도화동 ｜ 사랑 2 ｜ 대숲 아래서 ｜ 이제 바람이 찹니다 ｜ 모를 일 ｜ 끝내 하지 못한 말 ｜ 들국화 2 ｜ 나무에게 말을 걸다 ｜ 가을 서한 1
+                            ｜ 가을 서한 2 ｜ 보고 싶은 날 ｜ 내가 너를 ｜ 바람에게 묻는다 ｜ 그리움 ｜ 배회 ｜ 산수유꽃 진 자리 ｜ 사랑의 기쁨 ｜ 세상에 나와 나는 ｜ 첫눈
+                            ｜ 보고 싶다 ｜ 꽃 1</p>
+
+                        <p class="bold">2부 당신 있음이 그냥 행복이다</p>
+                        <p class="bold">_세상의 모든 아내들에게</p>
+
+                        <p>선물 1 ｜ 너에게 감사 ｜ 점 ｜ 봄비 ｜ 부끄러움 ｜ 뜻대로 하소서 ｜ 나의 사랑은 가짜였다 ｜ 사랑의 방식 ｜ 바람 부는 날 ｜ 사랑에 답함 ｜ 꽃 2
+                            ｜ 꽃 3 ｜ 별짓 ｜ 맑은 하늘 ｜ 벗은 발 ｜ 주제넘게도 ｜ 지상에서의 며칠 ｜ 때로 사랑은 ｜ 꽃 4 ｜ 비밀일기 2 ｜ 끝끝내 ｜ 연애 ｜ 목련꽃 낙화
+                            ｜ 오랜 사랑 ｜ 그런 사람으로 ｜ 다시없는 부탁 ｜ 사랑에의 권유 ｜ 선물 2 ｜ 비단강 ｜ 들길을 걸으며 ｜ 맨발 ｜ 지는 해 좋다</p>
+
+                        <p class="bold">3부 너를 생각하면 가슴속에 새싹이 돋아나</p>
+                        <p class="bold">_세상의 모든 딸들에게</p>
+
+                        <p>봄의 사람 ｜ 너에게 고마워 ｜ 사랑받는 사람 ｜ 청춘을 위하여 ｜ 혼자서 ｜ 웃기만 한다 ｜ 서로가 꽃 ｜ 길거리에서의 기도 ｜ 축하 ｜ 사랑 3
+                            ｜ 너를 두고 ｜ 행복 ｜ 내가 사랑하는 사람 ｜ 가난한 소망 ｜ 태풍 다음 날 ｜ 오지 못하는 마음 ｜ 사랑이거든 가거라 ｜ 너의 이름 ｜ 아이와 작별
+                            ｜ 안부 ｜ 멀리서 빈다 ｜ 그리움 ｜ 사진을 찍으며 ｜ 너에게 보낸다 ｜ 겨울에도 꽃 핀다 ｜ 잘 가라 내 사랑 ｜ 너의 총명함을 사랑한다
+                            ｜ 청춘을 위한 자장가 ｜ 머플러를 사서 보낼게 ｜ 너 떠난 뒤 ｜ 좋다 ｜ 그래도 ｜ 너에게 안녕 ｜ 참말로의 사랑은 ｜ 꿈꾸노니 ｜ 용납하옵소서</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr10" th:if="${book.bookCode==10}">
+                    <div class="bkCate bkc10">시/에세이</div>
+                    <div class="bkTitle bkt10">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw10">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl10">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309218621&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/116993239">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000200738641">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks10">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd10">
+                        <p>아이부터 노인까지 누구나 공감할 수 있는 시의 언어로 80만 독자를 사로잡은 나태주 시인이 특별한 테마시집으로 독자를 만나러 왔다. 신작 『사랑만이 남는다』는 나태주 시인이 세상의 모든 애인들에게 보내는 매우 특별한 러브레터다. 시인으로 살아온 50여 년, 그동안 쓴 수천 편의 시들 가운데서 뽑은 사랑의 시편과 신작으로 꾸민 시집이다. 전체 3부로 구성됐으며, 세상의 모든 애인들과 아내들과 딸들에게 보내는 시 142편을 수록했다.</p>
+                        <p>이 책에서 시인은 설렘과 기쁨으로 출렁이는 사랑, 초조함에 뒤척이는 사랑, 그리고 묵묵히 지켜보며 응원하는 사랑에 이르기까지, 사랑의 다양한 얼굴을 보여준다. 80년 가까운 생을 통해서 노시인이 느끼고 깨달은 인생이란 바로 ‘사랑’이다. 그는 우리가 우울하고 슬프고 불안하고 불행한 것은 “사랑하지 못해서”라고 말한다.</p>
+                        <p>일상이 불안함 속에서 흔들리는 순간, 시인은 따뜻한 축복과 응원을 아끼지 않으며 우리와 동행한다. 그리하여 이 순간을 살아가는 모두가 사랑만은 놓치지 않기를 바라는 간절한 마음을 전한다. 힘들거나 외로울 때, 우리가 시와 함께 숨 쉴 수 있다면 어떤 순간에도 마음이 무너지거나 무뎌지는 일은 없을 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>프롤로그 9</p>
+
+                        <p class="bold">1부 향기를 창작하는 조향사들</p>
+
+                        <p><span class="bold">1. 마스터 조향사</span><br>
+                        천재 조향사, 메종 프란시스 커정의 프란시스 커정 19<br>
+                        마스터 조향사, 라티잔 파퓨미에르의 빼뜨롱 뒤쇼푸 28<br>
+                        니치 향수 선구자, 파퓸 드 니콜라이의 파트리샤 드 니콜라이 38<br>
+                        이솝의 향수들 만든 조향사 바나베 피용 42<br>
+                            불가리 향수들을 조향한 소피 라베 51</p>
+
+                        <p><span class="bold">2. 향수 브랜드 창업가</span><br>
+                        마스터 조향사들의 향수 출판인, 에디션 드 파퓸 프레데릭 말의 프레데릭 말 55<br>
+                        코롱의 지속력을 높인 아틀리에 코롱의 실비 간터 & 크리스토프 세르바셀 66<br>
+                        세 명의 친구가 문을 연 딥티크 72<br>
+                        한 개의 향분자로 만든 향수, 이센트릭 몰리큘의 제프 라운즈 82<br>
+                        퍼퓸 라이브러리를 연 러쉬 설립자 중 한 사람인 로웨나 버드 88<br>
+                        이탈리아 본사에서 만난 아쿠아 디 파르마 97<br>
+                        향 공학의 선구자, 로베르트 뮐러 그뤼노브 105<br>
+                            향기를 만드는 사람들, 조향사들 그리고 퍼퓨머리 창업가들 116</p>
+
+                        <p><span class="bold">3. 향수의 도시, 그라스</span><br>
+                        향수의 도시, 그라스에 가다 121<br>
+                        그라스의 5월, 센티폴리아 장미 농장 126<br>
+                        그라스의 향 증류 공장 130<br>
+                        영화 〈향수〉의 그라스 135<br>
+                        그라스의 조향사, 퍼퓨머리들 141<br>
+                            그라스의 향미 147</p>
+
+                        <p><span class="bold">4. 아이 러브 퍼퓸</span><br>
+                        눈을 감으면 비로소 보이는 향 156<br>
+                            보이지 않는 향을 만드는 저는 눈에 이상이 있습니다 158</p>
+
+                        <p class="bold">2부 내게 맞는 향수 찾기</p>
+
+                        <p><span class="bold">1. 향수를 즐기기 위하여 꼭 알아야 할 것들</span><br>
+                        기억과 감정 183<br>
+                        향수 시향하기 190<br>
+                        톱노트, 미들노트, 베이스노트 200<br>
+                        오 드 투왈렛 vs 오 드 퍼퓸 vs 퍼퓸 205<br>
+                        향수의 계열, 노트별 추천 향수 209<br>
+                        비누 향과 살내음 239<br>
+                        남성 향수 vs 여성향수 244<br>
+                        향수와 성격 249<br>
+                        계절, 상황, 패션, 브랜드와 향수 253<br>
+                        일상 속 향기 256<br>
+                            후각 훈련 277</p>
+
+                        <p><span class="bold">2. 향수 즐기기</span><br>
+                        향수 사기 좋은 날 280<br>
+                        향수 입는 방법 284<br>
+                        향수와 피부 타입 291<br>
+                        향수 레이어링 293<br>
+                            향수와 연애 298</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr11" th:if="${book.bookCode==11}">
+                    <div class="bkCate bkc11">시/에세이</div>
+                    <div class="bkTitle bkt11">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw11">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl11">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314398903&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/118269830">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000201419353">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks11">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd11">
+                        <p>평생 글을 쓰고 45년간 글쓰기 워크숍을 운영해왔으며, 16년간 아픈 아들을 간병하며 힘든 시간을 통과한 저자가 ‘자전적 에세이’ 쓰기의 의의부터 창작의 전 과정을 소개한다. 자전적 에세이를 ‘왜 쓰는가?’라는 질문에서 시작해 글쓰기의 끝에서 만나게 되는 깨달음에 이르기까지, 글쓰기의 단서와 풍부한 일화, 구체적 조언과 지침이 망라되어 있다.</p>
+                        <p>오랫동안 글을 쓰고 글쓰기를 가르치면서 저자는 자전적 에세이 쓰기에 접근하는 관점, 구체적인 방법론, 사례, 길잡이를 만들 수 있었고, 이 책에 고스란히 담아냈다. 본인이 직접 쓴 글을 자전적 에세이의 예화로 제시하며, 삶에 대한 깊이 있는 이해와 글쓰기를 통한 치유, 글쓰기가 주는 해방감을 이야기한다. 책은 자전적 에세이 쓰기 가이드북인 동시에, 그 자체로 아름다운 자전적 에세이이자 기나긴 애도의 글이다. 그동안 소설 및 실용문 글쓰기 책이 상당수 출간된 데 비해 자전적 에세이 글쓰기 책은 별로 없었는데, 이 책은 에세이를 쓰고자 하는 사람들에게 유용한 지도가 되어줄 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>1. 시작은…<br>
+                        2. 왜 쓰는가<br>
+                        3. 불확실성<br>
+                        4. 당신 삶의 맨 처음으로 돌아가서 시작하지 않아도 된다<br>
+                        5. 집이 깔끔하다면 그건 당신이 글을 쓰고 있지 않기 때문이다<br>
+                        6. 어떻게 시작하건 있는 그대로의 사실을 쓰라<br>
+                        7. 때로는 살살 흔들리는 정도가 아니라 완전히 뒤흔들려야 한다<br>
+                        8. 영혼의 과제<br>
+                        9. 당신과 다르다고 생각하는 누군가에 대해 쓰라(그런데 당신이 생각하는 만큼 그렇게 다르지 않을 수도 있다)<br>
+                        10. 분기점과 압력<br>
+                        11. 무언가를 거부하면 그 안에 담긴 선물도 받을 수 없다<br>
+                        12. 팬 달구기<br>
+                        13. 같은 이야기를 다르게 써보자<br>
+                        14. 모든 사람이 스토리텔링 재능을 타고나지는 않는다<br>
+                        15. 독자가 책을 읽을 때 당신은 그 자리에 함께 있지 않다<br>
+                        16. 통찰<br>
+                        17. 때로는 무언가가 부서질 때 우리의 이야기가 시작된다<br>
+                        18. 당신의 이야기는 많은 변곡점에 맞닥뜨리게 될 것이다. 즐거움에서 고통으로, 그리고 다시…<br>
+                        19. 우연을 그냥 지나치지 마라<br>
+                        20. 전문가가 되지 마라: 전문가가 되라<br>
+                        21. 금기시되는 주제를 회피하지 마라<br>
+                        22. 기록하기, 기록하기, 기록하기. 제발 일기를 쓰라<br>
+                        23. 당신은 기자가 아니다<br>
+                        24. 책으로 출간되기를 기대하지 마라: 책으로 출간되기를 기대하라<br>
+                        25. 치마, 셔츠, 재킷에는 주머니를 항상 양쪽에 달라<br>
+                        26. 고독<br>
+                        27. 관점<br>
+                        28. 애도<br>
+                        29. 당신의 감정을 있는 그대로 드러내라<br>
+                        30. 흐르는 피를 종이에 옮기라<br>
+                        31. 타이밍과 아슬아슬한 경계<br>
+                        32. 한 문장<br>
+                        33. 이야기가 숙성될 시간을 주자<br>
+                        34. 남의 말을 엿듣는 사람이 되자<br>
+                        35. 대화문 활용하기<br>
+                        36. 다른 무엇보다 나의 치부를 드러내는 것이 우선이다<br>
+                        37. 독자를 상대로 속임수를 쓰지 마라<br>
+                        38. 기타 등등 그리고 그 외 다수<br>
+                        39. 실패의 가능성을 받아들이라<br>
+                        40. 자, 이제 성공에 대해 이야기해보자<br>
+                        41. 시각화<br>
+                        42. 그냥 일기를 전부 모아서 책으로 내면 안 되나요?<br>
+                        43. 글쓰기 워크숍에 참가하라<br>
+                        44. 분노<br>
+                        45. 이야기는 시멘트 바닥을 뚫고 뻗어나간다<br>
+                        46. 지금의 당신을 만든 무언가에 대해 쓰라<br>
+                        47. 읽고, 읽고, 또 읽으라<br>
+                        48. 편지: 쓰라<br>
+                        49. 에세이<br>
+                        50. 하나도 빠뜨리지 말고 전부 쓰라<br>
+                        51. 인용하기<br>
+                        52. 내 기억이 흐릿하다면?<br>
+                        53. 고통스러운 부분을 건너뛸 수는 없다<br>
+                        54. 때로는 의식의 전환을 위해 외부의 이야기가 필요할 때도 있다<br>
+                        55. 치유를 위한 글쓰기<br>
+                        56. 자신이 쓴 글을 소리 내 읽으라<br>
+                        57. 자전적 에세이를 쓰는 데 작업실은 필요 없다<br>
+                        58. 이렇게 써도 된다고? 이런 것에 대해?<br>
+                        59. 이야기에서 위기가 끊임없이 이어지면 버거워진다<br>
+                        60. 유머<br>
+                        61. 이야기가 앞으로 나아가는 데 도움이 되지 않는 아름다운 글<br>
+                        62. 다시 쓰기가 당신 글의 진짜 출발점이다<br>
+                        63. 말하지 말고 보여주라는 글쓰기 조언을 모르는 사람은 없다<br>
+                        64. 우리가 자기 자신에 대해 스스로에게 들려주는 이야기들<br>
+                        65. 블로그에 자전적 에세이를 연재하면 안 될까?<br>
+                        66. 상층부를 공략하라<br>
+                        67. 자신이 원하는 것을 쟁취하기 위해 싸우라<br>
+                        68. 끝을 향해 나아가는 결말<br>
+                            69. 끝</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr12" th:if="${book.bookCode==12}">
+                    <div class="bkCate bkc12">시/에세이</div>
+                    <div class="bkTitle bkt12">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw12">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl12">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317214972">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/119105431">예스24<img th:src="@{/image/rightarrow.png}" alt=""></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000202305856">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks12">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd12">
+                        <p>창작의 원천, 상상력을 촉발하는 방대한 이야기를 담은 &lt;상대적이며 절대적인 지식의 백과사전&gt;, 사랑스럽고 신비로운 고양이의 세계를 기록한 &lt;상대적이며 절대적인 고양이 백과사전&gt; 두 권의 에세이를 선보인 베르나르 베르베르가 처음으로 자기 고백의 이야기를 펴냈다.</p>
+                        <p>첫 단편소설 「벼룩의 추억」을 쓴 유년기부터 &lt;개미&gt;로 데뷔한 신인 시절을 거쳐 세계적 베스트셀러 작가로 우뚝 선 현재에 이르기까지, 전 세계 3천만 부 판매, 35개 언어 출간이라는 놀라운 기록을 어떻게 이어올 수 있었는지, 이 책에서 그 답을 찾는다. 작가는 지난 30년을 돌아보며 삶이 곧 소설이고, 소설이 곧 삶이 되어온 날들과, 작가만이 지켜온 글쓰기의 비밀을 숨김없이 털어놓는다. 여러 위기를 겪으면서도 성실하게 글쓰기에 매진해온 삶의 과정이 소설처럼 유려하게 이어진다. 작가는 책의 말미에 글을 쓸 힘이 있는 한, 내 책을 읽어 줄 독자가 존재하는 한 계속 쓸 것이라 고백한다. 앞으로 진화해 나갈 그의 작품 세계가 기대된다.</p>
+                    </div>
+                </div>
+                <div class="bkRight bkr13" th:if="${book.bookCode==13}">
+                    <div class="bkCate bkc13">경제/경영</div>
+                    <div class="bkTitle bkt13">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw13">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl13">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=31642609&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/11081680">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000000848997">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks13">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd13">
+                        <p>지금 자본주의는 기로에 놓여 있다. 이대로 갈 것인가, 새로운 길을 모색할 것인가. 약 250년에 걸쳐 우리 사회를 지배했으며 현재 위기를 겪고 있는 ‘자본주의’를 쉽게 풀어낸 방송, [EBS 다큐프라임 &lt;자본주의&gt; 5부작]이 책으로 출간됐다.</p>
+                        <p>이 책에는 5부작 방송에서 미처 다 보여주지 못한 내용들이 심층적으로 보완되고 정리되었다. ‘은행에 빚을 갚는다’는 것이 개인에게는 속박과 굴레를 벗어남을 뜻하지만 국가 경제로 보면 경제 규모의 축소를 의미한다든지, 뉴스에서 나오는 ‘서브프라임 모기지’는 대체 무엇이고 왜 문제가 생겼는지, 저축은행 사태는 왜 일어났는지, 마트에 가면 왜 나도 모르게 많이 사게 되는지 등 자본주의 사회의 숨은 진실과 무서움에 관해 책은 경고한다.</p>
+                        <p>그리고 무의식중에 우리를 나락으로 빠뜨리는 자본주의의 유혹과 위협 속에서 어떻게 살아남을 것인지 알려준다. 현재의 자본주의 시장 경제를 처음으로 묘사했던 1776년 아담 스미스의 『국부론』으로 거슬러 올라가 스미스와 마르크스의 관점에서 지금의 자본주의를 바라보기도 하고, 케인스와 하이에크의 ‘시장’이냐 ‘정부’냐 논쟁에서 벗어나 결국엔 ‘사람’이 가장 중요하다는 결론을 내린다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">프롤로그 _ 길 잃은 자본주의, 우리는 무엇을 할 수 있는가</span></p>
+
+                        <p><span class="bold">1장 ‘빚’이 있어야 돌아가는 사회, 자본주의의 비밀</span><br>
+                        1. 물가는 절대 내려가지 않는다 ｜ 2. 은행은 있지도 않은 돈을 만들어낸다｜ 3. 많은 사람들이 한꺼번에 예금을 찾지는 않는다<br>
+                            ｜ 4. 중앙은행은 끊임없이 돈을 찍어낼 수밖에 없다 ｜ 5. 인플레이션의 거품이 꺼지면 금융위기가 온다 ｜ 6. 내가 대출이자를 갚으면 누군가는 파산한다 <br>
+                            ｜ 7. 은행은 돈 갚을 능력이 없는 사람에게도 대출해 준다 ｜ 8. 달러를 찍어내는 FRB는 민간은행이다</p>
+
+                        <p><span class="bold">2장 위기의 시대에 꼭 알아야 할 금융상품의 비밀</span><br>
+                        1. 재테크 열기는 우리를 위한 것이 아니었다 ｜ 2. 은행이란 수익을 내야 하는 기업일 뿐이다 ｜ 3. 8%의 이자를 주는 후순위채권의 비밀 <br>
+                            ｜ 4. 은행은 판매수수료가 많은 펀드를 권한다 ｜ 5. 보험, 묻지도 따지지도 않다가 큰코다친다 ｜ 6. 파생상품은 투자를 가장한 도박과 같다 <br>
+                            ｜ 7. 저축만으로는 행복해질 수 없다 ｜ 8. 금융지능이 있어야 살아남는다</p>
+
+                        <p><span class="bold">3장 나도 모르게 지갑이 털리는 소비 마케팅의 비밀</span><br>
+                        1. 어릴 때부터 우리는 유혹당한다 ｜ 2. 쇼핑할 때는 여자가 훨씬 나약하다 ｜ 3. 보안용 CCTV가 당신을 지켜보고 있다 <br>
+                            ｜ 4. ‘사고 싶다’고 느끼면 ‘필요한’ 것 같다 ｜ 5. 소비는 불안에서 시작된다 ｜ 6. 필요하지 않아도 친구가 사면 나도 산다 <br>
+                            ｜ 7. 과소비는 상처받은 마음이다 ｜ 8. 자존감이 낮으면 더 많은 돈을 쓴다</p>
+
+                        <p><span class="bold">4장 위기의 자본주의를 구할 아이디어는 있는가</span><br>
+                        1. 금융위기는 반복해서 일어난다 ｜ 2. 노동만이 최상의 가치다 _ 아담 스미스의 『국부론』 ｜ 3. 쉬지 않고 일해도 왜 가난한가 _ 칼 마르크스의 『자본론』<br>
+                            ｜ 4. 실업률을 낮출 정부의 개입을 권하다 _ 케인스의 거시경제학 ｜ 5. 정부가 커지면 비용도 늘어난다 _ 하이에크의 신자유주의</p>
+
+                        <p><span class="bold">5장 복지자본주의를 다시 생각한다</span><br>
+                            1. 국민소득이 오르면 내 소득도 오른다? ｜ 2. ‘복지=분배’는 오해다 ｜ 3. 복지는 창의성의 원천이다 ｜ 4. 시장도 정부도 아닌 국민이 주인이다</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr14" th:if="${book.bookCode==14}">
+                    <div class="bkCate bkc14">경제/경영</div>
+                    <div class="bkTitle bkt14">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw14">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl14">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=288845971&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/90428162">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001913217">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks14">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd14">
+                        <p>초판 발행 후, 경제경영 필도서로 자리매김한 『돈의 속성』 300쇄 기념 개정증보판이다. 300쇄에 맞춰 코로나19로 바뀐 경제상황과 돈에 관한 김승호 회장의 추가 메시지를 담았다.</p>
+                        <p>『돈의 속성』은 3년 전 어느 극장 하나를 빌려 대중에게 강의했던 내용을 기반으로 집필됐다. 강연은 방송을 통해 전파되며 유튜브와 셀럽들에 의해 공유와 전파를 거듭했다. 그리고 이내 1,100만 명에게 전달되기에 이르렀다. 하지만 여러 사람을 통해 생산 및 재생산되는 과정에서 어떤 의미는 그 뜻이 정확히 전달되지 않았거나 의미가 왜곡되는 일이 있었다.</p>
+                        <p>몇 권을 저술한 저자지만 여전히 책 쓰기가 가장 어렵다는 그는 이런 상황에서 다시 한 번 펜을 잡기로 결정했다. 그것은 그의 내면에 깃든 사람에 대한 애정 때문이었다. 모두에게 정말 필요하고 중요하지만 아무도 말하지 않는 진짜 돈 버는 방법, 진짜 돈을 벌어본 사람은 그 누구도 방법을 공유하지 않기에 이 일이 저자 자신에게 주어진 것이라 받아들였다. 젊은 날의 자신의 모습이 투영되기에.</p>
+                        <p>어떤 횡재나 일명 대박주식 없이 말 그대로 맨손에서 만들어낸 종잣돈으로 돈 버는 방법을 알려준다. 부모에게 받은 유산은커녕, 30대 후반까지 낡은 자동차에 그날 판매할 과일을 싣고 다니던 어느 가난한 이민 가장이 이룬 진짜 부에 대한 모든 방법이 담겼다. 종잣돈 천만 원을 만들고 그 돈을 1억 원, 10억 원, 100억 원, 수천억 원이 될 때까지 돈을 관리하며 터득한 ‘돈’이 가진 속성을 정리한 안내서다. ‘진짜 부자’가 된 실제 인물이 말해주는 ‘진짜 돈’만들기에 대한 책이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">프롤로그</span></p>
+
+                        <p>돈은 인격체다<br>
+                        나는 나보다 더 훌륭한 경영자에게 투자한다<br>
+                        복리의 비밀<br>
+                        일정하게 들어오는 돈의 힘<br>
+                        돈은 중력의 힘을 가졌다<br>
+                        리스크가 클 때가 리스크가 가장 작을 때다<br>
+                        남의 돈을 대하는 태도가 내 돈을 대하는 태도다<br>
+                        100억을 상속받았는데 절대 잃지 말라는 유언이 붙었다면<br>
+                        빨리 부자가 되려면, 빨리 부자가 되려 하면 안 된다<br>
+                        경제 전문가는 경기를 정말 예측할 수 있나?<br>
+                        삼성전자 주식을 삼성증권에 가서 사는 사람<br>
+                        다른 이를 부르는 호칭에 따라 내게 오는 운이 바뀐다<br>
+                        반복되는 운은 실력이고 반복되는 실패는 습관이다<br>
+                        뉴스를 통해 사실과 투자 정보를 구분하는 법<br>
+                        돈마다 시간은 다르게 흐른다<br>
+                        달걀을 한 바구니에 담지 않았는데 왜 모두 깨질까?<br>
+                        부자가 되는 세 가지 방법<br>
+                        돈을 모으지 못하는 이유<br>
+                        자신이 금융 문맹인지 알아보는 법<br>
+                        주식으로 수익을 내는 사람들의 세 가지 특징<br>
+                        얼마나 벌어야 정말 부자인가?<br>
+                        내가 재산을 지키기 위해 매일 하는 일<br>
+                        가난은 생각보다 훨씬 더 잔인하다<br>
+                        금융 공황 발생에 따른 세 가지 인간상<br>
+                        내가 청년으로 다시 돌아가 부자가 되려 한다면<br>
+                        지혜는 기초학문으로부터 시작된다<br>
+                        부자가 되기 위해 우선 당장 할 수 있는 일 한 가지<br>
+                        앞으로 주식이 오를 것 같습니까?<br>
+                        현재 임대료를 내는 사람들의 숨은 가치<br>
+                        부동산에 투자하는 것이 좋을까? 주식이 좋을까?<br>
+                        나의 독립기념일은 언제인가?<br>
+                        돈을 다루는 네 가지 능력<br>
+                        이런 곳에 나는 투자 안 한다<br>
+                        보험은 저축이 아니다<br>
+                        예쁜 쓰레기<br>
+                        경제에 대한 해석은 자신의 정치적 신념에서 벗어나 있어야 한다<br>
+                        마중물과 종잣돈 1억 만들기의 다섯 가지 규칙<br>
+                        좋은 부채, 나쁜 부채<br>
+                        세상의 권위에 항상 의심을 품어라<br>
+                        좋은 돈이 찾아오게 하는 일곱 가지 비법<br>
+                        직장인들이 부자가 되는 두 가지 방법<br>
+                        감독(자산배분)이 중요한가? 선수(포지션)가 중요한가?<br>
+                        은행에서 흥정을 한다고요?<br>
+                        떨어지는 칼을 잡을 수 있는 사람<br>
+                        재무제표에 능통한 회계사는 투자를 정말 잘할까?<br>
+                        김승호의 투자 원칙과 기준<br>
+                        자식을 부자로 만드는 방법<br>
+                        만약 삼성전자 주식을 아직도 가지고 있었더라면<br>
+                        국제적 수준의 행동 에티켓과 세계화 과정<br>
+                        당신의 출구전략은 무엇인가?<br>
+                        모든 비즈니스는 결국 부동산과 금융을 만난다<br>
+                        똑똑한 사람들이 오히려 음모에 빠진다<br>
+                        사기를 당하지 않는 법<br>
+                        투자의 승자 자격을 갖췄는지 알 수 있는 열한 가지 질문<br>
+                        두량 족난 복팔분<br>
+                        부의 속성<br>
+                        흙수저가 금수저를 이기는 법<br>
+                        당신 사업의 퍼(PER)는 얼마인가?<br>
+                        큰 부자는 하늘이 낸다<br>
+                        창업을 꿈꾸는 젊은이는 작은 회사로 가라<br>
+                        능구(能久)와 공부(工夫)<br>
+                        아직도 할 사업은 끝도 없이 많다<br>
+                        사업가는 스스로에게 자유를 줄 수 있는 유일한 직업<br>
+                        돈마다 품성이 다르다<br>
+                        가족 안에서 가장 부자가 되었을 때 부모와 형제에 대한 행동요령<br>
+                        실패할 권리<br>
+                        책이 부자로 만들어줄까?<br>
+                        신은 왜 공평하지 않을까?<br>
+                        항상 투자만 하는 송 사장과 항상 화가 나 있는 그의 아내<br>
+                        동업을 어떻게 생각하세요?<br>
+                        길을 모르겠으면 큰길로 가라<br>
+                        쿼터 법칙<br>
+                        기도로는 부자가 될 수 없다<br>
+                        재산을 모을 때는 농부가 되고 투자할 때는 어부가 돼라<br>
+                            돈을 모으는 네 가지 습관</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr15" th:if="${book.bookCode==15}">
+                    <div class="bkCate bkc15">경제/경영</div>
+                    <div class="bkTitle bkt15">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw15">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl15">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=287238196&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/106369008">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001901955">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks15">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd15">
+                        <p>부자 되기 방식의 패러다임을 바꾼 &lt;부의 추월차선&gt;이 독자들의 사랑과 지지 속에 한국 출간 10주년을 맞이했다. 이 책은 죽도록 일하며 수십 년 간 아끼고 모아서 휠체어에 탈 때쯤 부자 되는 40년짜리 플랜을 비웃으며 한 살이라도 젊을 때 부자가 되어 은퇴하는 방법을 구체적으로 제시하고 있다.</p>
+                        <p>‘추월차선’을 알고 난 뒤 부의 지도를 다시 그린 사람들은 하나같이 입을 모은다. “추월차선 법칙을 알게 된 뒤 나는 내가 돈에 쪼들리며 사는 이유를 알게 되었고, 그런 인생으로부터 벗어나기로 결심했다. 4년 후 나는 자산을 4배로 불릴 수 있었다.”, “이제 나는 부자가 되는 데 돈 많은 부모님도, 운도 필요 없다는 사실을 알게 되었다. 돈을 버는 방법에 대한 지식만이 필요할 뿐이다. 그리고 추월차선이 내게 그 지식을 주었다.”</p>
+                        <p>휠체어 탄 백만장자는 부럽지 않다. 젊은 나이에 일과 돈에서 해방되어 인생을 즐겨라. 일주일에 5일을 노예처럼 일하고 다시 노예처럼 일하기 위해 2일을 쉬는 당신, 30대 억만장자가 알려 주는 가장 빠른 부자의 길 “부의 추월차선”으로 옮겨 타라.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">프롤로그 부자가 되는 길에는 지름길이 있다</span></p>
+
+                        <p><span class="bold">1장 부자 되는 데 걸리는 시간 50년 ? 맙소사 !</span><br>
+                        1 ‘천천히 부자 되기’로는 가망이 없다<br>
+                            2 돈은 기하급수적으로 벌어들이는 것이다</p>
+
+                        <p><span class="bold">2장 제대로 공부하고 역경을 이겨내야 목적지에 도달한다</span><br>
+                        3 백만장자는 사건이 아니라 과정에 의해 만들어진다<br>
+                        4 부를 향한 재무 지도 세 가지</p>
+
+                        <p><span class="bold">3장 가난을 만드는 지도 : 인도(人道)</span><br>
+                        5 돈은 돈 문제를 해결하지 못한다<br>
+                        6 부자처럼 보이는 것과 진짜 부자인 것의 차이<br>
+                        7 평범하다는 것은 현대판 노예라는 뜻이다<br>
+                        8 ‘인생 한 방’을 노리는 사람은 가난을 면치 못한다<br>
+                        9 인생을 남의 손에 맡기고 남 탓하며 사는 사람들</p>
+
+                        <p><span class="bold">4장 평범한 삶을 만드는 지도 : 서행차선</span><br>
+                        10 절약만으로는 절대 부자가 될 수 없다<br>
+                        11 당신은 자유를 사기 위해 자유를 팔고 있다<br>
+                        12 당신이 부의 길이라고 믿었던 것들의 함정<br>
+                        13 학위보다 빚더미를 먼저 안겨 주는 교육<br>
+                        14 자가당착에 빠진 서행차선의 구루들<br>
+                        15 서행차선을 벗어나는 비밀의 출구</p>
+
+                        <p><span class="bold">5장 부자를 만드는 지도 : 추월차선</span><br>
+                        16 빠르게 부자가 되기 위한 사고방식은 따로 있다<br>
+                        17 직장 같은 사업은 No! 사업은 시스템으로 굴려라<br>
+                        18 초고속으로 돈을 벌고 불리는 방법<br>
+                        19 추월차선 진입을 예고하는 다섯 가지 사업 씨앗<br>
+                        20 부자가 복리를 활용하는 방식<br>
+                        21 돈이 저절로 따라오는 영향력의 법칙</p>
+
+                        <p><span class="bold">6장 지금 당신 인생의 운전대를 잡아라</span><br>
+                        22 당신을 소유하고 있는 것은 누구인가<br>
+                        23 수백 가지 선택의 결과가 지금의 당신이다<br>
+                        24 올바른 선택을 위한 가중평균 의사결정 매트릭스<br>
+                        25 역풍으로 작용하는 사람들에게 등을 돌려라<br>
+                        26 노동 시간은 자유 시간의 대가다<br>
+                        27 시스템과 돈 나무를 키우는 교육<br>
+                        28 시스템과 사업에 진정으로 헌신하고 있는가</p>
+
+                        <p><span class="bold">7장 제한 속도 없이 달릴 수 있는 멋진 길이 있다</span><br>
+                        29 올바른 길로 가야 부로 통한다<br>
+                        30 돈을 좇지 말고 욕구를 좇으라<br>
+                        31 진입 장벽이 높거나 남달리 탁월하거나<br>
+                        32 통제권을 갖고 있어야 큰돈을 만질 수 있다<br>
+                        33 사업의 힘은 규모에서 나온다<br>
+                        34 시간을 쏟아 붓지 않아도 돈이 되는 사업<br>
+                        35 추월차선 5계명을 만족시키는 사업 아이템<br>
+                        36 성공은 아이디어가 아닌 실행에 있다<br>
+                        37 재무적 문맹 상태를 벗어나라</p>
+
+                        <p><span class="bold">8장 당신의 실행력이 당신의 최고 속도다</span><br>
+                        38 아이디어를 실행하는 사람이 모든 것을 소유한다<br>
+                        39 최고의 사업 계획은 실행 실적이다<br>
+                        40 고객에게 힘이 있다! 고객에게 충성하라!<br>
+                        41 사업 파트너십은 결혼만큼 중요하다<br>
+                        42 경쟁사를 어떻게 활용해야 할까?<br>
+                        43 추월차선 비즈니스의 접근 포인트<br>
+                            44 부자가 되기 위해 기억해야 할 20가지</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr16" th:if="${book.bookCode==16}">
+                    <div class="bkCate bkc16">경제/경영</div>
+                    <div class="bkTitle bkt16">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw16">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl16">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=254071448&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/93982017">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001729530">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks16">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd16">
+                        <p>가난했던 한 아빠가 부자가 되기까지 지녔던 소신과 개념, 원칙을 솔직하고 다정한 목소리로 알려주는 부의 보물 지도 같은 책이다. ‘부’에 대한 정의를 일깨워주고, ‘부’를 향한 길로 안내하는 친절한 지침서로, 롤러코스터 같은 인생에서 ‘경제적 자유’를 얻기 위해 노력한 한 아빠의 스펙터클한 여정이 담겨 있다.</p>
+                        <p>픽션과 논픽션이 절반씩 차지하는 독특한 구성으로, 각 장마다 ‘지혜로운 현자’인 부자 정원사가 주인공으로 등장해 ‘부를 가꾸는 과정’을 한 편의 소설처럼 들려준 후 저자가 자신의 실제 인생 경험에서 얻은 부의 원칙들을 명료하게 정리해놓았다.</p>
+                        <p>20대 아들에게 들려주기 위해 3년간 써 내려간 기록으로, 잔소리나 일장 연설 혹은 충고나 자랑처럼 들리지 않기 위해 고심한 저자의 세심한 배려가 돋보이는 책이다. 덕분에 20~30대 사회 초년생은 물론 삶의 기준을 세우려는 모든 사람이 공감할 수 있는 ‘이야기 부자학 책’이 탄생했다. 부 자체보다 내적 수양, 자기 신뢰, 위기 돌파력, 습관의 힘 등 부의 언어를 물려주기 위해 쓴 책으로, 한 아빠가 아들에게 온 마음을 다해 알려주고 싶었던 지혜로 가득하다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>1부 정원 일 배우기<br>
+                        1장 매일의 씨앗<br>
+                        2장 먹고사는 일<br>
+                            3장 부의 정원</p>
+                        <p>2부 부의 정원 가꾸기<br>
+                        4장 55가지 부의 언어<br>
+                        5장 10가지 부의 씨앗<br>
+                            6장 15가지 부의 덕목</p>
+                        <p>3부 풍성한 수확<br>
+                            7장 정원사의 유산</p>
+                    </div>
+                </div>
+                <div class="bkRight bkr17" th:if="${book.bookCode==17}">
+                    <div class="bkCate bkc17">경제/경영</div>
+                    <div class="bkTitle bkt17">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw17">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl17">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330342383&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/124112599">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000211647166">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks17">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd17">
+                        <p>카카오TV, 넷플릭스 방영 &lt;개미는 오늘도 뚠뚠&gt; 전 챕터 최고 수익률 133%, MZ세대 대왕개미의 투자법. 여의도 제도권 취업보다 전업투자를 선택하게 만든 안전한 주식 단기 매매 공식을 담은 책이다. 실전투자대회 1위 2회, 2위 2회 수상, 대학생 모의투자대회 1위, 177% 수익률 달성한 20대 투자자의 단타 수업. 불확실한 시장에서 돈을 잃지 않는 단타를 배우고 싶은 투자자에게 가장 적합한 트레이딩 입문서다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">파트1. 나는 어떤 투자를 해야 하는가</span><br>
+                        01. 돈을 잃지 않기 위해 선택한 단기투자<br>
+                        - 나의 주식투자 이야기<br>
+                        - 나에게 맞는 투자는 무엇일까?<br>
+                        02. 단기투자가 좋은 이유<br>
+                        - 리스크가 적다<br>
+                        - 소액으로 당장 시작할 수 있다<br>
+                        - 하락장에도 돈을 벌 수 있다<br>
+                        - 단기간에 성과 측정이 가능하다<br>
+                        - 지속적인 출금을 통해 안정적으로 수익을 쌓아갈 수 있다<br>
+                        03. 장기투자에 대한 잘못된 환상<br>
+                        - 기다리면 오른다는 환상<br>
+                        - 주식시장은 기울어진 운동장<br>
+                        - 대주주와 소액주주의 동상이몽<br>
+                        - 알고 보면 가장 어려운 장기투자<br>
+                            - 개인이 장기투자로 수익을 내려면</p>
+
+                        <p><span class="bold">파트2. 선택받은 종목만 상승한다</span><br>
+                        04. 인기 있는 테마를 고르자<br>
+                        - 시장을 주도하는 테마<br>
+                        - 거래대금으로 인기 테마 찾기<br>
+                        - 이슈 파악하기<br>
+                        - 뉴스 분석하기<br>
+                        05. 1등만이 살아남는다<br>
+                        - 대세를 따르자<br>
+                        - 가장 잘 오르는 종목에 집중하자<br>
+                        - 2등주는 안 된다<br>
+                        - 역전의 순간에는 갈아탄다<br>
+                        - 내 종목은 오르지 않는 이유가 있다<br>
+                        06. 끼 있는 종목<br>
+                        - 과거 차트에 답이 있다<br>
+                        - 상한가도 가본 놈이 간다<br>
+                        07. 매매하기 좋은 종목의 조건<br>
+                        - 단기매매에 적합한 시가총액<br>
+                            - 공매도가 불가능하거나 공매도 잔고비율이 낮은 종목</p>
+
+                        <p><span class="bold">파트3. 성공적인 단기매매를 위한 기술적 분석</span><br>
+                        08. 차트<br>
+                        - 기본 차트 설명<br>
+                        - 지지와 저항<br>
+                        - 지지와 저항이 될 수 있는 가격<br>
+                        - 가장 강력한 차트<br>
+                        - 상승하는 종목과 하락하는 종목<br>
+                        09. 수급<br>
+                        - 수급 주체가 있어야 상승한다<br>
+                        - 거래원<br>
+                        - 프로그램 매매<br>
+                        - 기관투자자 가집계<br>
+                        - 시장 동향 확인<br>
+                            - 호가창의 원리</p>
+
+                        <p><span class="bold">파트4. 거래의 기술</span><br>
+                        10. 비중 관리<br>
+                        - 본인의 그릇을 파악하기<br>
+                        - 비중 관리(불타기와 물타기)<br>
+                        11. 매매 타이밍<br>
+                        - 첫 장대양봉(D) 공략법<br>
+                        - 장대양봉 다음날(D+1) 공략법<br>
+                        - 장대양봉 2일 후(D+2) 공략법<br>
+                        - 주식 거래 시간별 매매 전략<br>
+                        12. 손절법<br>
+                            13. HTS 세팅</p>
+
+                        <p><span class="bold">파트5. 돈을 지키는 방법</span><br>
+                        14. 소나기를 피하는 방법<br>
+                        15. 자금 관리법<br>
+                            16. 심법</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr18" th:if="${book.bookCode==18}">
+                    <div class="bkCate bkc18">인문</div>
+                    <div class="bkTitle bkt18">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw18">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl18">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310646900&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/117389523">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000200940784">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks18">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd18">
+                        <p>수많은 젊은 부자가 선택한 『레버리지』의 20만 부 돌파 블랙 에디션이 출간되었다. 라이프해커 자청, 브라이언 트레이시가 강력 추천한 이 책은 2017년 국내 출간 이후 한국 독자들의 꾸준한 사랑을 받아 경제경영 바이블로 자리 잡았다. 아직까지 『레버리지』를 보지 못한 사람이라면 어떻게 읽고 활용해야 할까?</p>
+                        <p>당신이 만약 16년 동안 공부하는 교육 시스템을 통과하고, 그 과정에서 수천만 원의 빚을 지고, 직업 피라미드에서 가장 밑바닥인 저임금의 일자리를 구한 다음 40년 동안 천천히 고통스럽게 일하는 삶을 원한다면, 이 책은 당신을 위한 책이 아니다. 또 열심히 일하면서 사랑하는 사람들과 함께 보내는 시간을 희생하고, 추가 근무를 하고, 저축에만 의지하면서 행복과 자유를 나중으로 미루는 삶을 살기 원한다면, 역시 이 책은 당신을 위한 책이 아니다.</p>
+                        <p>이 책에는 한 가지 비밀이 담겨 있다. 이 비밀은 5만 파운드 빚더미에 올라 방황하던 한 남자를 3년 만에 백만장자로 만들었다. 그것은 바로 자본주의다. 자본주의는 당신이 생각하는 것보다 훨씬 많은 기회를 품고 있다. 그리고 『레버리지』는 그 자본주의를 내 편으로 만드는 기술이다.</p>
+                        <p>끊임없는 노동과 희생의 규칙을 깨뜨리고, 최소한의 노력과 시간으로 자본을 증식하는 새로운 부의 공식이다. 환갑 이후 찾아올 한 번의 긴 은퇴 생활을 위해 30~40년 동안 일에 파묻히는 것이 아닌, 매 순간 최고의 가치를 누리는 라이프스타일이다. 이제 더 열심히, 더 오래 일하라는 사회의 명령에 속지 마라. 당신은 지금보다 훨씬 더 쉽고 빠르게 성공할 수 있다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">1장. 레버리지</span><br>
+                        <span class="bold">: 부의 지렛대를 만드는 힘</span><br>
+                        성공의 기본 법칙은 깨졌다<br>
+                        최소 노력의 법칙<br>
+                        더 열심히, 더 오래 일하라는 기만<br>
+                        일과 삶의 균형이라는 망상<br>
+                            자기 방식의 삶</p>
+
+                        <p><span class="bold">2장. 새로운 부의 공식</span><br>
+                        <span class="bold">:젊고 게으른 백만장자들</span><br>
+                        노력을 위임해야 하는 이유<br>
+                        시간과 지식, 그리고 파트너십<br>
+                        유예된 자유<br>
+                        주체적 삶을 위한 감정 조절<br>
+                        적게 일할수록 부자가 되는 생산성의 비밀<br>
+                        모든 일에 최선을 다하면 아무 일도 못 한다</p>
+
+                        <p><span class="bold">3장. 부의 진입로</span><br>
+                        <span class="bold">:당신의 경제적 운명을 바꿀 새로운 기회</span><br>
+                        위대한 사람을 몰래 관찰하는 사람<br>
+                        해변에서 일하는 시대<br>
+                            부의 격차를 줄이는 가장 빠른 방법</p>
+
+                        <p><span class="bold">4장. 후천적 부자의 탄생</span><br>
+                        <span class="bold">:타인의 가치를 돈으로 바꾸는 방법</span><br>
+                        펩시 사장을 고용한 스티브 잡스<br>
+                        타인의 가치 속에서 자신을 발견하라<br>
+                        당신만의 사단을 구축하라<br>
+                        돈이 당신을 위해 일하게 하라<br>
+                        누군가 부를 얻으면 누군가는 부를 잃는다<br>
+                            부의 이동 경로</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr19" th:if="${book.bookCode==19}">
+                    <div class="bkCate bkc19">인문</div>
+                    <div class="bkTitle bkt19">생각이 너무 많은 <br>어른들을 위한 심리학</div>
+                    <div class="bkWrite bkw19">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl19">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338763713">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/122428190">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000208995869">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    <div class="bkStory bks19">완벽한 때는 결코 오지 않는 법이다. 그러니 더 이상 고민만 하지 말고 무엇이든 해 보라.<br> 그것이 당신의 인생을 단단하게 만들어 줄 것이다. </div>
+                        <div class="bkStoryDetail bksd19">
+                            <p>30만 독자의 공감을 얻은 《만일 내가 인생을 다시 산다면》의 작가 김혜남이 생각이 너무 많아 자꾸만 머뭇거리고 흔들리는 어른들에게 해 주고 싶은 말들을 담은 책이다. 30대를 어떻게 보내느냐에 따라 40대 이후의 삶은 정말 많이 달라진다. 그만큼 30대에는 향후 인생을 좌우하는 중요한 결정들을 많기 때문에 선택에 신중을 기할 수밖에 없다. 하지만 문제는 생각이 많아질수록 긍정적인 생각보다 부정적인 생각을 더 많이 하게 되며, 한번 부정적인 생각을 시작하면 멈출 줄을 모른다는 것이다.</p>
+                            <p>저자는 지난 30여 년 동안 정신분석 전문의로 일하며 수많은 환자들을 만나 왔다. 그들은 대부분 자신과 타인, 세상에 대해 부정적이었다. 그리고 사랑받을 만한 가치가 없는 사람이라며 스스로를 비하하고, 내일이 오지 않았으면 좋겠다고도 했다. 그런데 놀랍게도 그들은 정신분석 치료를 받으며 매번 부정적인 생각을 하게 되는 원인을 찾아냄으로써 캄캄한 동굴을 스스로 빠져나왔다.</p>
+                            <p>그러므로 사소한 일들을 할 때조차 걱정과 고민이 너무 많다면, 이제는 매번 자신의 발목을 붙잡고 놔주지 않으며, 꼼짝도 못 하게 만드는 것이 무엇인지를 찬찬히 들여다봐야 할 때다. 부정적인 생각을 하게 되는 근본 원인을 찾아 그것을 해결해야만 생각의 함정에 빠지지 않을 수 있고, 좀 더 후회 없는 인생을 만들어 갈 수 있기 때문이다. “완벽한 때는 결코 오지 않는 법이다. 그러니 더 이상 고민만 하지 말고 무엇이든 해 보라. 그것이 당신의 인생을 단단하게 만들어 줄 것이다.”</p>
+                            <p>그밖에도 책에는 30년 동안 만나온 수많은 환자들의 삶에서 길어 올린 인생에 대한 통찰, 그리고 두 아이의 엄마, 시부모님을 모시고 사는 며느리, 한 남자의 아내에서 두 손주의 할머니가 되기까지의 경험들을 토대로 전하는 진솔한 인생 조언 47가지가 담겨 있다. 2011년 출간된 《어른으로 산다는 것》이 독자들의 입소문으로 10만 부 베스트셀러가 된 것을 기념해 펴낸 전면 개정증보판이다.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>Prologue | 후회 없는 삶을 살고 싶다면</p>
+                        <p><span class="bold">Chapter 1. 나는 왜 이렇게 생각이 많은 걸까?</span><br>
+                        나는 왜 이렇게 생각이 많은 걸까?<br>
+                        긍정적인 생각과 부정적인 생각의 황금비율<br>
+                        지금 서른 살이 힘들 수밖에 없는 이유<br>
+                        인간관계가 너무 피곤하다는 사람들의 특징<br>
+                        ‘어른’이라는 이름의 무게<br>
+                        걱정의 90퍼센트를 없애는 가장 단순한 방법<br>
+                        결국 환자들을 울게 만든 말<br>
+                            마흔두 살에 찾아온 병이 내게 가르쳐 준 것들</p>
+                        <p><span class="bold">Chapter 2. 부정적인 생각을 멈추지 못하는 사람들에게 해 주고 싶은 말들</span><br>
+                        감정 기복이 심한 사람들이 흔히 하는 착각<br>
+                        누구에게나 어떤 일이든지 일어날 수 있다<br>
+                        나는 왜 이렇게 부족한 게 많은 걸까?<br>
+                        약점을 고치려 애쓰기보다 강점을 더 키울 것<br>
+                        항상 밝고 유쾌한 사람에게 주눅 들 필요가 없는 이유<br>
+                        일에 대한 비판을 당신에 대한 비난으로 받아들이지 말 것<br>
+                        ‘짜증 난다’는 말을 많이 하는 사람들의 특징<br>
+                        한 번쯤은 자기 자신에게 솔직해져 볼 것<br>
+                            화를 다스리는 가장 좋은 방법 6가지</p>
+                        <p><span class="bold">Chapter 3. 당신을 힘들게 만드는 문제는 따로 있을 수도 있다</span><br>
+                        그녀가 아이를 낳은 후 갑자기 나를 찾아온 이유<br>
+                        누구나 마음속에 상처 입은 어린아이가 살고 있다<br>
+                        정신분석을 공부하며 비로소 깨달은 것<br>
+                        당신이 쓰는 방어 기제에 문제가 있는지도 모른다<br>
+                        어린 시절 얘기를 불편해하는 사람들의 공통점<br>
+                            내 안의 어린아이를 달래는 4가지 방법</p>
+                        <p><span class="bold">Chapter 4. 정신분석에서 배우는 단단한 어른의 태도</span><br>
+                        첫눈에 반한 운명 같은 사랑이 위험한 이유<br>
+                        좋아하는 일도 지겨울 때가 있는 법이다<br>
+                        가까운 사람일수록 지켜야 할 최소한의 예의<br>
+                        ‘도와 달라’는 말을 잘 못하는 사람들의 공통점<br>
+                        경청이야말로 가장 좋은 대화법이다<br>
+                        어설픈 용서는 서로를 망칠 뿐이다<br>
+                        내가 당신에게 못된 딸이 되라고 권하는 까닭<br>
+                            남이 나를 함부로 대하지 못하게 만드는 법</p>
+
+                        <p><span class="bold">Chapter 5. 마흔이 되기 전에 배워 둬야 할 것들</span><br>
+                        인생을 살면서 풀어야 할 가장 큰 숙제<br>
+                        ‘안녕’이라는 작별 인사가 중요한 이유<br>
+                        더 늦기 전에 꼭 해야 할 일<br>
+                        이별을 견딜 수 없는 사람들의 심리<br>
+                        언니의 갑작스러운 죽음이 나에게 남긴 것들<br>
+                        사랑하는 사람을 잃은 이에게 함부로 하면 안 되는 말<br>
+                        실연에 대처하는 가장 현명한 방법<br>
+                            슬플 때는 굳이 강한 척하지 말 것</p>
+
+                            <p><span class="bold">Chapter 6. 이렇게 나이 들 수만 있다면</span><br>
+                        내가 삶의 흉터들을 사랑하는 이유<br>
+                        혼자만의 시간을 가지면 인생의 많은 문제가 해결된다<br>
+                        내가 치열하게 산 30대를 후회하지 않는 까닭<br>
+                        결혼한 아들과 딸에게 해 주고 싶은 유일한 당부<br>
+                        행복한 어른은 가끔 어린아이처럼 놀 줄 안다<br>
+                        마흔 이후, 가장 필요한 건 체력이다<br>
+                        우리가 서로에게 상처를 가장 적게 줄 수 있는 방법<br>
+                                나는 이렇게 나이 들어 가고 싶다</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr20" th:if="${book.bookCode==20}">
+                    <div class="bkCate bkc20">인문</div>
+                    <div class="bkTitle bkt20">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw20">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl20">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332100971">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/119562091">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000202652825">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks20">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd20">
+                        <p>쇼펜하우어는 니체의 철학, 헤세와 카프카의 문학, 프로이트와 융의 심리학에 지대한 영향을 끼친, 19세기 서양 철학계의 상징적인 인물이다. 그는 “인생은 의미가 없다. 그러므로 태어나지 않는 것이 최선이고, 태어났다면 최대한 빨리 죽는 것이 차선이다.”라고 말해 흔히 염세주의자로 알려졌지만, 그 어떤 철학자, 작가보다 치열하게 살았다. 이 책은 『당신의 인생이 왜 힘들지 않아야 한다고 생각하십니까』가 출간 6개월 만에 독자들의 사랑을 받으며 10만 부 돌파 베스트셀러가 된 것을 기념해 펴낸 스페셜 에디션이다.</p>
+                        <p>쇼펜하우어가 세상을 떠난 지 150년의 세월이 흘렀지만, 우리가 오늘날까지 쇼펜하우어를 기억하고 그가 남긴 저서에서 인생의 해답을 찾으려는 이유가 뭘까? 그것은 쇼펜하우어가 인생 그 자체를 텍스트 삼아 삶의 고통을 철학으로 승화시켰기 때문이다. 인생은 고통이며, 고통은 집착에서 비롯되고, 따라서 집착을 버림으로써 우리는 고통의 소멸에 이를 수 있다는 ‘비관에 대한 비관’을 제시했기 때문이다. 그래서 그의 철학은 행복해지고 싶어서 결국 불행해져 버린 현대인들에게 시사하는 바가 크다.</p>
+                        <p>쇼펜하우어는 일평생 열한 권의 책을 썼고, 그중 생전에 출판된 저서는 여덟 권이다. 괴테를 비롯한 수많은 사람과 편지를 주고받았고, 1만 페이지가 넘는 일기를 거의 하루도 빼놓지 않고 썼다. 『당신의 인생이 왜 힘들지 않아야 한다고 생각하십니까』는 그의 도서들과 편지, 일기 등에서 쇼펜하우어의 삶에 대한 통찰과 정곡을 찌르는 인생 조언을 모아 엮은 책이다. 쇼펜하우어를 알고 있는 사람도, 알지 못했던 사람도 이 책을 읽게 되는 순간, 옛 철학자의 독설 안에 감춰진 열망과 투지를 느낄 수 있을 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">1부</span><br>
+                        나는 ‘나’로서 존재한다<br>
+                        다수는 그저 많은 숫자일 뿐, 많다고 정의가 되는 건 아니다<br>
+                        산책의 동료는 ‘고뇌’로 족하다<br>
+                        나만 힘들고, 나만 피곤하고, 나만 희생당한다는 착각<br>
+                        현명할수록 명예와 체면이 얼마나 가벼운 것인지를 안다<br>
+                        누구나 자신의 산에 오르기를 꿈꾼다<br>
+                        늙음의 덧없음<br>
+                        인생에서 ‘죽음’보다 확실한 것은 없다<br>
+                        부모는 자녀를 개인으로 바라봐주지 않는다<br>
+                        가진 자에게도, 다스리는 자에게도 ‘장수’는 징계다<br>
+                        판단을 타인에게 의존하지 말라<br>
+                            우리가 사소한 일에 위로받는 이유는 사소한 일에 고통받기 때문이다</p>
+                        <p><span class="bold">2부</span><br>
+                        행복이란 단어를 제거하면 행복할 수 있다<br>
+                        신의 은총에 인생을 던지고 싶지 않다<br>
+                        내가 강해질수록 나는 더욱 치명적인 상처를 입는다<br>
+                        자신이 증오스러울 땐 자는 것이 최고다<br>
+                        ‘사유’를 통해 인간은 인간다워진다<br>
+                        인간의 불행 중 상당수는 혼자 있을 수 없어서 생기는 일이다<br>
+                        나는 왜 다른 사람의 판단에 휘말리는 것일까?<br>
+                        아파하고 싶지 않다면 아픔과 친해져야 한다<br>
+                        우정을 우연에 맡겨서는 안 된다<br>
+                        죽음이 오기 전까지 최선을 다하고 싶다<br>
+                        정신적으로 성숙해지려면 마흔 살은 되어야 한다<br>
+                        ‘사람들이 원하는 나’로 평생을 살 수는 없다</p>
+                        <p><span class="bold">3부</span><br>
+                        왜 주님이라는 자는 항상 분노하고 계시는가<br>
+                        잘못된 독서는 나쁜 친구와 어울리는 것보다 나쁘다<br>
+                        권태는 언제나 우리 등 뒤에 서 있다<br>
+                        소유는 만족이 아니라, 의무의 시작이다<br>
+                        나보다 비참한 자들이 나를 행복하게 해준다<br>
+                        교육의 궁극적 목표는 성장이 아닌 ‘개조’에 있다<br>
+                        정신적으로 성숙한 사람일수록 감성이 극도로 예민하다<br>
+                        인간의 성격은 어떻게 만들어지는가<br>
+                        적과 동지를 구별하는 가장 좋은 방법<br>
+                        인간을 불평분자로 만드는 악당<br>
+                        불행이 터졌을 때보다 불행이 지나간 후가 더 중요하다<br>
+                        보잘것없는 재능으로 너무 많은 것을 얻었다</p>
+                        <p><span class="bold">4부</span><br>
+                        그대의 오늘은 최악이었다, 내일은 오늘보다 더 나쁠지도 모른다<br>
+                        범죄자를 위한 사회의 헌신은 공짜가 아니다<br>
+                        가진 자들의 머릿속에는 노동자들에게 더 많은 노동을 전가하는 계획밖에 없다<br>
+                        대체 왜 우리는 노력하는가, 왜 청춘은 꿈을 꾸는가<br>
+                        세계관은 소년 시절에 완성된다<br>
+                        내 안에 악마가 숨어 있다<br>
+                        그다지 불행할 것도, 불편할 것도 없다<br>
+                        승리의 횟수가 늘어날수록 외톨이가 되었다<br>
+                        우리에게 신이 필요한 이유<br>
+                        부강한 국가가 국민의 행복은 아니듯 강력한 국가가 국민의 힘은 아니다<br>
+                        죽음마저도 자연의 일부이다<br>
+                        부처는 밥을 지을 때도 온정성을 쏟는다</p>
+                        <p><span class="bold">5부</span><br>
+                        사람들이 나를 보지 않더라도 정직할 것<br>
+                        국가는 길들여지지 않는 인간을 두려워한다<br>
+                        스스로 생각하는 사람은 군주와 같다<br>
+                        ‘고독’과 ‘권태’는 나의 말이 되었다<br>
+                        철학은 자명한 이치에 대한 반항이다<br>
+                        청년 시절은 처지와 환경이 어떻든 대체로 불만족스럽다<br>
+                        위대한 작품은 항상 시대에 버림받았다<br>
+                        남들이 나를 거부할 때, 내 안에는 거대한 기운이 용솟음친다<br>
+                        ‘부’를 목적으로 지식을 습득하지 마라<br>
+                        인간은 그 자체로 하나의 우주이며, 독립된 세계이며, 유일한 표상이다<br>
+                        나는 타인에게 필요한 물건이 되길 거부하겠다<br>
+                        환상 속에 갇힌 어린아이로 살겠다<br>
+                        오직 질문을 통해서만 성장한다</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr21" th:if="${book.bookCode==21}">
+                    <div class="bkCate bkc21">인문</div>
+                    <div class="bkTitle bkt21">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw21">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl21">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=328755353&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/122120495">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000208779631">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks21">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd21">
+                        <p>2023년 8월 유노북스에서 펴낸 《마흔에 읽는 쇼펜하우어》가 전 서점 종합 베스트셀러 1위에 올랐다. 철학 교양서로는 최초라는 점에서 기념비적이다.</p>
+                        <p>‘마흔’, ‘오십’, ‘서른’ 등 연령을 키워드로 한 인문 교양 도서들이 휩쓸고 있다. 많은 사람이 나이들며 겪는 환경과 감정에 현명하게 대처하기 위한 지혜를 책에서 찾고, ‘어떻게 살아야 하는가’에 대한 고민을 철학과 함께 풀고 있다. 특히 《마흔에 읽는 쇼펜하우어》가 일으킨 ‘쇼펜하우어 신드롬’은 사람들이 공감하는 생각과 말이라면 시대와 상관없이 통한다는 것을 증명한다.</p>
+                        <p>더 반가운 점은 독서의 즐거움을 아는 40대와 50대가 개인의 독서를 넘어 SNS, 유튜브에 글귀와 자기 생각을 공유한다는 것이다. 그리고 이 독서 경험이 20대와 30대, 60대와 70대의 다른 세대로까지 확장되고 있다. 이 중심에 《마흔에 읽는 쇼펜하우어》가 있다.</p>
+                        <p>현재 고려대학교 철학연구소 연구원으로 동 대학에서 강의를 하고 있는 강용수는 쇼펜하우어의 지혜들을 가장 정확히 해석하고 가장 탁월하게 40대의 삶과 연결해 《마흔에 읽는 쇼펜하우어》에 담아냈다. 책에서 쇼펜하우어의 40대 이야기와 주옥같은 말들을 만날 수 있다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">시작하며</span> 상대적인 삶이 아니라 절대적인 삶을 위하여</p>
+
+                        <p><span class="bold">1장 마흔, 왜 인생이 괴로운가 / 쇼펜하우어의 진리</span><br>
+                        01 삶은 전부 의지에 달려 있다 |고통|<br>
+                        -살고자 하는 의지는 인간의 본능이다<br>
+                        -고통을 깨달아야 인생을 깨닫는다<br>
+                        <p>02 인간은 욕망하기 때문에 욕망할 이유를 찾는다 |욕망|<br>
+                        -인간은 구체적으로 욕망한다<br>
+                        -욕망에는 선악이 없다<br>
+                        <p>03 인생은 고통과 권태를 왔다 갔다 하는 시계추 |과잉|<br>
+                        -욕망의 최대 만족과 최대 결핍<br>
+                        -지나침과 미치지 못함은 같다<br>
+                        <p>04 의도적인 배척도 필요하다 |결핍|<br>
+                        -변화하는 조건에 의존하는 행복은 오래가지 않는다<br>
+                        -긍정적인 호기심과 부정적인 호기심을 구분하라<br>
+                        <p>05 욕망은 필연이다 |충족|<br>
+                        -두려움과 희망의 근원은 같다<br>
+                        -욕망이라는 갈증을 해소하는 방법<br>
+                        <p>06 행복하게 산다는 것은 고통을 견딘다는 것이다 |행복|<br>
+                        -당연한 것은 세상에 없다<br>
+                        -행복에 가까워지는 확실한 방법</p>
+
+                        <p><span class="bold">2장 왜 있는 그대로 인정해야 하는가 / 쇼펜하우어의 자신</span><br>
+                        07 행복과 불행에 대한 관점을 바꿔라 |성격|<br>
+                        -기질 속에 나의 길이 있다<br>
+                        -고쳐 쓰지 못하면 바꿔 쓸 수 있다<br>
+                        08 하고 싶은 것과 할 수 있는 것을 분별하라 |능력|<br>
+                        -행복을 위한 가장 중요한 출발점<br>
+                        -행복은 지극히 주관적인 선택이다<br>
+                        09 행복과 불행을 상상하지 마라 |감정|<br>
+                        -기억과 예견은 착각이다<br>
+                        -돌아보지 말고 내다보지 마라<br>
+                        10 고통의 총량은 변하지 않는다 |죽음|<br>
+                        -나와 상관없이 세상은 잘 돌아간다<br>
+                        -죽음은 고통을 해결하는 수단이 아니다<br>
+                        11 모든 인생사는 수난의 역사다 |삶에의 의지|<br>
+                        -삶의 긍정이라는 삶의 부정<br>
+                            -존재하지 않고 행복할 수 없다</p>
+
+                        <p><span class="bold">3장 무엇으로 내면을 채워야 하는가 / 쇼펜하우어의 행복</span><br>
+                        12 행복의 90퍼센트는 건강에 좌우된다 |건강|<br>
+                        -건강한 정신력을 위해 그에 맞는 노력을 하라<br>
+                        -명랑해야 잘 살 수 있다<br>
+                        13 마음의 안정이 없는 행복은 있을 수 없다 |평정심|<br>
+                        -마음의 평정을 찾는 네 가지 방법<br>
+                        -나를 불안하게 하는 것들과 작별하라<br>
+                        14 예술 감각을 갖춰라 |관조|<br>
+                        -자연 앞에 인간의 고통은 아무것도 아니다<br>
+                        -음악은 의지를 울린다<br>
+                        15 인생의 무게 중심을 밖에서 안으로 옮겨라 |향유|<br>
+                        -인생의 질을 결정짓는 한 가지<br>
+                        -타인에게 방해받지 마라<br>
+                        16 인생은 짧고 시간과 힘은 한정돼 있다 |독서|<br>
+                        -양서를 읽기 위한 세 가지 조건<br>
+                        -군주처럼 사유하라<br>
+                        17 문체는 정신의 관상이다 |글쓰기|<br>
+                        -글에 필요한 두 가지, 단호함과 확고함<br>
+                            -그럴듯하게 보여 주지 말고 자기 자신을 위해 써라</p>
+
+                        <p><span class="bold">4장 어떤 사람으로 살아야 하는가 / 쇼펜하우어의 관계</span><br>
+                        18 영원을 위해 사랑한다 |본능|<br>
+                        -사랑은 영원히 살아 있음을 상징한다<br>
+                        -사랑의 형이상학<br>
+                        19 사랑은 이상향이자 현실이다 |연애|<br>
+                        -사랑에 빠지면 콩깍지가 씌이는 이유<br>
+                        -서로의 차이만 기억한다면 사랑은 행복한 착각이다<br>
+                        20 결혼은 공동의 실존이다 |결혼|<br>
+                        -사랑과 결혼 그 후를 내다보라<br>
+                        -많은 것을 기대하지 않으면 행복에 가까워진다<br>
+                        21 인간은 더 완벽해지기 위해 사랑을 한다 |조건|<br>
+                        -나와 반대인 사람에게 끌리는 실존적 이유<br>
+                        -사랑을 현실적으로 인정하라<br>
+                        22 당신의 거리를 유지하라 |관계|<br>
+                        -상처를 주지도 받지도 마라<br>
+                        -함께하기와 거리 두기의 균형을 잡아야 한다<br>
+                        23 혼자 있는 법을 익혀라 |고독|<br>
+                        -홀로 있는 능력이 생겼을 때 가치 있게 살 수 있다<br>
+                        -온전히 혼자 있어 보라<br>
+                        24 타인의 고통에 연민을 느껴라 |공감|<br>
+                        -인간의 양가감정<br>
+                            -사랑하지 않아도 미워하지 말 것</p>
+
+                        <p><span class="bold">5장 어디에서 행복을 찾아야 하는가 / 쇼펜하우어의 인생</span><br>
+                        25 행복한 순간은 너무나 짧다 |만족|<br>
+                        -행복은 항상 과거형이다<br>
+                        -자신에게 알맞은 행복이 있다<br>
+                        26 현재는 두 번 다시 오지 않는다 |현재|<br>
+                        -현재를 살아라<br>
+                        -하루하루는 하나하나의 인생이다<br>
+                        27 자신만의 색깔을 찾아라 |개성|<br>
+                        -원하는 바를 알면 원하는 대로 살 수 있다<br>
+                        -자기 자신으로 행복하라<br>
+                        28 얼마나 소유했는지는 중요하지 않다 |돈|<br>
+                        -행복한 부자, 불행한 부자<br>
+                        -돈의 크기보다 돈의 관리가 더 중요하다<br>
+                        29 타인의 평가는 중요하지 않다 |자존감|<br>
+                        -나도 남을 평가할 수 없고 남도 나를 평가할 수 없다<br>
+                        -호감 가는 사람이 되기를 포기하라<br>
+                        30 나 자신이 누구인지가 중요하다 |자기 긍정|<br>
+                        -인격이 관점을 결정하고 관점이 세계를 결정한다<br>
+                            -내가 깨달은 것만큼이 나의 세계다</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr22" th:if="${book.bookCode==22}">
+                    <div class="bkCate bkc22">인문</div>
+                    <div class="bkTitle bkt22">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw22">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl22">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=315599742&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/118579613">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000201621022">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks22">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd22">
+                        <p>수험생 땐 스톱워치를 가지고 다니며 집중해서 공부한 시간만 재기도 했다. 딴 생각이 들거나 멍해질 땐 주저 없이 STOP을 눌렀다. 매일 잠들기 전 워치에 기록된 시간을 보며 뿌듯했던 기억이 난다. 십수 년이 지난 지금, 나는 하루 집중 시간이 궁금하지 않다. 사실 적극적으로 모르고 싶다. 시계로 재지 않아도 온몸으로 느껴진다. 지난 세월 동안 내게 있던 집중력을 탈탈 털렸음이... 마주하기 두려운 진실이다.</p>
+                        <p>저자는 현대인의 집중력 도둑을 찾아 나서는 사냥꾼을 자처한다. 스스로를 실험 대상으로 삼아 몰입을 되찾아보고, 세계의 전문과들과 인터뷰를 통해 무엇이 우리의 집중력을 해치는지 연구한다. 그는 집중력 도둑을 '너무 많아서 문제인 것들'과 '너무 적어서 문제인 것들'로 나눈다. 전자는 멀티태스킹, 테크 기업의 감시와 조작, 과각성 상태 등이고 후자는 수면 시간, 소설 읽기, 영양가 있는 음식 등이다. 그가 문제를 하나하나 밝혀내고 근거를 들 때마다 눈이 번쩍번쩍 뜨인다. '이게 바로 내 얘기다!' 싶다.</p>
+                        <p>집중력의 위기가 곧 재앙인 이유와 집중력을 훔쳐 가는 도둑들에 관한 이야기를 거쳐 책은 우리의 집중력을 되찾기 위한 방법으로 향한다. 저자의 제안은 대담하게 사회 전체의 구조를 저격한다. "주 4일제가 필요하다." 맥락 없이 들으면 의아한 해결책이지만 책을 집중력 있게 읽었다면 충분히 납득 가능하다. 이 놀라운 결론을 함께 주장하기 위해, 쇼츠와 톡과 타임라인에 중독된 모든 이들에게 이 책을 권한다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>프롤로그<br>
+                        우리 집중력에 실제로 일어나고 있는 일<br>
+                            집중력 문제와 비만율 증가의 공통점 | 우리는 깊이 사고하는 능력을 잃을지도 모른다<br></p>
+                        <p><span class="bold">1장 너무 빠른 속도, 너무 잦은 멀티태스킹 - 집중력은 한정된 자원이다</span><br>
+                            쏟아지는 정보, 짧아지는 집중 시간 | 속도를 낮출 때 집중력에 생기는 일 | 멀티태스킹의 함정 | 불필요한 정보를 걸러내지 못하는 뇌</p>
+                        <p><span class="bold">2장 몰입의 손상 - 스키너의 비둘기와 미하이의 화가, 무엇이 되고 싶은가</span><br>
+                        수십억 사용자에게 적용된 기술 | 잊혀진 몰입의 즐거움 | 인생의 끝에서 무엇을 돌아보게 될까</p>
+                        <p><span class="bold">3장 잠들지 못하는 사회 - 수면의 질이 떨어지면 세상은 모든 면에서 더 흐릿해진다</span><br>
+                        잠들지 않고 깨어 있을 때 가장 먼저 사라지는 것 | 숙취 같은 느낌 | 잠든 사람은 아마존에 접속하지 않는다</p>
+                        <p><span class="bold">4장 소설의 수난 시대 - 긴 텍스트를 읽는 능력이 떨어지면 벌어지는 일</span><br>
+                        화면의 열세 | 우리가 소셜미디어에서 세상을 바라보는 방식 | 소설 읽기의 장기적 효과</p>
+                        <p><span class="bold">5장 딴생각에 대한 새로운 연구가 말해주는 것 - 우리 정신을 배회하게 뒀을 때 생기는 이점</span><br>
+                        딴생각 중에 우리 뇌에 벌어지는 일 | 다시, 딴생각에 실패하다</p>
+                        <p><span class="bold">6장 우리를 추적하고 조종하는 테크 기업들 - 집중력 파괴는 그들의 사업 모델이다</span><br>
+                        세계 최고의 마술사가 들려준 이야기 | “백만장자 메이커” | 어떻게 하면 20억 명의 주의를 빼앗을 수 있을까 | 무한 스크롤 속에서 사라지는 시간</p>
+                        <p><span class="bold">7장 산만함에 불을 지피다 - 집중하지 못하는 사회는 어떻게 위험에 빠졌나</span><br>
+                        테크 기업이 무언가 공짜로 제공할 때 | 기술은 누구의 이익을 위해 설계되는가 | 비난은 조금 더 많이, 이해는 조금 더 적게 | 우리는 알고리즘에 대해 너무 모른다 | 집단의 집중력이 파괴됐을 때 생기는 일 | 진짜 위협과 존재하지도 않는 위협</p>
+                        <p><span class="bold">8장 작고 얄팍한 해결책 - ‘문제는 네 안에 있어’라는 말이 틀린 이유</span><br>
+                        방해 금지 버튼만 누르면 모두 해결된다고? | 그럼 케이크를 먹게 하세요 | 화면 반대쪽 우리 자제력을 꺾는 사람들</p>
+                        <p><span class="bold">9장 근본적인 해결책을 처음으로 목격하다 - 저커버그는 왜 과학자들의 연구 결과를 무시했을까</span><br>
+                        저커버그가 싫어한 접근법 | 인간을 위한 기술</p>
+                        <p><span class="bold">10장 스트레스와 만성적인 각성 상태 - 방해 요소에 저항하는 능력이 현격하게 낮아진 이유</span><br>
+                        위험 앞에서 우리 뇌는 한 가지에만 집중한다 | 핀란드 기본소득 실험이 말해주는 것</p>
+                        <p><span class="bold">11장 우리 사회의 논리에 정면으로 도전한 장소들 - 주4일 근무로 바꾸면 집중력에 어떤 변화가 생길까?</span><br>
+                        이게 된다고요? | 연결되지 않을 권리</p>
+                        <p><span class="bold">12장 값싸고 형편없는 식단 - 허리둘레, 심장, 그리고 집중력을 파괴하는 음식들</span><br>
+                        뇌는 음식 섭취를 통해 만들어집니다 | 멕시코에서 날아온 어린이 MRI 사진</p>
+                        <p><span class="bold">13장 잘못된 ADHD 진단 - 유전자 탓을 하는 동안 우리 아이에게 실제로 벌어지는 일</span><br>
+                        당신 아들의 행동은 당신 탓이 아닙니다 | 정신과 약물을 진단받은 동물들 | 삶의 어떤 요소가 ADHD로 이어질까 | 아이들의 뇌는 약물에 가장 취약합니다 | 쌍둥이 연구의 허점</p>
+                        <p><span class="bold">14장 신체적으로 심리적으로 감금된 아이들 - 아이들은 놀고, 배회하고, 질문하고, 유능해진다</span><br>
+                        인간 역사에서 단 한 번도 없었던 생각 | 우리가 아이들에게서 빼앗아간 것들 | 허클베리 핀의 모험 | “삶은 안전지대에서 벗어나는 순간 시작된다” | 어린이들에게는 욕구가 있다</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr23" th:if="${book.bookCode==23}">
+                    <div class="bkCate bkc23">인문</div>
+                    <div class="bkTitle bkt23">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw23">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl23">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339275828&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/108389546">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001029426">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks23">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd23">
+                        <p>약물, 술, 도박, SNS 등 중독 문제를 두고 우리는 흔히 개개인의 약한 의지나 타락한 도덕성을 원인으로 든다. 중독을 개인의 일탈로 보았지 사회적 차원에서 접근하지 않았다. 따라서 중독 치료는 약물 처방, 심리 치료 또는 도덕적 각성을 통해 해결할 수 있다고 믿어 왔다.</p>
+                        <p>그런데 2021년 미국에서 출간돼 지금까지 뜨거운 논쟁을 일으키고 있는 『도파민네이션』은 인간이 중독에 빠지는 이유를 의지, 도덕성의 결핍이 아니라 쾌락과 고통을 지휘하는 신경물질, 도파민에서 찾고 있다. 또한 중독성 물질, 자본주의, 디지털이 결합된 현실 때문에 중독은 더 이상 개인의 문제가 아닌 모두의 문제, 사회 전체의 관점에서 바라봐야 한다고 주장한다.</p>
+                        <p>이 책의 저자 애나 렘키 박사는 스탠퍼드대학교 의과대학 교수이자 스탠퍼드대학 중독치료 센터를 이끄는 정신과 의사이다. 미국 행정부와 의회의 의료 정책을 만드는데 참여하고 있으며 100여 편이 넘는 글과 논문을 발표한 학자이기도 하다. 그러나 엘리트 코스만을 밟아온 이력과 달리 그녀는 이 책에서 어릴 때부터 우울증을 앓아왔고 의사가 된 후에도 에로티즘 소설에 중독된 적이 있었다고 고백한다. 그녀는 한마디로 중독에 관해서는 ‘전문가’인 동시에 ‘내부고발자’인 셈이다.</p>
+                        <p>『도파민네이션』은 최신 뇌과학, 신경과학 연구와 자신이 20년 동안 만난 수 만 명의 임상사례를 통해 인간, 뇌, 중독 그리고 회복에 대한 새로운 시각을 제시한다. 무엇보다 중독에서 벗어나 삶의 균형을 찾기 위해서는 약물 치료에 의존하기 보다는 도파민의 법칙을 이해하고 고통과 화해하는 법을 익혀야 한다고 말한다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p class="bold">머리말 탐닉의 시대에서 살아가기</p>
+
+                        <p class="bold">1부 쾌락과 고통의 이중주</p>
+
+                        <p><span class="bold">1장 자위 기계를 만드는 남자</span><br>
+                        누구나 이중생활을 한다<br>
+                        탐닉, 도파민 그리고 자본주의<br>
+                            인터넷: 디지털 약물 주사기</p>
+
+                        <p><span class="bold">2장 행복에 중독된 사람들</span><br>
+                        고통은 나쁜 것일까<br>
+                        고통이 사라지면 행복이 찾아올까<br>
+                            행복과 고통의 역설</p>
+
+                        <p><span class="bold">3장 뇌는 쾌락과 고통을 어떻게 이해하는가</span><br>
+                        도파민이 말씀하시되…<br>
+                        쾌락과 고통은 쌍둥이다<br>
+                        뇌과학이 밝혀낸 쾌락-고통 저울<br>
+                        중독은 뇌를 근본적으로 변화시킨다<br>
+                            저울은 비유일 뿐</p>
+
+                        <p class="bold">2부 중독과 구속의 딜레마</p>
+
+                        <p><span class="bold">4장 DOPAMINE: 나와 중독을 이해하는 7단계</span><br>
+                        D는 데이터Data: 너 자신을 알라<br>
+                        O는 목적Objectives: 핑계 없는 무덤 없다<br>
+                        P는 문제Problems: 중독의 악영향을 찾아라<br>
+                        A는 절제Abstinence: 30일의 인내<br>
+                        M은 마음챙김Mindfulness: 고통 들여다보기<br>
+                        I는 통찰Insight: 진짜 나와 대면하기<br>
+                        N은 다음 단계Next Steps: 중독 대상과 새로운 관계 맺기<br>
+                            E는 실험Experiment: 중독과 친구가 되는 법</p>
+
+                        <p><span class="bold">5장 자기 구속: 중독 관리를 위한 3가지 접근법</span><br>
+                        물리적 자기 구속, 쓰레기통에 버리고그 쓰레기통마저 버려라<br>
+                        순차적 자기 구속, 시간제한과 결승선<br>
+                        범주적 자기 구속, 넓은 그물을 쳐라<br>
+                            “저는 맥주를 숭배합니다”</p>
+
+                        <p><span class="bold">6장 처방약의 두 얼굴</span><br>
+                        어느 스탠퍼드 대학생의 중독 연대기<br>
+                        약이 해결책이 될까<br>
+                        나는 우울증을 가진 정신과 의사다<br>
+                            약물 처방의 그림자</p>
+
+                        <p class="bold">3부 탐닉의 시대에서 균형 찾기</p>
+
+                        <p><span class="bold">7장 고통 마주보기</span><br>
+                        찬물 목욕은 왜 짜릿할까<br>
+                        호르메시스의 과학<br>
+                        영웅 요법, 고통을 다스리기 위한 고통<br>
+                            고통이 선물하는 쾌락</p>
+
+                        <p><span class="bold">8장 있는 그대로 말하라</span><br>
+                        호모 거짓말쟁이<br>
+                        솔직함이 뇌를 치유한다<br>
+                        솔직함이 관계를 개선한다<br>
+                        나는 어떻게 엄마와 화해했는가<br>
+                            솔직함은 전염된다</p>
+
+                        <p><span class="bold">9장 나를 살리는 수치심</span><br>
+                        나를 파괴하는 수치심<br>
+                        나를 살리는 수치심<br>
+                        “수치심을 환영합니다”<br>
+                            수치심과 양육</p>
+
+                        <p>맺음말 저울의 교훈</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr24" th:if="${book.bookCode==24}">
+                    <div class="bkCate bkc24">인문</div>
+                    <div class="bkTitle bkt24">하루 한 장 <br>나의 어휘력을 위한 필사노트</div>
+                    <div class="bkWrite bkw24">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl24">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336489042">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/125557465">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000212753904">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks24">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd24">
+                        <p>《어른의 어휘력》으로 대중에게 어휘력과 문해력이라는 화두를 던진 유선경 작가의 첫 필사 책이다. 전작에서 ‘어휘력으로 세상을 인식하는 통찰을 제공’했다면 이 책에서는 어휘력과 문장력, 문해력을 끌어올리는 구체적인 방법 ‘필사’를 소개한다. 특히 어휘력은 책 읽기만으로 향상되기 힘들다고 지적하며, 어휘력을 기르는 구체적인 방법과 그에 따른 필사 가이드를 단계별로 세세하게 공유한다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>서문 – 필사, 살기 위하여</p>
+                        <p class="bold">첫 번째 걸음, 어휘와 친해지기</p>
+
+                        <p><span class="bold">1. 의성어와 의태어를 활용해서 느낌 있는 글쓰기</span><br>
+                        미하엘 엔데 소설 《모모》<br>
+                        박경리 소설 《토지 5》<br>
+                        황지우 시 〈너를 기다리는 동안〉<br>
+                        프랑수아즈 사강 소설 《패배의 신호》<br>
+                        [나의 글쓰기] 쿵쿵! 쿵!<br>
+                        김유정 소설 《봄봄》<br>
+                        신형건 시 〈봄날〉<br>
+                        권대웅 산문 〈두근거림〉<br>
+                        [나의 글쓰기] 당신의 고동 소리<br>
+                        박목월 시 〈기계 장날〉<br>
+                        문순태 시 〈멸치〉<br>
+                        김승희 시 〈새벽밥〉<br>
+                        크리스티앙 보뱅 소설 《가벼운 마음》<br>
+                        권여선 소설 〈삼인행〉<br>
+                        산도르 마라이 소설 《결혼의 변화(상)》<br>
+                        유선경 산문 〈통각 편 감정어휘〉<br>
+                            [나의 글쓰기] 어떤 어휘가 당신에게 들어오나요?</p>
+                        <p>2. 말맛 체험하기 : 언어적 직관을 터득하기<br>
+                        윤동주 시 〈소년〉<br>
+                        페데리코 가르시아 로르카 시 〈진심이다〉<br>
+                        다니엘 글라타우어 소설 《새벽 세시, 바람이 부나요?》<br>
+                        윌리엄 셰익스피어 희곡 《로미오와 줄리엣》<br>
+                        가와바타 야스나리 소설 《설국》<br>
+                        한강 소설 《희랍어 시간》<br>
+                        정지용 시 〈별똥〉<br>
+                        추사 김정희 시 〈봄빛 짙어 이슬 많고〉<br>
+                        막심 고리키 소설 《어머니》<br>
+                        동파 소식 시 〈거문고의 시〉<br>
+                        아쿠타가와 류노스케 소설 〈갓파〉<br>
+                        빅토르 위고 소설 《레 미제라블》<br>
+                            유선경 산문 〈서로의 말을 이해하지 못한다는 사실을 받아들여라〉</p>
+
+                        <p>3. 승자독식의 어휘를 대체하기<br>
+                        승자독식의 어휘 대신 쓸 수 있는 다양한 어휘들<br>
+                        오스카 와일드 소설 《도리언 그레이의 초상》<br>
+                        박완서 소설 《그 많던 싱아는 누가 다 먹었을까》<br>
+                        전혜린 산문 〈긴 방황〉<br>
+                        아멜리 노통브 소설 《이토록 아름다운 세 살》<br>
+                        에밀 아자르 소설 《자기 앞의 생》<br>
+                        장영희 산문 〈‘특별한’ 보통의 해〉<br>
+                        칼릴 지브란 시 〈결혼에 대하여〉<br>
+                        김애란 산문 〈부사副詞와 인사〉<br>
+                        미야시타 나츠 소설 《양과 강철의 숲》<br>
+                        유선경 산문 〈관점을 이동시키면 생각의 그릇이 넓어진다〉<br><br>
+                        이하생략</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr25" th:if="${book.bookCode==25}">
+                    <div class="bkCate bkc25">역사/문화</div>
+                    <div class="bkTitle bkt25">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw25">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl25">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336556121&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/124931409">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000213105508">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks25">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd25">
+                        <p>《박시백의 조선왕조실록》으로 350만 독자의 열렬한 사랑을 받은 우리나라 최고의 역사 만화가 박시백 화백이 한반도 역사상 가장 역동적인 나라 ‘고려’로 향한다. 정사(正史) 사료 《고려사》에 엄정히 기반한 신뢰성부터 고려시대가 한눈에 이해되는 탄탄한 구성과 물 흐르듯 읽히는 이야기, 1,100년 전 고려의 역사적 인물들을 눈앞에 생생히 되살린 또렷한 작화, 남녀노소 누구나 쉽고 재미있게 역사 속으로 빠져들게 하는 만화적 흡인력까지. ‘Korea’의 원조, 한반도 최초의 통일 국가, 지금껏 한 번도 제대로 알지 못했던 고려왕조 500년, 이제 박시백의 만화로 생생히 되살아난다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">1권 천하통일과 고려의 개막</span><br>
+                        제1장 후삼국의 분립<br>
+                        제2장 삼한의 통일<br>
+                        제3장 호족의 나라<br>
+                            제4장 개혁하는 고려</p>
+                        <p><span class="bold">2권 전쟁과 외교, 작지만 강한 고려</span><br>
+                        제1장 거란과의 전쟁<br>
+                        제2장 태평시대<br>
+                        제3장 떠오르는 여진과의 관계<br>
+                            제4장 잇따른 정변</p>
+                        <p><span class="bold">3권 무신정권과 반란의 시대</span><br>
+                        제1장 무신란과 무신정권<br>
+                        제2장 이어지는 무신 권력자<br>
+                        제3장 반란의 시대<br>
+                            제4장 최씨 정권의 성립</p>
+                        <p><span class="bold">4권 대몽항쟁의 끝, 부마국 고려</span><br>
+                        제1장 몽골의 침략과 항전<br>
+                        제2장 무신정권과 항전의 끝<br>
+                        제3장 원나라의 간섭<br>
+                        제4장 부마국</p>
+                        <p><span class="bold">5권 개혁의 실패, 망국으로의 길</span><br>
+                        제1장 허약한 왕좌<br>
+                        제2장 공민왕의 개혁과 좌절<br>
+                        제3장 우왕과 권문세족<br>
+                        제4장 역성혁명</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight  bkr26" th:if="${book.bookCode==26}">
+                    <div class="bkCate bkc26">역사/문화</div>
+                    <div class="bkTitle bkt26">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw26">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl26">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=276531122&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/102932372">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001939531">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks26">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd26">
+                        <p>전 세계 각지에 흩어져 있는 독립운동의 흔적을 발굴하고 기록한 최초의 다큐멘터리. 인도에 간 한국광복군, 멕시코의 애니깽 농부들, 체 게바라의 동지, 한인 최초 백만장자, 우리 공군이 시작된 땅… 이제껏 우리가 들어보지 못한 바다 건너 독립운동가들의 이야기가 펼쳐진다.</p>
+                        <p>기자로 활동하다 여행자의 삶을 살던 김동우 작가는 세계일주를 하던 중 우연히 인도 델리 ‘레드 포트’가 한국광복군 훈련지란 사실을 알게 된다. 이후 독립운동가들의 삶에 강렬하게 사로잡혀 그들의 흔적을 좇아 기록하기 시작한다. 중국, 인도, 멕시코, 쿠바, 미국, 러시아, 네덜란드, 카자흐스탄, 우즈베키스탄, 일본 등 10개국에 이른 생생한 현장 취재기, 그리고 끝끝내 고국으로 돌아오지 못한 독립운동가 후손과의 에피소드를 110컷의 사진과 함께 이 책에 담아냈다. 또한 현장에 얽힌 깊고 내밀한 역사를 풀어내기 위해 수많은 논문과 단행본, 국내외 기사를 망라해 독립운동사를 재구성했다.</p>
+                        <p>둥글둥글하게 생긴 큰 돌을 뜻하는 ‘뭉우리돌.’ 일제강점기 서대문 형무소에 투옥된 김구는 일본 순사가 “지주가 전답의 뭉우리돌을 골라내는 것은 당연한 일이 아니냐!”며 자신을 협박하자 이 말을 오히려 영광으로 여기며 “오냐, 나는 죽어도 뭉우리돌 정신을 품고 죽겠고, 살아도 뭉우리돌의 책무를 다하리라”라고 답했다. 올곧은 일에 생을 바치고자 했던 뭉우리돌들의 역사, 오늘날 반드시 기억해야 할 자랑스러운 대한의 독립운동사가 우리 곁에 새롭게 다가온다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>서문 | 실패했지만 포기하지 않았던 역사</p>
+                        <p><span class="bold">1장. 인도</span><br>
+                        인도 서문 | 두 왕조의 비슷했던 최후<br>
+                        인도에 간 한국광복군<br>
+                        전장에서 찾은 명분<br>
+                            한지성, 비운의 독립운동가</p>
+                        <p><span class="bold">2장. 멕시코</span><br>
+                        멕시코 서문 | 돌아올 수 없던 사람들<br>
+                        목숨을 건 태평양 횡단<br>
+                        국화 한 다발이 바꾼 장면<br>
+                        중국인 안창호<br>
+                        꼬레아노의 시원을 찾아<br>
+                        이정표, 다시 멕시코시티로<br>
+                        상투가 잘린 사람들<br>
+                        멕시코 아리랑<br>
+                        애니깽 농장으로<br>
+                        멕시코에서 독립전쟁을 준비하다<br>
+                        과테말라 정글로 간 한인들<br>
+                        멕시코의 조선 왕족<br>
+                            담을 넘어<br></p>
+                        <p><span class="bold">3장. 쿠바</span><br>
+                        쿠바 서문 | 헤밍웨이와 동시대를 살다<br>
+                        카리브 해의 한인들<br>
+                        정신을 차려야 했다<br>
+                        소탐대실<br>
+                        스파이가 된 한인들<br>
+                        노동 정지<br>
+                        아바나 골목에서 찾은 내 자화상<br>
+                        잃어버린 영웅을 찾아<br>
+                        기록, 소멸을 영원으로<br>
+                        사람이 곧 하늘이다<br>
+                        기록자 임천택<br>
+                        체 게바라의 친구 헤로니모 임<br>
+                        반동분자<br>
+                        사진 한 장의 힘<br>
+                            몸부림의 흔적</p>
+                        <p><span class="bold">4장. 미국</span><br>
+                        미국 서문 | 이민의 문을 열다<br>
+                        기억보다 또렷하고 언어보다 질긴<br>
+                        빛을 찾아<br>
+                        나성에 남은 독립운동의 흔적들<br>
+                        영원한 이별의 징표<br>
+                        아버지의 얼굴을 모르는 아들<br>
+                        낯 뜨거운 이야기<br>
+                        대한의 행복이라야 나의 행복이다<br>
+                        중가주, 독립운동의 ‘금맥’<br>
+                        죽어서도 혼자였던 사람들<br>
+                        두 영웅의 만남<br>
+                        도쿄에 폭탄을 투하하라<br>
+                        우리 역사 최초 공군 장교 탄생<br>
+                        엉터리 사진이 찾아낸 진실<br>
+                        미국에 간 고려인삼<br>
+                        친일을 쏘다<br>
+                        “살인자를 도울 수 없다”<br>
+                        투신, 영웅의 최후<br>
+                        평생 일본 음식에 손대지 않은 사람<br>
+                        큰 나를 위해 작은 나를 바치다<br>
+                        공신력 없는 사진가<br>
+                        맨해튼 한복판에 울려 퍼진 만세 삼창<br>
+                        태평양 사이로 주고받은 메아리<br>
+                        이상한 나라의 앨리스<br>
+                        북극해에서 온 전보<br>
+                        그대여 다시 반짝여라<br>
+                        풀벌레 우는 언덕에서<br>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr27" th:if="${book.bookCode==27}">
+                    <div class="bkCate bkc27">역사/문화</div>
+                    <div class="bkTitle bkt27">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw27">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl27">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329933886&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/124015180">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000211596245">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks27">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd27">
+                        <p>세계사를 다룰 때 우리에게 가장 예민하게 받아들여질 역사는 단연 동아시아의 역사다. 일제강점기라는 뼈아픈 과거의 경험 때문에 한일 간 역사 갈등은 계속되고 있으며, 중국이 동북공정 작업을 벌이면서 한중 간 역사 문제 역시 뜨거운 감자로 떠올랐다. 고대부터 중국은 조공책봉관계를 통해 한반도에 권력을 행사했고, 일본의 도요토미 히데요시는 권력욕 때문에 한반도를 전쟁터로 만들었다.</p>
+                        <p>또한 조선은 명나라와 청나라 틈에 끼어 입장을 정하지 못하다가 병자호란이라는 치욕을 겪었고, 일본 천황과 군부가 권력을 잡은 근대에는 우리나라의 국권이 피탈되는 아픔이 있었다. 이 책에서는 중국과 일본이 왜 한반도를 침략했고 한반도 국가들은 어떻게 대응했는지를 파헤치며 권력자의 기록 뒤에 감춰져 있던 한중일 역사의 진실을 드러낸다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>들어가는 글</p>
+                        <p>제1장 도대체 중화사상이 뭐야? : 중화사상의 시작<br>
+                        제2장 고구려도 조공을 바쳤다 : 고대 한반도와 중국대륙<br>
+                        제3장 중국 역사 절반은 이민족이었다 : 분열과 통일의 연속<br>
+                        제4장 왕이 되고 싶으면 머리를 조아려라 : 명나라와 조선의 관계<br>
+                        제5장 고래 싸움에 조선 등 터진다 : 명청교체기<br>
+                        제6장 중국대륙의 새로운 주인 : 청나라의 부흥과 몰락<br>
+                        제7장 중화민족의 탄생 : 국가를 위해 창조된 민족<br>
+                        제8장 일본 천황의 탄생 : 쓸모 있는 허수아비<br>
+                        제9장 전국시대와 임진왜란 : 동아시아를 흔들어놓은 계기<br>
+                            제10장 메이지유신과 천황 : 허수아비를 벗어나기 위한 몸부림</p>
+                    </div>
+                </div>
+                <div class="bkRight bkr28" th:if="${book.bookCode==28}">
+                    <div class="bkCate bkc28">역사/문화</div>
+                    <div class="bkTitle bkt28">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw28">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl28">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310086732&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/117211673">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000200829658">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    <div class="bkStory bks28">[[${book.bookStory}]]</div>
+                        <div class="bkStoryDetail bksd28">
+                            <p>중국 근현대사의 중심에서 거대한 기업 제국을 형성했던 두 라이벌 가문 서순과 커두리의 숨겨진 100년을 복원한 논픽션이다. &lt;월스트리트 저널&gt; &lt;블룸버그&gt; &lt;보스턴 글로브&gt;의 중국 담당 기자로 30년 가까이 일하며 퓰리처상을 받기도 했던 조너선 카우프만은 치밀한 자료 조사와 수많은 인터뷰, 소설가와 같은 글솜씨로 중국 근대화 과정에서 엄청난 부를 축적한 서순과 커두리의 유산을 세상에 드러냈다.</p>
+                            <p>1차 아편전쟁이 끝난 1842년부터 1949년 공산당 집권까지, 중국 정부가 ‘치욕의 100년’으로 여기며 감추려 했던 이면의 역사를 파고들었다는 점에서 출간 당시부터 유력 매체의 뜨거운 관심을 받았다. 저자의 끈질긴 추적은 중국 근현대사뿐만 아니라 세계화의 거대한 맥락과 연결되며, 서순과 커두리의 발자취와 함께 격동하는 20세기 초의 역사 속으로 독자들을 안내한다. 두 가문의 선택은 21세기를 살아가는 우리에게도 중요한 메시지를 던진다.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>등장인물<br>
+                        지도<br>
+                            들어가는 글</p>
+                        <p><span class="bold">1부 상하이가 부른다</span><br>
+                        1장 가부장<br>
+                        2장 아들들의 제국이자 아편의 제국<br>
+                            3장 로라와 엘리<br></p>
+                        <p><span class="bold">2부 상하이의 거물들</span><br>
+                        4장 떠오르는 상하이<br>
+                        5장 흥행주<br>
+                        6장 “난 줄타기를 하고 있어”<br>
+                        7장 전쟁<br>
+                            8장 “난 인도를 버렸고 중국은 날 버렸다”<br></p>
+                        <p><span class="bold">3부 추방과 귀환</span><br>
+                        9장 결산<br>
+                        10장 마지막 타이판<br>
+                            11장 와이탄으로 돌아오다<br></p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr29" th:if="${book.bookCode==29}">
+                    <div class="bkCate bkc29">역사/문화</div>
+                    <div class="bkTitle bkt29">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw29">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl29">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=324474510">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/122433629">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000209045024">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks29">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd29">
+                        <p>러시아는 왜 우크라이나와 전쟁을 벌이는 걸까? 미국은 언제부터 전 세계를 호령하는 강대국이 되었을까? 《요즘 어른을 위한 최소한의 세계사》는 오늘날 꼭 알아야 할 세계사의 주요 사건을 핵심만 쏙쏙 정리했다. 고대 문명의 탄생부터 강대국의 발전 과정을 시간순으로 빠짐없이 정리해 현재의 세계정세가 어떻게 구축되었는지 머릿속에 세계사의 뼈대를 확실하게 잡기 충분하다.</p>
+                        <p>특히 한 편의 영화를 보는 것처럼 서술되어 있어 읽기 편하고, 속도감 있게 진행되는 스토리텔링으로 정신없이 책장을 넘기게 되는 재미와 흥미진진함까지 갖췄다. 역사를 뒤흔든 전쟁사부터 알아두면 쓸모 있는 세계사 교양까지, 어렵게만 느껴졌던 6,000년 세계사가 이 책 한 권으로 단숨에 정리되는 기적을 경험하게 될 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">프롤로그</span>｜더 나은 삶을 살기 위한 최소한의 역사 교양</p>
+                        <p><span class="bold">PART 01 인류 문명의 탄생, 고대사</span><br>
+                        아스테카문명｜비밀에 싸인 고대 문명이 하루아침에 멸망한 이유<br>
+                        이집트문명｜나일강의 비옥한 토지를 차지하기 위한 전쟁의 역사<br>
+                            황하문명｜천하 패권을 차지하기 위한 중국의 역사</p>
+                        <p><span class="bold">PART 02 역사를 바꾼 결정적인 순간, 전쟁사</span><br>
+                        제1차 세계대전｜제국주의의 탐욕이 낳은 20세기 최초의 대규모 전쟁<br>
+                        제2차 세계대전｜한 사람의 광기가 부른 비극적인 전쟁<br>
+                        태평양전쟁｜일본의 야욕이 불러일으킨 미국과의 한판승부<br>
+                        베트남전쟁｜미국은 왜 동남아 신생국에 패배했을까?<br>
+                            중동전쟁｜피로 물든 신들의 땅은 언제쯤 평화를 찾을 수 있을까?<br></p>
+                        <p><span class="bold">PART 03 대제국 흥망의 역사, 최강국 통사</span><br>
+                        오스만제국｜동서양 문명을 잇는 제국의 탄생<br>
+                        스페인｜유럽과 이슬람의 경계, 이베리아반도를 둘러싼 패권 전쟁<br>
+                        영국｜미지의 섬 브리튼이 해가 지지 않는 나라가 되기까지<br>
+                        러시아와 동슬라브｜왜 러시아는 10년마다 전쟁을 벌일까?<br>
+                            미국｜영국의 식민지에서 초강대국이 될 수 있었던 이유</p>
+                        <p><span class="bold">PART 04 세상이 숨긴 비극의 역사, 잔혹사</span><br>
+                        아이티 혁명｜좀비의 기원이 된 세계 최초 흑인 공화국의 탄생<br>
+                        아편전쟁｜서양을 깔보던 우물 안 개구리 중국의 추락<br>
+                        캄보디아 킬링필드｜홀로코스트보다 잔인한 전 국민 4분의 1이 사망한 대학살극<br>
+                        홍콩 구룡성채｜20세기 최후의 무법지, 거대한 슬럼에서 일어난 일들<br>
+                            오키나와 류큐 왕국｜이제는 사라진 옛 국가를 찾아서</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr30" th:if="${book.bookCode==30}">
+                    <div class="bkCate bkc30">역사/문화</div>
+                    <div class="bkTitle bkt30">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw30">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl30">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=327615498&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/122599816">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000210802438">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks30">지난 25년간의 연구를 바탕으로 <br> 예루살렘을 거쳐 간 4000년 인류 역사를 극적으로 재구성했다.</div>
+                    <div class="bkStoryDetail bksd30">
+                        <p>프랑스 최고의 역사학자 뱅상 르미르가 들려주는 아주 특별한 세계사다. 지난 25년간의 연구를 바탕으로, 예루살렘을 거쳐 간 4000년 인류 역사를 극적으로 재구성했다. 전 세계 역사와 종교와 정치와 문명이 충돌하는 최전선인, 아주 특별한 장소의 연대기라고도 할 수 있다.</p>
+                        <p>이 책에 등장하는 (유명하거나 그렇지 않은) 수많은 인물들은 수십 세기 동안 예루살렘을 직접 겪었던 당사자들이거나 목격자들이다. 합창처럼 울려 퍼지는 이들의 생기 있는 목소리는, 온갖 것이 뒤섞이고 뒤얽혀 있는 이 혼성적인 도시의 역사와 당대 삶의 모습들을 하나하나 풀어낸다. 꾸며낸 내용은 단 하나도 없다! 이 웅장한 서사에 살을 붙이는 장면과 대사들은 모두 200개 이상의 문헌과 미공개 아카이브에서 따온 것들이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>1장. 태초에 성전(聖殿)이 있었나니 (기원전 2000년~기원전 586년)<br>
+                            2장. 제국의 그늘 아래 (기원전 586년~기원후 312년)<br>
+                            3장. 기독교 예루살렘의 탄생 (312~614년)<br>
+                            4장. 알-쿠드스, 이슬람의 성도 (614~1095년)<br>
+                            5장. 십자군의 세기 (1095~1187년)<br>
+                            6장. 살라딘의 유산, 맘루크의 발자취 (1187~1516년)<br>
+                            7장. 오스만 왕조의 평화 (1516~1799년)<br>
+                            8장. 성도의 재발명 (1799~1897년)<br>
+                            9장. 시온의 꿈 (1897~1947년)<br>
+                            10장. 불가능한 수도 (1947년~ )<br>
+                            연대표 / 자료와 참고문헌 / 감사의 말
+                        </p>
+                    </div>
+                </div>
+                <div class="bkRight bkr31" th:if="${book.bookCode==31}">
+                    <div class="bkCate bkc31">역사/문화</div>
+                    <div class="bkTitle bkt31">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw31">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl31">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332027100&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/123155346">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000210830482">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks31">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd31">
+                        <p>모두가 ‘신의 직장’이라고 부르는 공기업에 취업한 사람이 있다. 대기업 수준의 연봉에 정년이 보장되고, 퇴직 이후에는 연금까지 나오니 이제 앞으로 돈 걱정은 할 필요가 없을 것 같았다. 입사 이후에도 성실하게 일한 그는 3년 연속 최우수 인사 고과를 받으며 최연소 인사 팀장이 되었다. 이만하면 성공한 인생이라는 생각이 들었다. 하지만 그렇게 그가 이렇게 ‘성공’한 삶을 사는 사이, 과중한 업무 스트레스로 인한 건강 악화로 공황장애가 찾아왔다. 난치병으로 한쪽 청력을 30%나 잃었다. 출근길에 매고 다니는 가방에는 각종 병원에서 받아 온 약이 한가득하였다. 거울을 들여다보며 그는 물었다. ‘이게 정말 내가 원하는 삶의 모습인가?’, ‘내가 진정으로 원하는 것은 무엇인가?’</p>
+                        <p>결론은 분명했다. 회사에 매여 건강과 시간을 바치는 삶은 바라던 모습이 아니었다. 내가 언제, 어디서, 무엇을, 어떻게, 왜 할지는 스스로 정하고 싶었다. 스스로 계속 되물었다. ‘내가 진정으로 원하는 것은 무엇인가.’ 그러던 어느 순간 머릿속에 진짜 하고 싶은 일을 하면서 여유롭게 살아가는 모습이 생생하게 떠올랐다. 따스한 햇볕이 내리쬐는 하와이에 머물며 행복한 시간을 보내는 모습. 수십만 구독자들에게 매일 아침 동기부여와 영감을 주는 유튜브 채널 ‘하와이 대저택’이 탄생한 순간이었다. 진정으로 원하는 삶이 무엇인지 알아차린 저자가 자기계발의 거장, 자수성가한 사업가, 학자들의 책 수천 권을 읽어가며 발견한 무의식, 마인드 셋의 힘을 본인이 직접 체득하고 실천한 구체적인 방법과 함께 담았다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p class="bold">(프롤로그) 원하는 현실을 만드는 해답, 그 단 하나의 비밀은 당신 안에 있다</p>
+                        <p class="bold">1부 나는 어떻게 경제적 자유를 끌어당겼는가</p>
+                        <p><span class="bold">2부 부와 성공의 원칙을 인수분해하다</span><br>
+                        (제1원칙) 무의식에 설치된 가난을 삭제하라<br>
+                        • 부자가 되고 싶은 사람은 결국 부자가 된다<br>
+                        • 가난한 신념에 의심을 품어라<br>
+                        • 당신의 무의식에는 어떤 프로그램이 설치되어 있는가<br>
+                            • 평생 ‘포텐’ 한번 못 터뜨리고 살다 갈 건가<br></p>
+                        <p><span class="bold">(제2원칙) 상상을 통해 무의식에 닿아라</span><br>
+                        • 그건 진짜 당신의 목표가 아니다<br>
+                        • 상상만으로 현실이 바뀌는 이유<br>
+                        • 내 인생을 ‘미리 보기’ 하면 일어나는 일들<br>
+                        • 부를 끌어당기는 확실하고 구체적인 방법<br>
+                        • 무의식의 힘을 극대화하는 ‘감사하기’의 위력<br>
+                            • 빚을 생각하면 빚은 늘어난다<br></p>
+                        <p><span class="bold">(제3원칙) 부를 강하게 끌어당겨라</span><br>
+                        • 도대체 언제 이루어지는가<br>
+                        • 원하는 곳에 최단거리로 도달하는 끌어당김의 법칙<br>
+                        • 아무런 노력 없이 무의식을 바꿀 수 있다<br>
+                        • 무의식의 시그널은 불꽃놀이처럼 다가온다<br>
+                            • 동기 부여는 세수 하듯 매일 하는 것이다<br></p>
+                        <p><span class="bold">(제4원칙) ‘불편의 다리’를 건너 원하는 곳으로 가라</span><br>
+                        • 지금 당장, 먼지 같은 성공을 시작하라<br>
+                        • 일단 시작은 했는데 이 정도로 힘들 줄은 몰랐던 당신에게<br>
+                        • 이제 인생의 비대위를 가동할 시간이다<br>
+                            • 남들보다 1년 더 길게 사는 법<br></p>
+                        <p><span class="bold">(제5원칙) 고립된 자, 성공한다</span><br>
+                        • 페이스메이커로 살지 마라<br>
+                            • 두려움, 망설임, 막연함을 넘어서는 가장 쉬운 방법<br></p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr32" th:if="${book.bookCode==32}">
+                    <div class="bkCate bkc32">자기개발</div>
+                    <div class="bkTitle bkt32">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw32">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl32">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331475851&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/9349031">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001619177">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks32">이 책에는 부와 성공을 안겨줄 무기가 들어 있다! <br> 자청, 신사임당 등 인플루언서의 강력 추천 인생 책!</div>
+                    <div class="bkStoryDetail bksd32">
+                        <p>2022, 2023년 연이어 종합 베스트셀러에 선정된《원씽》이 국내 60만 부 판매를 기념하여 스페셜 에디션으로 탄생했다. 수많은 언론과 매체, 인플루언서들이 연이어 《원씽》을 다시 찾아 읽고 강력하게 추천하는 이유는 무엇일까?</p>
+                        <p>오늘 날, 많은 사람이 멀티 태스킹의 환상을 가지며 동시에 여러가지 일을 잘 해내고 싶어한다. 하지만 실제 부와 성공을 거머쥔 이들의 이야기를 들어보면 다르다. 인플루언서 자청, 신사임당은 한 방송에서 100억을 벌게 만든 책으로 《원씽》을 꼽으며, 진짜 원하는 것을 이룰 수 있는 ‘단 하나’가 무엇인지 고민하자 성공의 길이 열리기 시작했다고 밝혔다. 모든 것을 동시다발적으로 해내길 바라는 사회에서 《원씽》이 주는 특별한 교훈은 우리가 지치거나 포기하지 않고 목표를 향해 앞으로 나아가는 힘이 되어준다.</p>
+                        <p>성공은 도미노처럼 작동한다. 성공한 사람들은 ‘성공에 필요한 일’이 무엇인지 알아내고 그 ‘단 하나의 일’을 순서에 맞게 진행한다. 첫 번째 일을 제대로 해내면, 도미노가 쓰러지듯 더 큰 성공의 길이 이어진다. 이렇게 차근차근 ‘단 하나의 일’을 해내다보면 어느새 더 크고 위대한 성공을 이루게 된다. 스스로 자기 인생의 ‘단 하나’, 즉 이 책이 말하는 ‘원씽’을 찾아낼 수만 있다면 누구나 부와 성공을 거머쥘 수 있다.</p>
+                        <p>이 책은 누구나 자신만의 ‘원씽’을 찾을 수 있도록 도와주며 미래의 청사진을 그리고 계획을 세우는 방법과 반드시 목표를 이룰 수 있는 노하우를 전해준다. 특히 이번 리커버는 하드 커버로, 《원씽》의 메시지를 간직하고자하는 독자들에게 그 무엇보다 특별한 선물이 될 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>한국의 독자들에게</p>
+                        <p>제1장 당신에게 가장 중요한 ‘단 하나’는 무엇인가<br>
+                        제2장 도미노 효과<br>
+                        제3장 성공은 반드시 단서를 남긴다</p>
+                        <p><span class="bold">제1부 : 거짓말_의심해 봐야 할 성공에 관한 여섯 가지 믿음</span><br>
+                        제4장 모든 일이 다 중요하다<br>
+                        제5장 멀티태스킹은 곧 능력이다<br>
+                        제6장 성공은 철저한 자기관리에서 온다<br>
+                        제7장 의지만 있다면 못할 일은 없다<br>
+                        제8장 일과 삶에 균형이 필요하다<br>
+                            제9장 크게 벌이는 일은 위험하다<br></p>
+                        <p><span class="bold">제2부 : 진실_복잡한 세상에서 중심을 잃지 않는 법</span><br>
+                        제10장 미래의 크기를 바꾸는 초점탐색 질문<br>
+                        제11장 도미노를 세워라<br>
+                            제12장 삶의 해답으로 가는 길<br></p>
+                        <p><span class="bold">제3부 : 위대한 결과_인생의 반전을 불러오는 단순한 진리</span><br>
+                        제13장 목적의식을 가지고 살아라<br>
+                        제14장 우선순위에 따라 살아라<br>
+                        제15장 생산성을 위해 살아라<br>
+                        제16장 세 가지 약속<br>
+                        제17장 네 종류의 도둑들<br>
+                            제18장 위대함으로 가는 변화의 시작<br></p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr33" th:if="${book.bookCode==33}">
+                    <div class="bkCate bkc33">자기개발</div>
+                    <div class="bkTitle bkt33">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw33">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl33">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318336319&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/117722000">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000201141891">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks33">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd33">
+                        <p>1980년대, 학문을 통해 세상이 나아갈 방향을 찾는 것과 거리에서의 실천 사이에서 방황하던 한 역사학도는 “이론(역사)을 추구해야 실천(기록)에 도달할 수 있고, 실천(기록)을 통해야 이론(역사)에 도달할 수 있다.”는 생각에서 기록학자가 되었다. 그는 2000년도부터 ‘공공기관의 기록물관리에 관한 법률’을 만드는 데 매진하였고, 청와대에서 기록 및 업무 혁신 TF의 자문위원장으로도 활동했다. 또 기록학회를 만들어 학술 활동도 쉬지 않았으며, 기록연구사로 키워 낸 제자만 300명이 넘는 등, 대학과 정부, 사회에 기록의 중요성을 알리는 데 힘썼다. 국내 최초이자 1호 기록학자인 김익한 교수의 이야기이다.</p>
+                        <p>그는 오랜 기간 기록하고 가르치고 퍼뜨리는 과정에서 예상보다 많은 사람이 기록을 제대로 이해하거나 활용하지 못해 여러 면에서 불편을 겪고 있음을 알게 되었다. 기록만 잘할 수 있다면 생활과 학업, 일, 관계가 좀 더 분명해지고 해결책을 쉽게 찾을 수 있으리라는 생각에, 기록‘학’에서 학문의 난도를 낮추고 구체적인 방법과 기술부터 알리기 위해 유튜브 채널까지 열었다. 그리고 개개인의 사연을 가까이에서 듣게 되면서 그들에게 좀 더 나은 삶을 선물하고 싶다는 생각이 들었다. 그래서 이 책을 통해 기록의 중요성과 가치를 일깨우고 성장을 가로막는 벽을 뛰어넘는 방법, 머릿속을 맴도는 생각을 요약하고 정리하는 방법, 그리고 공부부터 대화, 생각, 일상, 일까지 삶을 구성하는 다섯 가지 주요 영역에서 능률을 높이기 위해 어떻게 기록해야 하는지를 소개한다. 스스로 남긴 기록을 디딤돌 삼아 가장 높은 곳에 서기를, 거인의 어깨 위에 올라타 거인보다 조금 더 멀리 볼 수 있기를, 우리 모두가 생각하고, 말하고, 기록하고, 공유하며 나를, 가정을, 나라를 들여다보기를, 그리하여 우리 삶의 민주주의가 조금씩 성장해 가기를 바라는 마음에서다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">들어가는 글</span> 기록하면 인생의 방향이 보인다</p>
+                        <p><span class="bold">1부 기록하는 인간</span><br>
+                        1장 성장<br>
+                        01 기록형 인간으로 산다는 것<br>
+                        02 당신은 여전히 성장할 수 있다<br>
+                        03 나만의 성장 메커니즘을 만들어라<br>
+                        04 휘발되는 지식을 잡아라<br>
+                        05 생각은 나선형으로 성장한다<br>
+                        06 내적 자산을 활용하라<br>
+                            ❖ 생각하는 힘을 기르는 3단계 연습<br></p>
+                        <p><span class="bold">2장 자유</span><br>
+                        07 당신의 삶이 공허한 이유<br>
+                        08 진짜 욕망을 찾아가는 과정<br>
+                        09 일하기 싫은 진짜 이유를 찾아라<br>
+                        10 미래가 불안하다면 경험을 기록하라<br>
+                        11 인생의 본질은 자유를 찾는 과정이다<br>
+                        12 기록은 나눌수록 확장된다<br>
+                            ❖ 나를 알아 가는 기록 연습<br></p>
+                        <p><span class="bold">2부 거인의 요약법과 분류법</span><br>
+                        3장 집중<br>
+                        01 기록의 고수는 많이 쓰지 않는다<br>
+                        02 핵심만 남기고 다 버려라<br>
+                        03 이해가 안 되는 건 내 것이 아니다<br>
+                        04 책을 자기화하는 최고의 방법<br>
+                        05 오독에 대한 두려움을 버려라<br>
+                        06 짜깁기와 요약의 결정적 차이<br>
+                            ❖ 생활의 모든 것을 요약하는 습관<br></p>
+                        <p><span class="bold">4장 확장</span><br>
+                        07 막막하다면 나눠 보라<br>
+                        08 분류하면 고민의 답이 보인다<br>
+                        09 한곳에 메모하고 나누어 정리하라<br>
+                        10 쌓인 기록을 정리하고 되살리는 방법<br>
+                            ❖ 기록을 즐겁게 만드는 도구들<br></p>
+                        <p><span class="bold">3부 거인의 다섯 가지 기록법</span><br>
+                        5장 공부<br>
+                        01 정보에서 지식으로, 지식에서 지혜로<br>
+                        02 책을 읽고 키워드로 기록하라<br>
+                        03 어려운 책을 쉽게 읽는 방법<br>
+                        04 암기가 쉬워지는 공부 기록<br>
+                            05 글을 잘 쓰고 싶다면 메모 글쓰기를 하라<br></p>
+                        <p><span class="bold">6장 대화</span><br>
+                        06 대화는 어떻게 지식이 되는가<br>
+                        07 주고받으면서 쌓이는 다이얼로그의 신비<br>
+                        08 말 속에 숨어 있는 지혜를 놓치지 않으려면<br>
+                        09 대화의 맥락을 기록하라<br>
+                            10 대화할 때 떠오르는 순간의 생각을 포착하라<br></p>
+                        <p><span class="bold">7장 생각</span><br>
+                        11 기록이 쌓이면 아이디어가 된다<br>
+                        12 고민된다면 생각을 기록하라<br>
+                        13 무의식을 어떻게 기록하는가<br>
+                            14 천재는 기록으로 이루어진다<br></p>
+                        <p><span class="bold">8장 일상</span><br>
+                        15 신기루가 아닌 진짜 삶에 집중하라<br>
+                        16 아침에는 꿈을 적고, 밤에는 과거를 적어라<br>
+                        17 오늘을 기록하면 팔리는 콘텐츠가 된다<br>
+                        18 기록형 인간의 다이어리 사용법<br></p>
+                        <p><span class="bold">9장 일</span><br>
+                        19 유능해지고 싶다면 일을 기록하라<br>
+                        20 상사의 지시를 메모하는 법<br>
+                            21 내 삶을 바꾼 월간 다이어리 작성법<br></p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr34" th:if="${book.bookCode==34}">
+                    <div class="bkCate bkc34">자기개발</div>
+                    <div class="bkTitle bkt34">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw34">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl34">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=323548193">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/122090360">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000208718100">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks34">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd34">
+                        <p>살 날이 얼마 남지 않은 ‘미래의 내’가 현재로 시간 여행을 왔다고 상상해보자. ‘현재의 나’는 해야 할 일은 미뤄둔 채 소파에 누워 핸드폰을 보느라 시간 가는 줄 모른다. 당장 사고 싶은 것, 먹고 싶은 것에 생각 없이 돈을 쓰고, ‘다음 달의 나’에게 결제를 미룬다. 자극적이고 간편한 정크 푸드를 즐겨 먹으며 건강은 생각하지 않는다. 어린 자녀와 눈을 맞추고 시간을 보내기보다 잔소리와 고성이 오가는 전쟁 같은 하루하루를 보낸다. 이 모습을 본 ‘미래의 나’는 과연 어떤 말을 하고 싶을까? 혹시 지금의 내 모습과 크게 다르지 않다고 생각하는가? 미래의 모습이 그려지지 않는다면, 현재의 내가 좀 더 나은 모습이기를 원한다면 이 책이 해답을 제시해줄 것이다.</p>
+                        <p>‘미래의 나는 어떤 모습일까?’라는 질문은 우리가 인생에서 쉽게 놓치는 중요한 진실에 이르게 한다. 즉, 미래의 나와 연결될수록 현재 더 나은 삶을 살게 된다는 것이다. 이 책은 미래의 내가 어떤 모습일지 깊이 생각해보고, 지금 그 사람이 되는 방법을 구체적으로 알려주는 인생 지침서이다. 상상한 미래 자아는 현실에서 원동력이 되어 목표와 우선순위가 달라지고, 이에 맞게 행동하게 만든다. 그렇기에 우리가 다시 예전 모습으로 돌아가려 하거나 의지가 약해질 때마다, 혹은 작은 성취를 맛본 후 다음 목표를 정해야 할 때 이 책을 옆에 두고 수시로 꺼내 보기를 권한다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p class="bold">프롤로그: 현재와 미래가 달라지는 놀라운 혁명</p>
+                        <p><span class="bold">Part1 미래의 나를 위협하는 요인 7가지</span><br>
+                        위협 1: 미래에 대한 희망이 없다면 현재는 의미를 잃는다<br>
+                        위협 2: 과거에 대한 부정적인 스토리는 미래를 위협한다<br>
+                        위협 3: 주변 환경을 인식하지 못하면 당신은 아무 길이나 가게 된다<br>
+                        위협 4: 미래의 나와 단절되면 근시안적인 결정을 내리게 된다<br>
+                        위협 5: 시급한 문제와 사소한 목표가 당신의 발목을 잡는다<br>
+                        위협 6: 경기장에 들어가지 않으면 당연히 패배다<br>
+                        위협 7: 성공이 실패의 기폭제가 될 때가 있다<br>
+                            key point: 미래의 나에 대한 위협<br></p>
+                        <p><span class="bold">Part2 미래의 나에 대한 진실 7가지</span><br>
+                        진실 1: 당신의 미래가 현재를 이끈다<br>
+                        진실 2: 미래의 나는 예상과 다르다<br>
+                        진실 3: 미래의 나는 피리 부는 사람이다<br>
+                        진실 4: 미래의 나를 생생하고 자세하게 그릴수록 더 빠르게 발전한다<br>
+                        진실 5: 미래의 나의 실패가 현재의 나의 성공보다 낫다<br>
+                        진실 6: 성공하려면 미래의 나에 진실해져야 한다<br>
+                        진실 7: 신에 대한 견해가 미래의 나에게 영향을 미친다<br>
+                            key point: 미래의 나에 대한 진실</p>
+                        <p><span class="bold">Part3 미래의 내가 되는 7단계</span><br>
+                        1단계: 현실에 맞는 목표를 명확하게 세워라<br>
+                        2단계: 덜 중요한 목표들을 제거하라<br>
+                        3단계: 필요에서 열망으로, 열망에서 앎으로 나아가라<br>
+                        4단계: 원하는 것을 정확하게 요구하라<br>
+                        5단계: 미래의 나를 자동화하고 시스템화하라<br>
+                        6단계: 미래의 나의 일정을 관리하라<br>
+                        7단계: 완벽하지 않더라도 공격적으로 완수하라<br>
+                            key point: 미래의 내가 되는 단계<br></p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr35" th:if="${book.bookCode==35}">
+                    <div class="bkCate bkc35">자기개발</div>
+                    <div class="bkTitle bkt35">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw35">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl35">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=258108880&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/96072143">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000001949259">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks35">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd35">
+                        <p>‘생각의 힘’에 대한 강조는 이미 여러 책을 통해 접해 온 주장이다. 그러나 성공한 몇몇 이들의 주장과 생각은 그들의 것이지 우리의 것이 아니다. 비루한 현실 속에서 우리는 ‘생각하는 대로 이루어진다’라는 말이 주는 용기 이면에 있는 ‘간절히 원하면 우주의 기운이 나서 도와준다’는 식의 무조건적 신념에 코웃음 칠지 모른다.</p>
+                        <p>인생이 정말 내가 생각하는 대로, 원하는 대로 될 수 있다면 지금의 이 현실은 무엇이란 말인가! 수많은 실패자들은 마음에 실패를 품어서 실패했단 말인가? 생각의 힘을 강조하는 주장과 더불어 늘 재기되는 이런 의문들은 냉소로 귀결된다.</p>
+                        <p>그런데 이 책의 저자 앨런 피즈와 바바라 피즈는 이런 우리의 생각을 읽었다! 그래서 가장 먼저 “우리 뇌가 가동하는 기막힌 소원성취 시스템”으로서의 망상활성계에 대해 설명한다. 성공철학의 대부라 할 수 있는 나폴레온 힐이 우리의 “마음이 무엇을 품고 무엇을 믿든 몸이 그것을 현실로 이룬다”라는 말을 했을 때, 그 믿음을 증명해 줄 의학기술이 없었다. 그러나 이제 현대 의학은 뇌 스캔 장치로 힐이 말한 것의 진위를 과학적으로 따져볼 수 있게 해 준다.</p>
+                        <p>성취, 목표 설정, 자기 충족적 예언, 기도의 힘, 끌어당김의 법칙 같은 정신작용이 과학의 영역으로 들어왔다. 우리 뇌는 자아와 인격 형성뿐 아니라 인생의 성공과 실패에도 깊이 관여한다. 그러므로 현재 어떤 상태에 있든 나의 미래만은 내 뜻대로, 내 힘을 통해 성공적으로 꾸리고 싶다면 ‘과학적’ 견지에서 우리 뇌의 작동 방식을 알아보는 것이 유용할 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p>들어가는 글</p>
+                        <p>1장 망상활성계RAS의 비밀<br>
+                        2장 무엇을 원할지 결정하라<br>
+                        3장 목표를 명확하게 정의하라<br>
+                        4장 데드라인이 없는 계획은 계획이 아니다<br>
+                        5장 누가 뭐라고 하든 밀고 나가라<br>
+                        6장 내 인생의 최고 결정자<br>
+                        7장 시각화 기법<br>
+                        8장 확언의 힘<br>
+                        9장 버릇 바꾸기<br>
+                        10장 확률게임<br>
+                        11장 웃음이 만병통치약<br>
+                        12장 두려움과 걱정 극복<br>
+                        13장 포기 금지, 좌절 금지<br>
+                        14장 파산자에서 갑부로<br>
+                        15장 몸에게 지령을 내려라<br>
+                        16장 종합장</p>
+                        <p>참고문헌</p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+                <div class="bkRight bkr36" th:if="${book.bookCode==36}">
+                    <div class="bkCate bkc36">자기개발</div>
+                    <div class="bkTitle bkt36">[[${book.bookTitle}]]</div>
+                    <div class="bkWrite bkw36">[[${book.bookWriter}]]<span class="ji">지음</span></div>
+                    <hr>
+                    <div class="bkLink bkl36">
+                        <div class="joinLink">구매하러 가기</div>
+                        <span class="aladin"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317300995&start=slayer">알라딘<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="yes24"><a href="https://www.yes24.com/Product/Goods/119120517">예스24<img th:src="@{/image/rightarrow.png}"></a></span>
+                        <span class="kyobo"><a href="https://product.kyobobook.co.kr/detail/S000202340164">교보문고<img th:src="@{/image/rightarrow.png}"></a></span>
+                    </div>
+                    <div class="bkStory bks36">[[${book.bookStory}]]</div>
+                    <div class="bkStoryDetail bksd36">
+                        <p>95퍼센트의 인간은 타고난 유전자와 본성의 꼭두각시로 살아간다. 이들은 평생 돈, 시간, 운명에게 속박되어, 평범함을 벗어나지 못하고 불행하게 사는 ‘순리자’다. 그러나 5퍼센트의 인간은 다르다. 이들은 타고난 유전자의 본성을 역행해 돈, 시간, 운명으로부터 완전한 자유를 얻는다. 본성을 거슬러 행복을 쟁취하는 이들이 바로 ‘역행자’다.</p>
+                        <p>운명과 본능의 지배에서 벗어나 경제적 자유와 행복을 쟁취하는 라이프해킹의 비밀을 담은 책, 『역행자』가 2022년 출간된 지 1년 만에 확장판으로 다시 돌아왔다. ‘무자본 연쇄창업마’로서 30대 초반에 자동화 수익을 완성한 자청, 그가 10년 동안 시행착오를 겪으며 찾아낸 ‘역행자 7단계’ 모델을 담은 『역행자』는 2022년 출간 즉시 ‘전 서점 종합 베스트셀러 1위 달성’, ‘1년 만에 40만 부 판매’라는 대기록을 세우며 대한민국에 ‘역행자 신드롬’을 불러일으켰다.</p>
+                        <p>『역행자』 확장판은 더욱 묵직해진 팩트 폭격과 뼈 때리는 사례들, 저자의 비밀 노하우인 ‘무자본 창업 7단계 공식’ 등을 수록하며 초판에 비해 무려 100페이지 가량의 분량이 추가되었다. 저자의 생생한 육성을 그대로 담았을 뿐만 아니라 『역행자』를 만나 완전히 다른 인생을 살고 있는 독자들의 생생한 경험담을 수록하여 독자들로 하여금 역행자가 되지 않고는 버틸 수 없게 만든다. 한층 더 강력해진 『역행자』 확장판만 있다면, 당신도 저자와 함께 ‘돈, 시간, 운명’으로부터 완전한 자유를 얻게 될 것이다.</p>
+                    </div>
+                    <hr>
+                    <div class="bkIndex">목차</div>
+                    <div class="bki">
+                        <p><span class="bold">확장판 서문 | 『역행자』를 뛰어넘은 『역행자』 확장판<br>
+                            프롤로그 | 30대 초반, 일하지 않아도 월 1억씩 버는 자동 수익이 완성되다</span><br>
+                        인생에도 공략집이 있다면<br>
+                        역행자 7단계 모델<br>
+                        세상에 공짜는 없지만</p>
+                        <p><span class="bold">CHAPTER1 나는 어떻게 경제적 자유에 이르게 되었나</span><br>
+                        1막/ 3개의 벽_ 인생에서 절대 넘을 수 없을 거라 믿었던 것<br>
+                        2막/ 하루 2시간, 기적의 시작_ 역행자의 첫 번째 단서<br>
+                        3막/ 배수의 진_ “19000원이 입금되었습니다”<br>
+                        4막/ 행운 뒤에 숨은 것_ ‘이보다 최악의 상황이 있을까?’<br>
+                        5막/ 인간의 그릇_ 결국 사람은 제 그릇만큼의 돈을 모은다<br>
+                        피날레/ 거슬러 오르기_ 돈, 시간, 정신으로부터 완벽한 자유를 얻다</p>
+
+                        <p><span class="bold">CHAPTER2 역행자 1단계_ 자의식 해체</span><br>
+                        자의식이 인간을 망치는 이유<br>
+                        내가 너무 소중한 사람들<br>
+                        자의식 해체의 3가지 단계<br>
+                            인생을 허비하는 특별한 방법<br></p>
+
+                        <p><span class="bold">CHAPTER3 역행자 2단계_ 정체성 만들기</span><br>
+                        내 머리를 포맷할 수 있다면<br>
+                        정체성 소프트웨어를 설치하기<br>
+                            자유의지가 없다는 믿음에 대하여<br></p>
+
+                        <p><span class="bold">CHAPTER4 역행자 3단계_ 유전자 오작동 극복</span><br>
+                        뇌는 어떻게 진화했을까<br>
+                        진화의 목적은 완벽함이 아니라 생존이다<br>
+                        유전자 오작동을 이기는 역행자의 사고방식<br>
+                            오작동을 극복하고 30억을 취하다<br></p>
+
+                        <p><span class="bold">CHAPTER5 역행자 4단계_ 뇌 자동화</span><br>
+                        뇌를 복리로 성장시킨다면<br>
+                        뇌 최적화 1단계_ 22전략<br>
+                        뇌 최적화 2단계_ 오목 이론<br>
+                            뇌 최적화 3단계_ 뇌를 증폭시키는 3가지 방법<br></p>
+
+                        <p><span class="bold">CHAPTER6 역행자 5단계_ 역행자의 지식</span><br>
+                        기버 이론_ 역행자는 1을 받으면 2를 준다<br>
+                        확률 게임_ 역행자는 확률에만 베팅한다<br>
+                        타이탄의 도구_ 유전자에 각인된 장인 정신을 역행하라<br>
+                        메타인지_ 주관적인 판단은 순리자들의 전유물이다<br>
+                            실행력 레벨과 관성<br></p>
+
+                        <p><span class="bold">CHAPTER7 역행자 6단계_ 경제적 자유를 얻는 구체적 루트</span><br>
+                        돈을 버는 근본 원리<br>
+                        경제적 자유라는 성을 함락시키는 방법<br>
+                        당신이 직장인이든 백수든 열아홉이든 쉰이든<br>
+                        경제적 자유를 위한 5가지 공부법<br>
+                        젊은 부자들은 어떻게 공부했을까<br>
+                        경제적 자유로 가는 알고리즘 설계<br>
+                            나를 부자로 만들어준 본질 강화란 무엇인가<br></p>
+
+                        <p><span class="bold">CHAPTER8 역행자 7단계_ 역행자의 쳇바퀴</span><br>
+                        역행자는 시시포스의 형벌을 레벨업의 기회로 만든다<br>
+                            어느 순간에 경제적 자유를 얻게 될까<br></p>
+                    </div>
+                    <div class="bkMoreBtn">더보기<img th:src="@{/image/arrow_icon.png}"></div>
+                    <div class="bkLessBtn">닫기<img th:src="@{/image/arrow_icon.png}"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const moreBtn = document.querySelector('.bkMoreBtn');
+            const lessBtn = document.querySelector('.bkLessBtn');
+            const bki = document.querySelector('.bki');
+
+            moreBtn.addEventListener('click',()=>{
+                moreBtn.style.display='none';
+                lessBtn.style.display='inline-block';
+                bki.style.display='inline-block';
+            })
+
+            lessBtn.addEventListener('click',()=>{
+                lessBtn.style.display='none';
+                moreBtn.style.display='inline-block';
+                bki.style.display='-webkit-box';
+            })
+        </script>
+    </th:block>
+</th:block>

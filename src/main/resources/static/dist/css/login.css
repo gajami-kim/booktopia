@@ -1,0 +1,133 @@
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: jalnan;
+    src: url(../font/Jalnan2.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.wrap{
+    font-family:SCDream4;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 850px;
+
+}
+
+.text-danger{
+    color: red;
+}
+
+
+.loginWrapPage{
+    width: 1000px;
+   height: 680px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+.loginAllPage{
+    text-align: center;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.loginAllPage>form{
+    margin-bottom: 10px;
+}
+.loginAllPage>form>input{
+   border: 1px solid;
+       width: 350px;
+       height: 50px;
+       font-size: 20px;
+       padding-left: 10px;
+       border-radius: 20px;
+       font-family: 'Pretendard-Regular';
+}
+.loginAllPage>form>input:nth-child(1){
+    margin-bottom: 10px;
+}
+.loginAllPage>form>.loginLoginBtn{
+   width: 200px;
+   height: 30px;
+   border-radius: 10px;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+.loginAllPage>form>.loginLoginBtn>button{
+    width: 95px;
+        height: 35px;
+        border-radius: 10px;
+        line-height: 30px;
+        background-color: transparent;
+    box-shadow: 0 0 13px lightskyblue;
+}
+.loginAllPage>form>.loginLoginBtn>button:hover{
+    box-shadow: 0 0 13px #abcc92;
+}
+.loginLostWrap{
+    margin: 25px auto;
+    display: flex;
+    text-align: center;
+    width: 350px;
+    justify-content: center;
+}
+.loginFindDiv{
+    height:20px;
+    width:100px;
+    display: inline-block;
+}
+.loginFindDiv>a>button{
+  background-color: transparent;
+
+}
+.loginSocialBtn{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.loginSocialBtn>div{
+    margin: 0 5px 0 5px;
+}
+.loginSocialBtn>div>a>img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+.loginFind:hover{
+ border-bottom : 1px solid black;
+}
+
+.errMsg{
+    margin-top: 10px;
+    font-color: rosybrown;
+}
+#loginPwd{
+    position: relative;
+}
+#eye {
+    position: absolute;
+    right: 184px;
+    top: 192px;
+}
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.BookTopiaMapper">
+
+    <select id="getList" resultType="com.booktopia.www.domain.BookVO">
+        select * from book;
+    </select>
+
+    <select id="getListType" resultType="com.booktopia.www.domain.BookVO">
+        select * from book where result_type=#{resultType}
+    </select>
+
+    <insert id="insert">
+        insert into booktopia (id, birth, gender, btn_result) values (#{id}, #{birth}, #{gender}, #{btnResult})
+    </insert>
+
+    <select id="bTestList" resultType="com.booktopia.www.domain.BooktopiaVO">
+        select * from booktopia
+    </select>
+
+    <select id="getTotal" resultType="int">
+        select count(btp_no) from booktopia
+    </select>
+
+    <select id="adminTestList" resultType="com.booktopia.www.domain.BooktopiaVO">
+        select * from booktopia
+        order by test_at desc
+        limit #{pageStart}, #{qty}
+    </select>
+
+    <select id="findType" resultType="String">
+        select btn_result from booktopia where id = #{id} order by test_at desc limit 1
+    </select>
+</mapper>

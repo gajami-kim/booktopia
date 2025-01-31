@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.BoardMapper">
+    <insert id="insert">
+        insert into board (id,b_title,b_writer, b_content,b_cate,b_mainImg)
+        values (#{id}, #{bTitle},#{bWriter},#{bContent},#{bCate},#{bMainImg})
+    </insert>
+
+    <select id="getList" resultType="com.booktopia.www.domain.BoardVO">
+        select * from board
+        where b_is_del='N'
+        <include refid="search"></include>
+        order by bno desc
+        limit #{pageStart},#{qty}
+    </select>
+
+    <select id="getTotalCount" resultType="int">
+        select count(bno) from board
+        where b_is_del='N'
+        <include refid="search"></include>
+    </select>
+
+    <select id="getCateList" resultType="com.booktopia.www.domain.BoardVO">
+        select * from board
+        where b_cate=#{bCate}
+        and b_is_del='N'
+        order by bno desc
+        limit #{pageStart},#{qty}
+    </select>
+    
+    <select id="getCateTotalCount" resultType="int">
+        select count(bno) from board
+        where b_is_del='N'
+        and b_cate=#{bCate}
+        <include refid="search"></include>
+    </select>
+
+    <select id="getDetail" resultType="com.booktopia.www.domain.BoardVO">
+        select * from board where bno=#{bno}
+    </select>
+
+    <update id="modify">
+        update board set b_title=#{bTitle}, b_content=#{bContent}, b_cate=#{bCate}, b_mainImg=#{bMainImg}, b_up_date=now()
+        where bno=#{bno}
+    </update>
+
+    <update id="delete">
+        update board set b_is_del="Y" where bno=#{bno}
+    </update>
+
+    <select id="getBno" resultType="long">
+        select bno from board
+    </select>
+
+    <update id="updateReadCnt">
+        update board set b_read_cnt = b_read_cnt+1 where bno=#{bno}
+    </update>
+
+    <update id="updateCommentCnt">
+        update board set b_cmt_cnt = b_cmt_cnt + #{cnt} where bno=#{bno}
+    </update>
+
+    <update id="deleteCommentCnt">
+        update board set b_cmt_cnt=b_cmt_cnt-1 where bno=#{bno}
+    </update>
+
+    <update id="deleteAllCommentCnt">
+        update board set b_cmt_cnt=b_cmt_cnt - (#{rccnt}+1) where bno=#{bno}
+    </update>
+
+    <select id="getCateCount" resultType="int">
+        select count(b_cate) from board where b_is_del='N'
+    </select>
+
+    <select id="getboarList" resultType="com.booktopia.www.domain.BoardVO">
+        select * from board
+    </select>
+
+    <select id="getCategoryCount" resultType="int">
+        select count(b_cate) from board where b_is_del='N' and b_cate=#{bCate}
+    </select>
+
+    <delete id="deleteCommentFromBoard">
+        delete from comment where bno=#{bno}
+    </delete>
+
+    <update id="bnoDel">
+        update board set b_is_del='Y' where bno=#{bno}
+    </update>
+    <update id="updateHeartCount">
+        update board set b_heart_cnt=b_heart_cnt+1 where bno=#{bno}
+    </update>
+
+    <select id="getHeartCnt" resultType="int">
+        select b_heart_cnt from board where bno=#{bno}
+    </select>
+
+    <update id="deleteHeartCnt">
+        update board set b_heart_cnt=b_heart_cnt-1 where bno=#{bno}
+    </update>
+
+    <select id="getCount" resultType="int">
+        select count(bno) from board
+        where b_is_del='N'
+    </select>
+
+    <select id="adminBoardList" resultType="com.booktopia.www.domain.BoardVO">
+        select * from board
+        where b_is_del='N'
+        order by bno desc
+        limit #{pageStart},#{qty}
+    </select>
+
+    <delete id="adminDelBoard">
+        delete from board where bno=#{bno}
+    </delete>
+    <sql id="search">
+        <if test="type!=null">
+            <trim prefix="and (" suffix=")" suffixOverrides="or">
+                <foreach collection="typeToArray" item="type">
+                    <trim suffix="or">
+                        <choose>
+                            <when test="type=='w'.toString()">
+                                b_writer like concat('%',#{keyword},'%')
+                            </when>
+                            <when test="type=='t'.toString()">
+                                b_title like concat('%',#{keyword},'%')
+                            </when>
+                            <when test="type=='c'.toString()">
+                                b_content like concat('%',#{keyword},'%')
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+        </if>
+    </sql>
+</mapper>

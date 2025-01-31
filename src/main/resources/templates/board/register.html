@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+    <th:block th:with="auth=${#authentication.getPrincipal().userVO}">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" th:href="@{/dist/css/communityRegi.css}">
+        <!--토스트 API-->
+        <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
+        <div class="wrap" >
+            <div class="commWrap">
+                <!-- 왼쪽 카테고리 -->
+                <div class="commUl">
+                    <ul>
+                        <li><a th:href="@{/community/communityListAll}">전체 게시글</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='novel')}">소설</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='poem')}">시/에세이</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='finance')}">경제/경영</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='human')}">인문</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='history')}">역사/문화</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='development')}">자기개발</a></li>
+                    </ul>
+                </div>
+                <div class="commToast" >
+                    <div id="commForm">
+                        <!--아이디-->
+                        <div class="WriterArea">
+                            <th:block th:if="${auth.getUserType() == '일반'}">
+                                <input type="hidden" th:value="${auth.getId()}" class="commDeUserId">
+                                <input type="hidden" value="" class="commDeUserEmail">
+                            </th:block>
+                            <th:block th:if="${auth.getUserType()!='일반'}">
+                                <input type="hidden" th:value="${auth.getId()}" class="commDeUserId">
+                                <input type="hidden" th:value="${auth.getEmail()}" class="commDeUserEmail">
+                            </th:block>
+                        </div>
+                        <!-- 게시판 선택 select 효과 -->
+                        <div class="commRegiCate">
+                            <button class="cateBtn">
+                                <img th:src="@{/image/arrow_icon.png}" width="10px" height="10px">
+                                <span id="selectedText">게시판 선택</span>
+                            </button>
+                            <ul class="commul" id="commSelID">
+                                <li class="commli">게시판 선택</li>
+                                <li class="commli">소설</li>
+                                <li class="commli">시/에세이</li>
+                                <li class="commli">경제/경영</li>
+                                <li class="commli">인문</li>
+                                <li class="commli">역사/문화</li>
+                                <li class="commli">자기개발</li>
+                            </ul>
+                        </div>
+                        <div class="commContent">
+                            <div class="commTitle">
+                                <input type="text" id="commTitleID" name="commTitleID" class="commTitle" placeholder="제목을 입력해주세요">
+                            </div>
+                            <!-- 토스트 에디터 부분 -->
+                            <div id="editor"></div>
+                            <!-- 내용 작성 부분 -->
+                            <div id="editorContent"></div>
+                            <div>
+                                <button type="button" class="commRegiBtn" onclick="handleEditor(event)">등록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--토스트 API 스크립트-->
+        <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+        <script th:src="@{/dist/js/toastApi.js}"></script>
+    </th:block>
+    </th:block>
+</th:block>

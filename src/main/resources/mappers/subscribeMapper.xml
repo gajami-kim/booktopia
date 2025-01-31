@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.SubscribeMapper">
+
+    <select id="getPayInfo" resultType="com.booktopia.www.domain.SubscribeInfoVO">
+        select * from subscribe_info where sub_in_month=#{month}
+    </select>
+
+    <select id="getPayShipNo" resultType="int">
+        select * from subscribe_info where sub_in_month=#{month}
+    </select>
+</mapper>

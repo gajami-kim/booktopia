@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.DeliMapeer">
+    <insert id="insertDeli">
+        insert into delivery (merchant_uid, id, item_name)
+        values (#{merchantUid}, #{id}, #{itemName})
+    </insert>
+
+    <select id="getList" resultType="com.booktopia.www.domain.DeliveryVO">
+        select * from delivery
+    </select>
+
+    <update id="updateStaus">
+        update delivery set deli_status = '배송중' where merchant_uid=${merchantUid}
+    </update>
+
+    <select id="getStatus" resultType="String">
+        select deli_status from delivery where merchant_uid=#{merchantUid}
+    </select>
+
+    <update id="updateScondStaus">
+        update delivery set deli_status = '배송완료' where merchant_uid=${merchantUid}
+    </update>
+
+    <update id="updatefinal">
+        update delivery set deli_status = '구매확정' where merchant_uid=${merchantUid}
+    </update>
+
+    <select id="getTotal" resultType="int">
+        select count(deli_no) from delivery
+    </select>
+
+    <select id="adminDelList" resultType="com.booktopia.www.domain.DeliveryVO">
+        select * from delivery
+        order by deli_date desc
+        limit #{pageStart}, #{qty}
+    </select>
+</mapper>

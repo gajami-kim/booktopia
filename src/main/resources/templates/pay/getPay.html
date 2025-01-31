@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<title xmlns="http://www.w3.org/1999/html">getPay</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/dist/css/getPay.css}">
+<!--결제 스크립트 연결-->
+<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+
+        <!DOCTYPE html>
+        <!-- 결제창 -->
+        <div class="wrap">
+            <div class="payTitle">
+                <p>주문서 작성</p>
+            </div>
+            <span th:text="${#authentication.getPrincipal().userVO.getId()}"
+                  class="IDspan" id="realId" th:style="'display:none'"></span>
+            <form action="/pay/payInfo" method="post">
+                <th:block th:with="auth=${#authentication.getPrincipal().userVO}">
+                    <input type="hidden" id="payID" th:value="${auth.getId()}">
+                    <input type="hidden" id="payEmail" th:value="${auth.getEmail()}">
+                    <div class="paySubBox">
+                        <div class="paySubDiv">구독정보</div>
+                        <div class="paySubInner">
+                            <div><span class="paySubRight">구독상품</span><span>북토피아 구독 [[${ssivo.subInMonth}]]개월권</span></div>
+                            <div><span class="paySubRight">구독기간</span><span class="payStartDate"></span> ~ <span class="payEndDate"></span></div>
+                            <div class="paySubInfoText">* 구독 시작 이후 배송을 받은 경우 취소가 어렵습니다. 유의하여 결제 바랍니다.</div>
+                        </div>
+                    </div>
+                    <div class="payUserBox">
+                        <div class="payUserDiv">배송 정보</div>
+                        <div class="payUserInner">
+                            <div class="payUserInner1">
+                                <div class="payUserName">이름<span class="payStar">*</span> </div>
+                                <input type="text" th:value="${auth.getName()}" id="ordName" name="ordName">
+                            </div>
+                            <div class="payUserInner2">
+                                <p>전화번호<span class="payStar">*</span></p>
+                                <input type="text" id="ordPhone" name="ordPhone" placeholder="'-' 제외하고 입력해주세요.">
+                            </div>
+                            <div class="payUserInner3">
+                                <p>주소<span class="payStar">*</span> </p>
+                                <input type="text" name="ordAddr" class="addrInput" id="addrInput" placeholder="주소를 입력해주세요.">
+                                <button type="button" class="payGetAddrBtn" id="payGetAddrBtn">주소 검색</button>
+                                <input type="text" name="ordAddrDetail" id="addrDetailInput" placeholder="상세 주소를 입력해주세요.">
+                            </div>
+                            <div class="payUserInner4">
+                                <p>배송 메모</p>
+                                <input type="text" name="ordMemo" id="ordMemo" placeholder="(예시: 부재 시 경비실에 맡겨 주세요.)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payCouponBox">
+                        <div class="payCouponDiv">쿠폰 선택하기</div>
+                            <select id="coupon">
+                                    <option value="choiceCoupon" name="coupon">보유중인 쿠폰 확인하기</option>
+                                <th:block th:each="advo:${advo}">
+                                    <option>[[${advo.adCouInfo}]]</option>
+                                </th:block>
+                            </select>
+                    </div>
+                    <div class="payInfoBox">
+                        <div class="payInfoDiv">결제정보</div>
+                        <div class="payInfoInner">
+                            <input type="hidden" class="priceDiv" th:value="${ssivo.subInPrice}">
+                            <div><span>상품 금액</span><span class="won">[[${ssivo.subInPrice}]]원</span></div>
+                            <div><span>할인 금액</span><span class="discountAmount won">0원</span></div>
+                            <input type="hidden" class="amountInput" th:value="${ssivo.subInPrice}"><hr>
+                            <div class="totalAmountDiv"><span>총 결제 금액</span><span class="amountDiv won">[[${ssivo.subInPrice}]]원</span></div>
+                        </div>
+                    </div>
+                    <div class="payMethodBox">
+                        <hr class="hr">
+                        <div class="payMethodDiv">결제수단을 선택해주세요.</div>
+                        <div class="payMethodInner">
+                            <div class="kakaoPayM payM" id="kakaoPayBtn" data-btn="">
+                                <div class="kakaopaydiv"><img th:src="@{/image/kakaoPay.png}"></div>
+                                <div class="kakaoPayText payMText btnVal">카카오페이</div>
+                            </div>
+                            <div class="tossM payM" id="tossBtn" data-btn="">
+                                <img th:src="@{/image/toss.png}">
+                                <span class="btnVal">토스</span>
+                            </div>
+                            <div class="paycoM payM" id="paycoBtn" data-btn="">
+                                <img th:src="@{/image/payco.png}">
+                                <span class="btnVal">페이코</span>
+                            </div>
+                            <div class="kgM payM" id="kgBtn" data-btn="">
+                                <img th:src="@{/image/kg-t.png}">
+                                <span class="btnVal">신용카드</span>
+                            </div>
+                        </div>
+                    </div>
+                </th:block>
+            </form>
+        </div>
+
+            <!-- daum 주소검색 api 사용 구문 -->
+            <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+            <script>
+                document.getElementById('payGetAddrBtn').addEventListener('click', ()=>{
+                    new daum.Postcode({
+                        oncomplete: function(data) {
+                            document.getElementById('addrInput').value = data.address;
+                            document.getElementById('addrDetailInput').value = "";
+                            document.getElementById('addrDetailInput').focus();
+                        }
+                    }).open();
+
+                })
+            </script>
+
+        <script th:inline="javascript">
+            const ordName = document.getElementById('ordName').value;
+            const ordMemo = document.getElementById('ordMemo').value;
+            const ordId = document.getElementById('payID').value;
+            const ordEmail = document.getElementById('payEmail').value;
+            const payName = [[${ssivo.subInMonth}]];
+            let amount = [[${ssivo.subInPrice}]];
+        </script>
+        <script th:src="@{/dist/js/imp_payment.js}"></script>
+    </th:block>
+</th:block>
+
+<script th:inline="javascript">
+    const monthVal = [[${ssivo.subInMonth}]];
+    console.log(monthVal);
+
+    const date = new Date();
+    const today = date.toISOString().substring(0,10).replaceAll("-",".");
+    console.log(today);
+
+    let plus1 = parseInt(date.getMonth()+2);
+    let plus3 = parseInt(date.getMonth()+4);
+    let plus6 = parseInt(date.getMonth()+7);
+
+    let month1 = plus1<10? date.getFullYear()+".0"+(parseInt(date.getMonth())+2)+"."+date.getDate() : date.getFullYear()+"."+(parseInt(date.getMonth())+2)+"."+date.getDate();
+    let month3 = plus3<10? date.getFullYear()+".0"+(parseInt(date.getMonth())+4)+"."+date.getDate() : date.getFullYear()+"."+(parseInt(date.getMonth())+4)+"."+date.getDate();
+    let month6 = plus6<10? date.getFullYear()+".0"+(parseInt(date.getMonth())+7)+"."+date.getDate() : date.getFullYear()+"."+(parseInt(date.getMonth())+7)+"."+date.getDate();
+
+    document.querySelector('.payStartDate').innerText+=today;
+    if(monthVal==1) {
+        document.querySelector('.payEndDate').innerText+=month1;
+        document.querySelector('.nextPayDate').innerText+=month1;
+    } else if(monthVal==3) {
+        document.querySelector('.payEndDate').innerText+=month3;
+        document.querySelector('.nextPayDate').innerText+=month3;
+    } else{
+        document.querySelector('.payEndDate').innerText+=month6;
+        document.querySelector('.nextPayDate').innerText+=month6;
+    }
+</script>
+</html>

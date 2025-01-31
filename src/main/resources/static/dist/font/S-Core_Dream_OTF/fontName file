@@ -1,0 +1,63 @@
+css 설정시 원하는 폰트 스타일 긁어서 쓰시면 됩니다!
+
+@font-face {
+    font-family: SCDream1;
+    src: url(../font/S-Core_Dream_OTF/SCDream1.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SCDream2;
+    src: url(../font/S-Core_Dream_OTF/SCDream2.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SCDream3;
+    src: url(../font/S-Core_Dream_OTF/SCDream3.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SCDream5;
+    src: url(../font/S-Core_Dream_OTF/SCDream5.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream6;
+    src: url(../font/S-Core_Dream_OTF/SCDream6.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SCDream7;
+    src: url(../font/S-Core_Dream_OTF/SCDream7.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SCDream8;
+    src: url(../font/S-Core_Dream_OTF/SCDream8.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SCDream9;
+    src: url(../font/S-Core_Dream_OTF/SCDream9.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}

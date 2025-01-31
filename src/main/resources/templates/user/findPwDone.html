@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/dist/css/findId.css}">
+<script type="text/javascript" th:src="@{/dist/js/findId.js}"></script>
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <div class="wrap">
+            <div class="fi_wrap" style="background-image: url(../image/loginmain.jpg">
+                <h1 class="fi_title sendMsg"> 임시비밀번호 전송 완료! </h1>
+                <section class="fi_input">
+                    <p class="fi_msg">이메일을 확인해주세요.</p>
+                </section>
+                    </div>
+            </div>
+        </div>
+    </th:block>
+</th:block>

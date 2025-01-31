@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/dist/css/findId.css}">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <div class="wrap">
+            <div class="fi_wrap" style="background-image: url(../image/loginmain.jpg">
+                <h1 class="fi_title"> 비밀번호 찾기 </h1>
+                <section class="fi_input">
+                    <p class="fi_msg">가입하신 아이디와 이메일을 입력하세요.</p>
+                    <form class="user" action="/user/findPw" method="post">
+                    <input type="text" class="fi_name" id="id" name="id" placeholder="아이디 입력하기...">
+                    <input type="text" class="fi_name" id="email" name="email" placeholder="이메일 입력하기...">
+                    <button type="submit" class="fi_btn" id="findbtn">확인</button>
+                    </form>
+                    <div class="fi_resultArea" id="resArea">
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+            const msg = /*[[${msg != null ? '"' + msg + '"' : '""'}]]*/ '';
+            console.log('Message:', msg); // msg 값 확인을 위해 콘솔에 출력
+            if (msg && msg.includes('아이디')) {
+                alert(msg);
+            }
+            /*]]>*/
+        </script>
+    </th:block>
+</th:block>
+

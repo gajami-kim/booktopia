@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<title>payDone</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- css area-->
+<link rel="stylesheet" th:href="@{/dist/css/payDone.css}">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <div class="wrap" style="background-image: url(../image/loginmain.jpg">
+            <div class="payDoneBox">
+                <div><span >[[${#authentication.getName()}]] 님</span> 결제 완료되었습니다.</div>
+                <div> 주문번호 : [[${id}]] </div>
+                <div><button type="button" class="payDoneGoToMainBtn"><a th:href="@{/}">메인으로</a></button></div>
+            </div>
+        </div>
+    </th:block>
+</th:block>
+</html>

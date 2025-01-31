@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <link rel="stylesheet" th:href="@{/dist/css/testResult.css}">
+        <div class="wrap">
+            <div class="booklistwrap">
+                <div class="book-list-contain">
+                    <div class="bestbooklistwrap">
+                        <input type="hidden" name="id" th:with="auth=${#authentication.getPrincipal().userVO.getId()}" id="commuUser" th:value="${auth}">
+                    </div>
+                    <div id="testResult">
+                    </div>
+                    <div id="bestBookList"></div>
+                </div>
+            </div>
+        </div>
+        <script th:src="@{/dist/js/result.js}"></script>
+    </th:block>
+</th:block>

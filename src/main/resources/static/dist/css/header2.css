@@ -1,0 +1,57 @@
+
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+.wrap-header{
+    height: 80px;
+    font-family:SCDream4;
+}
+.contain-body{
+    display: flex;
+    position: relative;
+}
+
+
+.headertwoul{
+    display:flex;
+}
+
+.cate, .register, .login {
+    line-height: 104px;
+    margin: 0 10px;
+}
+
+.cate:hover{
+    border-bottom: 1px solid;
+}
+
+
+.userName{
+    width: 240px;
+    margin-left: 95px;
+    text-align: right
+}
+
+.logout{
+    margin-right: 70px;
+    margin-left: 30px;
+}
+
+.logo{
+    width: 200px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px;
+}
+
+
+.outcate{
+    position: absolute;
+    right: 10px;
+}
+

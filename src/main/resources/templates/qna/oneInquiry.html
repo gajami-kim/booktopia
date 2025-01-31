@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" th:href="@{/dist/css/oneInquiry.css}">
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css}">
+<head>
+    <script type="text/javascript" th:src="@{/dist/js/oneInquiry.js}"></script>
+</head>
+<body>
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block sec:authorize="isAuthenticated()">
+        <th:block th:fragment="content">
+            <div class="wrap">
+                <div class="qnawrap">
+                    <div class="qnalefttform">
+                <span th:text="${#authentication.getPrincipal().userVO.getId()}" class="IDspan" id="inquiryId"
+                      th:style="'display:none'"></span>
+                        <div class="qnaformwrap">
+                            <form action="/qna/addQna" method="post">
+                                <input type="hidden" name="id" th:value="${#authentication.getPrincipal().userVO.getId()}">
+                                <div class="qnainput">
+                                    <div class="qnacontenttext">작성자 :</div>
+                                    <input type="text" th:value="${#authentication.getName()}" readonly="readonly">
+                                </div>
+                                <div class="qnainput">
+                                    <div class="qnacontenttext">제목 :</div>
+                                    <input type="text" id="qnaTitle" name="qnaTitle" maxlength="50">
+                                </div>
+                                <div class="qnainput">
+                                    <div class="qnacontenttext">내용 :</div>
+                                    <textarea type="text" id="qnaContent" name="qnaContent" maxlength="200"></textarea>
+                                </div>
+                                <button type="submit" class="QnaBtn">문의하기</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </th:block>
+    </th:block>
+</th:block>
+</body>
+</html>

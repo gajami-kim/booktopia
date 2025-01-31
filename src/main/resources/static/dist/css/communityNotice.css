@@ -1,0 +1,92 @@
+@font-face {
+    font-family: SCDream5;
+    src: url(../font/S-Core_Dream_OTF/SCDream5.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+.commNoTitle{
+    width: 1000px;
+    height: 55px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: SCDream5;
+    line-height: 55px;
+    padding-bottom: 10px;
+    border-top: 1px solid #dadada;
+    margin-top: 30px;
+    padding-top: 2px;
+}
+.commNoWriterInfo{
+    width: 1000px;
+    height: 20px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.commNoWriter, .commNoRegdate{
+    height: 20px;
+    font-family: SCDream3;
+    font-size: 15px;
+    color: #4c4c4c;
+}
+.commNoContent{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 90px 0;
+    position: relative;
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 18px;
+}
+.commNoContent p:nth-of-type(4),
+.commNoContent p:nth-of-type(7),
+.commNoContent p:nth-of-type(9),
+.commNoContent p:nth-of-type(11){
+    margin-top: 26px;
+}
+.red{
+    color:red;
+}
+.bold{
+    font-weight: bolder;
+}
+
+
+.comm-commArea{
+    background-color: rgba(241, 241, 241, 0.5);
+    width: 940px;
+    margin: 20px auto 50px;
+    padding: 30px;
+}
+.commDeComment{
+    margin: 0 auto;
+}
+.comm-CommInputArea{
+    background-color: white;
+    width: 940px;
+    margin: 20px auto;
+}
+.comm-CommInput{
+    width: 940px;
+    height: 195px;
+}
+.comm-Comment{
+    width: 889px;
+    height: 100px;
+    padding-left: 21px;
+    margin-top: 18px;
+    font-size: 15px;
+    font-family: SCDream4;
+    border: none;
+    resize: none;
+    outline: none;
+}
+.comm-CommRegBtn{
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 850px;
+    width: 68px;
+    height: 40px;
+}

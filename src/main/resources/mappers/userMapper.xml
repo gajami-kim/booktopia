@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.UserMapper">
+    
+    <insert id="joinInsert">
+        insert into user(id,pwd,email,name,user_type) values(#{id},#{pwd},#{email},#{name},'일반')
+    </insert>
+    <insert id="joinInsertOauth">
+        insert into user(id,email,name,user_type,access_token) values(#{id},#{email},#{name},#{userType},#{accessToken})
+    </insert>
+    <insert id="insertAuth">
+        insert into auth values(#{id},'ROLE_USER')
+    </insert>
+
+    <select id="selectId" resultType="com.booktopia.www.domain.UserVO">
+        select * from user where id=#{id}
+    </select>
+    <select id="selectAuths" resultType="com.booktopia.www.domain.AuthVO">
+        select * from auth as a join user as u on u.id=a.id where u.user_del = "N" and a.id=#{id};
+    </select>
+
+    <select id="findByEmail" resultType="com.booktopia.www.domain.UserVO">
+        select * from user where pwd=#{pwd}
+    </select>
+
+    <insert id="saveOauthUser">
+        insert into user(id,pwd,name,email,user_type) values(#{id},#{pwd},#{name},#{email},#{userType})
+    </insert>
+
+    <insert id="authUserRegister">
+        insert into auth values(#{pwd},"ROLE_USER")
+    </insert>
+
+    <select id="checkId" resultType="int">
+        select count(id) from user where id=#{id}
+    </select>
+
+    <select id="isSocialUser" resultType="String">
+        select user_type from user where id=#{id}
+    </select>
+
+    <update id="modifyMyinfo">
+        update user set email=#{email}, phone=#{phone},user_up=now() where id=#{id}
+    </update>
+
+    <update id="modifyMyinfoWithPwd">
+        update user set pwd = #{pwd},phone = #{phone},user_up=now() where id=#{id}
+    </update>
+
+    <select id="findId" resultType="String">
+        select id from user where name=#{name} and user_type = '일반' and user_del = 'N'
+    </select>
+
+    <update id="deleteMyPageUser">
+        update user set user_del = "Y" where id=#{id}
+    </update>
+
+    <select id="findPwCheck" resultType="int">
+        select count(id) from user where id=#{id} and email=#{email}
+    </select>
+
+    <select id="findUserByUserId" resultType="String">
+        select id from user where email = #{email}
+    </select>
+
+    <update id="updateUserPassword">
+        update user set pwd = #{pw} where id=#{id}
+    </update>
+
+    <select id="getList" resultType="com.booktopia.www.domain.UserVO">
+        select * from user
+    </select>
+
+    <update id="updateaddr">
+        update user set address = #{ordAddr}, phone= #{ordPhone} where id = #{id}
+    </update>
+
+    <select id="countAuth" resultType="int">
+        select count(role) from auth where id = #{providerId}
+    </select>
+
+    <update id="modifyaddrandphone">
+        update user set address=#{address} , phone=#{phone} , user_up=now() where id =#{id}
+    </update>
+
+    <update id="updateAccessToken">
+        update user set access_token = #{accessToken} where id=#{id}
+    </update>
+
+    <select id="comusercheck">
+        select * from user where id=#{id} and user_del = "N"
+    </select>
+
+    <select id="getTotal" resultType="int">
+        select count(id) from user
+    </select>
+
+    <select id="adminUserList" resultType="com.booktopia.www.domain.UserVO">
+        select * from user
+        order by user_reg desc
+        limit #{pageStart}, #{qty}
+    </select>
+
+    <select id="getUserId" resultType="com.booktopia.www.domain.UserVO">
+        select id from user
+    </select>
+
+    <select id="getcallinfo" resultType="com.booktopia.www.domain.UserVO">
+        select * from user where id = #{id}
+    </select>
+</mapper>

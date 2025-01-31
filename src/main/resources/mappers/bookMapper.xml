@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.BookMapper">
+
+    <select id="getBookList" resultType="com.booktopia.www.domain.BookVO">
+        select * from book where book_code=#{book}
+    </select>
+
+</mapper>

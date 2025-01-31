@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<th:block th:fragment="setFragment(content)">
+    <head>
+        <meta charset="UTF-8">
+        <title>북토피아에 오신것을 환영합니다~~!</title>
+        <link rel="stylesheet" th:href="@{/dist/css/header2.css}">
+        <link rel="stylesheet" th:href="@{/dist/css/reset.css}">
+        <link rel="stylesheet" th:href="@{/dist/css/footer.css}">
+        <link rel="stylesheet" th:href="@{/dist/css/mainPage.css}">
+        <link rel="stylesheet" th:href="@{/dist/css/chatBot.css}">
+    </head>
+    <body>
+    <nav class="contain-header">
+                <div class="wrap-header">
+                    <div class="contain-body">
+                        <a th:href="@{/}"><div class="logo" th:style=" 'background-image: url(../image/logo.png)' "> </div></a>
+                        <div class="outcate">
+                            <ul class="headertwoul">
+                                <li><a class="cate cate1" th:href="@{/info/info}">북토피아 소개</a></li>
+                                <li><a class="cate cate2" th:href="@{/subscribe/info}">구독상품</a></li>
+                                <li><a class="cate cate3" th:href="@{/community/communityMain}">커뮤니티</a></li>
+                                <li><a class="cate cate4" th:href="@{/booktopiaTest/test}">취향검사</a></li>
+                                <li><a class="cate cate4" th:href="@{/booktopiaTest/result}" id="showRes">검사결과</a></li>
+                                <li class="right" sec:authorize="isAnonymous()">
+                                    <a class="cate register" th:href="@{/user/join}">회원가입</a></li>
+                                <li sec:authorize="isAnonymous()"><a class="cate login" th:href="@{/user/login}">로그인</a></li>
+                                <li sec:authorize="hasAnyAuthority('ROLE_ADMIN')" >
+                                    <a class="cate nav-link adminpagealink" th:href="@{/admin/adminPage}">관리자페이지</a>
+                                </li>
+                                <th:block sec:authorize="isAuthenticated()">
+                                        <li class="userName" sec:authorize="!hasAuthority('ROLE_ADMIN')">
+                                            <a class="cate" th:href="@{/user/myPage}" sec:authentication="name" id="userId"></a>
+                                        </li>
+                                        <li class="logout"><a class="cate" th:href="@{/user/logout}" id="logoutuser">로그아웃</a></li>
+                                </th:block>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    </nav>
+    <div class="content-fluid">
+        <th:block th:replace="${content}"></th:block>
+    </div>
+
+    <script th:src="@{/dist/js/chatBot.js}"></script>
+    <script th:src="@{/dist/js/header.js}"></script>
+    </body>
+</th:block>
+</html>

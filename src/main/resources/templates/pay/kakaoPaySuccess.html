@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<title>payDone</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- css area-->
+<link rel="stylesheet" th:href="@{/dist/css/payDone.css}">
+<!-- css area -->
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <h1>success html 결제완료!</h1>
+        [[${info.partner_order_id}]]
+    </th:block>
+</th:block>
+</html>

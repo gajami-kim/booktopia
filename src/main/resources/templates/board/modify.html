@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+    <th:block th:with="auth=${#authentication.getPrincipal().userVO}">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" th:href="@{/dist/css/communityRegi.css}">
+        <!--토스트 API-->
+        <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
+        <div class="wrap" >
+            <div class="commWrap">
+                <!-- 왼쪽 카테고리 -->
+                <div class="commUl">
+                    <ul>
+                        <li><a th:href="@{/community/communityListAll}">전체 게시글</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='novel')}">소설</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='poem')}">시/에세이</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='finance')}">경제/경영</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='human')}">인문</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='history')}">역사/문화</a></li>
+                        <li><a th:href="@{/community/communityList(bCate='development')}">자기개발</a></li>
+                    </ul>
+                </div>
+                <div class="commToast" >
+                    <div id="commForm2">
+                        <!--아이디-->
+                        <input th:value="${bvo.bno}" type="hidden" class="commModBno">
+                        <div class="WriterArea">
+                            <input type="hidden" th:value="${auth.getEmail()}" class="commDeUserEmail">
+                            <input type="hidden" th:value="${auth.getId()}" class="commDeUserId">
+                        </div>
+                        <!-- 게시판 선택 select 효과 -->
+                        <div class="commRegiCate">
+                            <button class="cateBtn">
+                                <img th:src="@{/image/arrow_icon.png}" width="10px" height="10px">
+                                <span id="selectedText2" th:switch="${bvo.bCate}">
+                                     <span th:case="novel" th:text="'소설'"></span>
+                                    <span th:case="finance" th:text="'경제/경영'"></span>
+                                    <span th:case="human" th:text="'인문'"></span>
+                                    <span th:case="history" th:text="'역사/문화'"></span>
+                                    <span th:case="poem" th:text="'시/에세이'"></span>
+                                    <span th:case="development" th:text="'자기개발'"></span>
+                                </span>
+                            </button>
+                            <ul class="commul" id="commSelID2">
+                                <li class="commli">게시판 선택</li>
+                                <li class="commli">소설</li>
+                                <li class="commli">시/에세이</li>
+                                <li class="commli">경제/경영</li>
+                                <li class="commli">인문</li>
+                                <li class="commli">역사/문화</li>
+                                <li class="commli">자기개발</li>
+                            </ul>
+                        </div>
+                        <div class="commContent">
+                            <div class="commTitle">
+                                <input type="text" id="commTitleID2" name="commTitleID" class="commTitle" th:value="${bvo.bTitle}">
+                            </div>
+                            <!-- 토스트 에디터 부분 -->
+                            <div id="editor2">[[${bvo.bContent}]]</div>
+                            <!-- 내용 작성 부분 -->
+                            <div id="editorContent2"></div>
+                            <div>
+                                <button type="button" class="commModiBtn" onclick="handleEditor(event)">등록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--토스트 API 스크립트-->
+        <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+        <script th:src="@{/dist/js/toastApiModify.js}"></script>
+    </th:block>
+    </th:block>
+</th:block>

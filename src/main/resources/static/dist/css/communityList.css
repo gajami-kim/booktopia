@@ -1,0 +1,364 @@
+@font-face {
+    font-family: SCDream3;
+    src: url(../font/S-Core_Dream_OTF/SCDream3.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream5;
+    src: url(../font/S-Core_Dream_OTF/SCDream5.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream6;
+    src: url(../font/S-Core_Dream_OTF/SCDream6.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: cafe;
+    src: url(../font/Cafe24Ssurround-v2.0.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+.wrap{
+    font-family: SCDream3;
+}
+.commSearchArea{
+    width: 350px;
+    height: 40px;
+    margin-top: 30px;
+}
+.commSelect{
+    border: 1px solid #9a9a9a;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: SCDream3;
+    color: #303030;
+    width: 80px;
+    height: 39.9px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-left: 900px;
+}
+.commSeaBar{
+    height: 37.9px;
+    width: 200px;
+    border: 1px solid #9a9a9a;
+    padding-left: 9px;
+    color: #4c4c4c;
+    border-radius: 5px;
+    font-size: 13px;
+    outline: none;
+}
+.commSeaBtn{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    transform: translate(-26px, 42px);
+}
+.commListAll{
+    margin: 30px 0 0 1130px;
+    font-size: 14px;
+}
+.commNoticeLine{
+    /*background-color: lightseagreen;*/
+    width: 1000px;
+    margin: 12px auto 0;
+    height: 50px;
+    display: flex;
+    font-size: 20px;
+    line-height: 50px;
+    /* border: 1px solid crimson; */
+    border-radius: 10px;
+    background-color: #c3e8ff59;
+}
+.NoticeBlock{
+    font-family: SCDream6;
+    padding: 0 30px;
+}
+.NoticeTitle{
+    font-family: SCDream5;
+}
+.commCateLine{
+    /*background-color: goldenrod;*/
+    width: 870px;
+    height: 35px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 30px;
+}
+.commCateChoice{
+    /*background-color: rgba(1, 103, 152, 0.8);*/
+    /*width: 100px;*/
+    padding: 0 20px;
+    border: 1px solid #cacaca;
+    border-radius: 18px;
+}
+.commCateChoice:hover{
+    background-color: #c2e3f76b;
+    border: none;
+}
+.commCateChoice span{
+    font-family: cafe;
+    font-size: 14px;
+}
+
+.commLine2 img{
+    margin-top: 12px;
+    margin-left: 216px;
+    width: 970px
+}
+.commRegBtn{
+    font-family: SCDream3;
+    font-size: 14px;
+    width: 65px;
+    float: right;
+    margin: 18px 193px 0 0;
+}
+.commRegBtn img{
+    width: 15px;
+    height: 16px;
+    float: right;
+    margin-right: 7px;
+    margin-top: -2px;
+}
+/*게시글 한개 사이즈*/
+.commListArea, .commNon{
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto 0;
+    border-top: 1px solid #b1b1b1;
+    padding-top: 25px;
+}
+.commListArea:nth-child(1),.commNon{
+    margin-top: 41px;
+}
+.commListArea:nth-of-type(10){
+    border-bottom: 1px solid #b1b1b1;
+}
+.commListContent:nth-child(1){
+    padding: 0 30px;
+}
+.commNon{
+    margin-bottom: 356px;
+}
+.commNon p{
+    font-size: 17px;
+    text-align: center;
+    line-height: 200px;
+}
+.commTitle,.commWriter{
+    width: 700px;
+    height: 20px;
+    line-height: 20px;
+}
+.commTitle span, .commTitle a{
+    font-family: SCDream5;
+    font-size: 18px;
+}
+.commWriter{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #474747;
+}
+.commContent{
+    width: 700px;
+    height: 95px;
+    line-height: 95px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+.commImg{
+    float: right;
+    width: 250px;
+    height: 160px;
+    margin: -140px 20px 0 0;
+}
+.commImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 4px 3px 13px -5px #dcdcdc42;
+}
+.commCntInfo{
+    width: 230px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.commCnt{
+    width: 70px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #474747;
+}
+.commSeaBar{
+    display: inline-block;
+}
+.commTopBtnArea{
+    float: right;
+    width: 25px;
+    height: 1800px;
+    border: none;
+    margin-top: -1830px;
+    margin-right: 50px;
+}
+.commTopBtnSticky{
+    position: sticky;
+    top: 880px;
+}
+.commTopBtnArea .commTopBtn{
+    cursor: pointer;
+    background-color: white;
+}
+.commTopBtnArea .commTopBtn>img{
+    width: 25px;
+    height: 25px;
+    transform: rotate(270deg);
+    background-color: white;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    padding: 10px;
+    border-radius: 30px;
+}
+.commPage{
+    width: 400px;
+    height: 45px;
+    margin: 50px auto 20px;
+}
+.commPaging{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.commPagingLi{
+    width: 25px;
+    font-size: 18px;
+}
+
+.sticker{
+    position: absolute;
+    z-index: -1000;
+    opacity: 0.3;
+}
+img.stickerBC {
+    top: 173px;
+    position: absolute;
+    left: -100px;
+    width: 340px;
+}
+img.stickerBook {
+    position: absolute;
+    top: 2100px;
+    left: 531px;
+    width: 150px;
+}
+img.stickerCat {
+    position: absolute;
+    width: 350px;
+    top: 916px;
+    left: 600px;
+}
+img.stickerD {
+    position: absolute;
+    top: 1709px;
+    transform: rotate(9deg);
+    width: 180px;
+    left: 738px;
+}
+img.stickerL1 {
+    position: absolute;
+    top: 1463px;
+    left: 85px;
+    width: 110px;
+    transform: rotate(382deg);
+}
+img.stickerL2 {
+    position: absolute;
+    top: 1876px;
+    width: 140px;
+    left: 1188px;
+    transform: rotate(167deg);
+}
+img.stickerN {
+    position: absolute;
+    top: 1315px;
+    left: -124px;
+    width: 224px;
+}
+img.stickerOC {
+    position: absolute;
+    width: 280px;
+    top: 1166px;
+    left: 1225px;
+}
+img.stickerPEN {
+    position: absolute;
+    width: 85px;
+    top: 1311px;
+    left: 90px;
+}
+img.stickerP1 {
+    position: absolute;
+    top: 440px;
+    left: 1220px;
+    width: 300px;
+}
+img.stickerP2 {
+    position: absolute;
+    width: 300px;
+    top: 2312px;
+    left: 953px;
+}
+img.stickerS1 {
+    position: absolute;
+    top: 1410px;
+    left: 1016px;
+    width: 99px;
+}
+img.stickerS1-2 {
+    position: absolute;
+    top: 1423px;
+    left: 977px;
+    width: 75px;
+    transform: rotate(-33deg);
+}
+img.stickerS3 {
+    top: 428px;
+    position: absolute;
+    left: 1213px;
+    width: 79px;
+}
+img.stickerS4 {
+    position: absolute;
+    top: 2445px;
+    width: 86px;
+    left: 920px;
+}
+img.stickerS5 {
+    position: absolute;
+    left: 0;
+    top: 670px;
+    width: 151px;
+}
+img.stickerT {
+    position: absolute;
+    top: 1786px;
+    left: 64px;
+    width: 207px;
+}

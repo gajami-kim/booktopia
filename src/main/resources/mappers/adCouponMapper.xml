@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.AdCouponMapper">
+    <select id="getCount" resultType="int">
+        select count(cou_no) from ad_coupon
+    </select>
+
+    <select id="getList" resultType="com.booktopia.www.domain.AdCouponVO">
+        select * from ad_coupon
+        order by cou_no desc
+        limit #{pageStart},#{qty}
+    </select>
+
+    <insert id="insert">
+        insert into ad_coupon (ad_cou_name, ad_cou_period, ad_cou_sale, ad_cou_info)
+        values (#{adCouName}, #{adCouPeriod}, #{adCouSale}, #{adCouInfo})
+    </insert>
+
+    <select id="joingetList" resultType="com.booktopia.www.domain.AdCouponVO">
+        select * from ad_coupon
+        order by cou_no desc
+    </select>
+
+    <select id="getNewCouponNum" resultType="int">
+        select cou_no from ad_coupon where ad_cou_date = (select max(ad_cou_date) from ad_coupon)
+    </select>
+
+</mapper>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:ses="http://www/thymeleaf.org/extras/spring-security">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block ses:authorize = "isAuthenticated()">
+    <th:block th:fragment="content">
+        <!--booktopia Test css-->
+        <link rel="stylesheet" th:href="@{/dist/css/booktopiaTest.css}">
+        <form action="/booktopiaTest/test" method="post" id="bookTest">
+            <div class="wrap">
+                <img  style="background-image: url(/image/testBack_white.png)">
+                <div class="test-contain">
+                    <div class="test-title">
+                        <div class="title">
+                            <h1>나의 책 취향을 알 수 있는</h1>
+                            <h1>퍼스널북 테스트</h1>
+                        </div>
+                    </div>
+                    <div class="test">
+                        <div class="bar-progress">
+                            <div class="bar">
+                                <div class="percent"></div>
+                            </div>
+                        </div>
+                        <div class="test-content">
+                            <div id="questionInfo" style="display:block;">
+                                <div class="innerText">
+                                    <input type="hidden" name="id" th:with="auth=${#authentication.getPrincipal.userVO.getId()}" id="commuUser" th:value="${auth}">
+                                    <p>생년월일 </p>
+                                    <input type="text" name="birth" id="brith" class="placeholder" placeholder="ex) 19900101">
+                                    <p>성별</p>
+                                    <input type="radio" name="gender" value="남"> 남
+                                    <input type="radio" name="gender" value="여"> 여
+                                </div>
+                                <button type="button" id="next" class="testInfoBtn"> Next </button>
+                            </div>
+
+                            <div class="content-detail" id="questionDiv" style="display: none;">
+                                <h1 id="question"></h1>
+                                <button type="button" class="answer1 first testBtn" id="btn1" ></button>
+                                <button type="button" class="answer2 second testBtn" id="btn2"></button>
+                            </div>
+
+                            <div id="resultDiv" style="display: none">
+                                <h1 id="testResult">당신의 도서 취향은 어떻게 될까요?</h1>
+                                <button type="button" class="result testBtn" id="resultBtn">결과 보기</button>
+                                <button type="button" id="home" class="testBtn">Home</button>
+                                <button type="submit" hidden="hidden" id="hiddenBtn"></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--js 영역-->
+        <script th:src="@{/dist/js/testScript.js}"></script>
+    </th:block>
+    </th:block>
+</th:block>

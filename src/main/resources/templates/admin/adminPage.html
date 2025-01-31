@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <!--css 영역-->
+        <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+        <script th:src="@{/dist/js/markdown.js}"></script>
+        <link rel="stylesheet" th:href="@{/dist/css/adminPage.css}">
+        <nav class="admin-contain">
+            <p class="admin"> 관리자 페이지</p>
+            <!--cate 버튼 -->
+            <div class="admin-cate">
+                <button type="button" class="admin-btn" id="aBtn1">회원리스트</button>
+                <button type="button" class="admin-btn" id="aBtn2">취향검사 리스트</button>
+                <button type="button" class="admin-btn" id="aBtn3">구독자리스트(결제현황)</button>
+                <button type="button" class="admin-btn" id="aBtn4">배송현황</button>
+                <button type="button" class="admin-btn" id="aBtn5">게시글관리</button>
+                <button type="button" class="admin-btn" id="aBtn6">댓글관리</button>
+                <button type="button" class="admin-btn" id="aBtn7">쿠폰관리</button>
+                <button type="button" class="admin-btn" id="aBtn8">CS관리</button>
+            </div>
+
+            <!--cate 별 내용-->
+            <div class="cate-detail">
+                <!--회원 리스트-->
+                <div class="admin-UserList" style="display: none">
+                    <table>
+                        <thead>
+                            <tr class="adUserTr">
+                                <th style="width: 200px">ID</th>
+                                <th style="width: 80px">Name</th>
+                                <th style="width: 200px;">E-mail</th>
+                                <th style="width: 120px">Phone</th>
+                                <th style="width: 80px">SignUp</th>
+                                <th style="width: 200px">RegAt</th>
+                            </tr>
+
+                        </thead>
+                        <tbody id="adminUserList">
+                        </tbody>
+
+                        <!--spreadline-->
+                    </table>
+                    <div class="moreBtnBottom">
+                        <button type="button" id="adminUserBtn" class="adminmoreBtn" data-page="1" data-cate="adUser" style="visibility:hidden; margin-top: 11px">더보기 +</button>
+                    </div>
+                </div>
+
+                <!--취향검사 진행자 리스트-->
+                <div class="bookTopia-user" style="display: none">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="width: 210px">ID</th>
+                            <th style="width: 165px">BIRTH</th>
+                            <th style="width: 100px;">GENDER</th>
+                            <th style="width: 200px;">TEST_AT</th>
+                            <th style="width: 80px">Result</th>
+                        </tr>
+                        </thead>
+                        <tbody id="adminTestList">
+                        </tbody>
+
+                    </table>
+                    <div class="moreBtnBottom">
+                        <button type="button" id="adminTestBtn" class="adminmoreBtn" data-page="1" data-cate="adTest" style="visibility:hidden; margin-top: 11px">더보기 +</button>
+                    </div>
+                </div>
+
+                <!--구독자 리스트-->
+                <div class="subUser" style="display: none">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 200px">MerchantUid</th>
+                                <th style="width: 150px">ItemName</th>
+                                <th style="width: 70px">UserName</th>
+                                <th style="width: 110px">Phone</th>
+                                <th style="width: 320px">Address</th>
+                                <th style="width: 70px">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminSubList">
+                        </tbody>
+
+                    </table>
+                    <div class="moreBtnBottom">
+                        <button type="button" id="adminSubBtn" class="adminmoreBtn" data-page="1" data-cate="adsubUser" style="visibility:hidden; margin-top: 11px">더보기 +</button>
+                    </div>
+                </div>
+
+                <!-- 배송현황 -->
+                <div class="delivery" style="display: none">
+                    <table >
+                        <thead>
+                            <tr>
+                                <th style="width: 220px">MerchantUid</th>
+                                <th style="width: 180px">ItemName</th>
+                                <th style="width: 180px">Pay_RegAt</th>
+                                <th>Status</th>
+                                <th style="width: 100px">Delivery</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="adminDeliList">
+                        </tbody>
+                    </table>
+                    <div class="moreBtnBottom">
+                        <button type="button" id="adminDeliBtn" class="adminmoreBtn" data-page="1" data-cate="addeli" style="visibility:hidden; margin-top: 11px">더보기 +</button>
+                    </div>
+                </div>
+
+                <!--게시글 관리-->
+                <div class="commuBoard" style="display: none">
+                    <table >
+                        <thead>
+                            <tr>
+                                <th style="width: 45px"> Board_No</th>
+                                <th style="width: 80px">Cate</th>
+                                <th style="width: 230px;">Title</th>
+                                <th style="width: 230px;">Content</th>
+                                <th>Writer</th>
+                                <th>RegAt</th>
+                                <th>Manage</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminBoardList">
+                        </tbody>
+                    </table>
+                    <div class="moreBtnBottom">
+                        <button type="button" id="adminBoardBtn" class="adminmoreBtn" data-page="1" data-cate="addboard" style="visibility:hidden; margin-top: 11px">더보기 +</button>
+                    </div>
+                </div>
+
+                <!--댓글관리-->
+                <div class="commuComment" style="display: none">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Board_No</th>
+                                <th style="width: 200px">Writer</th>
+                                <th style="width: 350px">Content</th>
+                                <th style="width: 180px">RegAt</th>
+                                <th style="width: 80px">Manage</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminComment">
+                        </tbody>
+                    </table>
+                    <div class="moreBtnBottom">
+                        <button type="button" id="adminCommBtn" class="adminmoreBtn" data-page="1" data-cate="adCommen" style="visibility:hidden; margin-top: 11px">더보기 +</button>
+                    </div>
+                </div>
+
+                <!--쿠폰관리 -->
+                <div class="adminCouponAdd" style="display: none">
+                    <!--생성라인-->
+                    <p> 쿠폰 생성 </p>
+                    <div class="couponaddTable">
+                        <div class="coupondiv">
+                            <span>CouponName</span>
+                            <input type="text" name="couName" id="couName">
+                        </div>
+                        <div class="coupondiv">
+                            <span>Period</span>
+                            <input type="text" name="couPeriod" id="couPeriod">
+                        </div>
+                        <div class="coupondiv">
+                            <span>SalePer</span>
+                            <input type="text" name="couSale" id="couSale">
+                        </div>
+                        <div class="coupondiv">
+                            <span>Info</span>
+                            <input type="text" name="couInfo" id="couInfo">
+                            <button type="submit" id="postCoupon"> 쿠폰등록 </button>
+                        </div>
+                    </div>
+
+
+                    <!--리스트 뿌리기 라인-->
+                    <p class="couponList"> 쿠폰 List </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>CouponName</th>
+                                <th>Period</th>
+                                <th>Sale</th>
+                                <th>addAt</th>
+                                <th>Info</th>
+                            </tr>
+                        </thead>
+                        <tbody id="addCoupon">
+                        </tbody>
+                    </table>
+                    <div class="moreBtnBottom">
+                        <button type="button" id="adminCoupon" class="adminmoreBtn" data-page="1" data-cate="adCoupon" style="visibility:hidden; margin-top: 11px">더보기 +</button>
+                    </div>
+                </div>
+
+                <!--1:1 문의 관리 -->
+                <div class="adminqna" style="display: none">
+                    <table >
+                        <thead>
+                        <tr>
+                            <th style="width: 30px;">No</th>
+                            <th>User_id</th>
+                            <th style="width: 250px;">Title</th>
+                            <th style="width: 300px;">Content</th>
+                            <th>RegAt</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody id="adminqnaList">
+                        </tbody>
+                    </table>
+                    <div class="moreBtnBottom">
+                        <button type="button" id="adminQnABtn" class="adminmoreBtn" data-page="1" data-cate="adqna" style="visibility:hidden; margin-top: 11px">더보기 +</button>
+                    </div>
+
+                    <!--문의 답변 작성 라인-->
+                    <div class="qnaCotain">
+                    <div id="adminQnA" style="display: none">
+
+                    </div>
+                    </div>
+
+                    <!--문의 답변 확인 라인 -->
+                    <div class="qnaCotain">
+                    <div id="adminQnA_answer" style="display: none">
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <script th:src="@{/dist/js/adminPage.js}"></script>
+    </th:block>
+</th:block>

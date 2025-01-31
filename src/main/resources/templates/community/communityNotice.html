@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<title>안녕하세요</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/dist/css/communityNotice.css}">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <div class="wrap">
+            <!--작성자, 등록일 하나로-->
+            <div class="commNoTitle">북토피아 커뮤니티 이용안내 및 공지사항</div>
+            <div class="commNoWriterInfo">
+                <span class="commNoWriter">관리자 &nbsp·&nbsp 2024-06-20</span>
+            </div>
+            <div class="commNoContent">
+                <p>안녕하세요.</p>
+                <p>북토피아 관리자입니다.</p>
+                <p>커뮤니티의 원활한 운영을 위해 이용 안내를 드립니다.</p>
+                <p>아래 내용에 어긋나는 게시판 사용의 경우 관리자 판단하에
+                <span class="red">무통보 삭제</span> 또는
+                <span class="red">무통보 탈퇴</span> 등 이용제재를</p>
+                <p>당할 수 있으니 아래 내용을 숙지하시고 활동해주시기 바랍니다.</p>
+                <p>공지는 수시로 내용 수정 및 추가, 변경될 수 있으니 확인 부탁드립니다.</p>
+                <p>북토피아 커뮤니티는 기본적으로 책과 관련된 이야기를 나누기 위한 곳입니다.</p>
+                <p>게시글 속 내용은 모두 자유롭게 작성 가능 하지만
+                <span class="bold">목적과 관련없는 사담은 지양해주세요.</span></p>
+                <p class="red">사용자간의 친목을 금지합니다.</p>
+                <p class="red bold">실명 / 전화번호 / 주소 공유 금지</p>
+                <p>커뮤니티 이용 공지사항에 어긋나는 게시물이나 댓글이 지속적으로 확인될 경우</p>
+                <p>해당 게시판의 댓글 기능 차단 혹은 무통보 삭제될 수 있습니다.</p>
+                <p><span class="bold">의도적인 분란, 물타기를 유도하는 글, 광고성 스팸글을 반복 게시하는 회원의 경우 강제 탈퇴 처리됩니다.</span></p>
+                <p>원활한 커뮤니티 운영을 위해 사용자분들의 적극적인 협조를 부탁드립니다.</p>
+                <p>감사합니다.</p>
+            </div>
+            <div class="comm-commArea">
+                <!--댓글출력란-->
+                <div class="commDeComment">
+                    <div class="commDeCommentCtn">댓글&nbsp</div>
+                </div>
+                <!--댓글입력란-->
+                <div class="comm-CommInputArea">
+                    <div class="comm-CommInput">
+                        <textarea type="text" id="cmtContent" name="comm-Comment" readonly="readonly" class="comm-Comment" placeholder="해당 게시글은 댓글을 등록할 수 없습니다."></textarea>
+                        <button type="button" id="cmtAddBtn" class="comm-CommRegBtn">등록</button>
+                    </div>
+                </div>
+        </div>
+    </th:block>
+</th:block>

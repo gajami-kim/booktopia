@@ -1,0 +1,148 @@
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: jalnan;
+    src: url(../font/Jalnan2.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: cafe;
+    src: url(../font/Cafe24Ssurround-v2.0.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+.wrap{
+
+     justify-content: center;
+     font-family:SCDream4;
+     position:  relative;
+}
+.subTopBox{
+
+    width: 100%;
+    height: 100px;
+    margin-top: 75px;
+    text-align: center;
+}
+.subBottomBox{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+.subTicketInfo{
+    background-color: aquamarine;
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    padding-top: 60px;
+    border-radius: 20px;
+}
+.subTitle{
+    font-size: 4em;
+    letter-spacing: 7px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.subTitle span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce .3s ease infinite alternate;
+  font-family: cafe, cursive;
+  color: #3f3f3f;
+  text-shadow: 0 1px 0 #CCC,
+               0 2px 0 #CCC,
+               0 3px 0 #CCC,
+               0 4px 0 #CCC,
+               0 5px 0 #CCC,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px rgba(0, 0, 0, .4);
+}
+
+.subTitle span:nth-child(2) { animation-delay: .1s; }
+.subTitle span:nth-child(3) { animation-delay: .2s; }
+.subTitle span:nth-child(4) { animation-delay: .3s; }
+.subTitle span:nth-child(5) { animation-delay: .4s; }
+
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 #CCC,
+                 0 7px 0 #CCC,
+                 0 8px 0 #CCC,
+                 0 9px 0 #CCC,
+                 0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+.subTitle2{
+    padding-top: 48px;
+    font-size: 1.5em;
+    font-family: cafe;
+}
+
+.subMonth{
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.subGoToPayBtn{
+   margin-top: 440px;
+       cursor: pointer;
+       font-family: SCDream4;
+       width: 70px;
+       height: 70px;
+       border: none;
+       border-radius: 36px;
+       background-color: transparent;
+       font-size: 2em;
+       position: absolute;
+      transition: transform 0.5s ease;
+      }
+
+
+.subGoToPayBtn:hover{
+    color: white;
+     transform: translateY(-5px);
+}
+
+.onem{
+    left: 435px;
+    bottom: 238px;
+   color:gainsboro;
+   text-shadow: 1px 2px 5px black;
+}
+
+.threem{
+    left: 759px;
+    bottom: 241px;
+     color: gainsboro;
+     text-shadow: 1px 2px 5px black;
+}
+
+.sixm{
+    color:gainsboro;
+    text-shadow: 1px 2px 5px black;
+    left: 1082px;
+    top: 47px;
+}

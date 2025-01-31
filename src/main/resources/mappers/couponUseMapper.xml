@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.CouponUseMapper">
+
+    <insert id="insertUserCoupon">
+        insert into coupon_use (id, cou_no) values (#{id},1),(#{id},2);
+    </insert>
+
+    <update id="insertCouponUse">
+        update coupon_use set merchant_uid=#{merchantUid}, cou_use='Y' where id=#{id} and cou_no=#{couNo}
+    </update>
+
+    <select id="getCoupon" resultType="com.booktopia.www.domain.DTO.CouponInfoDTO">
+        select * from coupon_use where id=#{id} and cou_no=#{couNo}
+    </select>
+
+    <insert id="newCouponUpdate">
+        insert into coupon_use (id, cou_no) values (#{id}, #{couNo})
+    </insert>
+</mapper>

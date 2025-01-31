@@ -1,0 +1,82 @@
+.commDeContent h1, .commNoDeContent h1{
+    font-size: 46px;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+.commNoDeContent h1::after, .commDeContent h1::after{
+    content: "";
+    border-style: double;
+    display: block;
+    color: gray;
+    padding-top: 2px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    margin-top: 17px;
+    width: 940px;
+}
+.commDeContent h2, .commNoDeContent h2{
+    font-size: 41px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.commNoDeContent h2::after, .commDeContent h2::after{
+    content: "";
+    border-bottom: 1px solid #dddddd;
+    height: 1px;
+    display: block;
+    margin-top: 11px;
+    width: 940px;
+}
+.commDeContent h3, .commNoDeContent h3{
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+.commDeContent h4, .commNoDeContent h4{
+    font-size: 31px;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+.commDeContent h5, .commNoDeContent h5{
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+.commDeContent h6, .commNoDeContent h6{
+    font-size: 19px;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+.commDeContent strong, .commNoDeContent strong{
+    font-weight: bold;
+}
+.commDeContent em, .commNoDeContent em{
+    font-style: italic;
+    margin-top: 5px;
+}
+.commDeContent blockquote, .commNoDeContent blockquote{
+    border-left: 4px solid grey;
+    margin: 10px 0 0 8px;
+    padding-left: 10px;
+    line-height: 20px;
+    color: grey;
+}
+.commDeContent ul li::before, .commNoDeContent ul li::before{
+    content:'';
+    display:inline-block;
+    width:6px;
+    height:6px;
+    margin:-5px 10px 0 0;
+    vertical-align:middle;
+    background:#242222;
+    border-radius:50%
+}
+.commDeContent ul li>p .commNoDeContent ul li>p{
+    margin-left: 93px;
+    margin-top: -15px;
+}
+p{
+    line-height: 23px;
+}
+

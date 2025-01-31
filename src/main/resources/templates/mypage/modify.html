@@ -1,0 +1,61 @@
+<div class="myPageRight">
+    <div class="myPageRightWrap">
+        <div class="myPageRightWrapInfo">
+            <div class="myPageRightWrapInfoModWrap" style="background-image: url(../image/modifybg.png">
+                <div class="myPageRightWrapForm">
+                    <form action="/user/modify" method="POST" id="myinfoModifyForm">
+                        <div class="myPageModInputFormWrap" >
+                            <div class="myPageModInputFormText">아이디</div>
+                            <div class="mypageModInputFormData">
+                                <input type="text" name="id"
+                                       th:value="${#authentication.getName()}" readonly="readonly">
+                                <div class="pencil" style="background-image: url(../image/penLine.png"></div>
+                            </div>
+                        </div>
+                        <div class="myPageModInputFormWrap">
+                            <div class="myPageModInputFormText">이메일</div>
+                            <div class="mypageModInputFormData">
+                                <input type="text" name="email"
+                                       th:value="${#authentication.getPrincipal().userVO.getEmail()}" readonly="readonly">
+                                <div class="pencil" style="background-image: url(../image/penLine.png"></div>
+                            </div>
+                        </div>
+                        <div class="myPageModInputFormWrap">
+                            <div class="myPageModInputFormText">새 비밀번호</div>
+                            <div class="mypageModInputFormData">
+                                <input type="password" name="pwd" id="changePwd">
+                                <div class="pencil" style="background-image: url(../image/penLine.png"></div>
+                            </div>
+
+                        </div>
+                        <div class="myPageModInputFormWrap">
+                            <div class="myPageModInputFormText">새 비밀번호 확인</div>
+                            <div class="mypageModInputFormData">
+                                <input type="password" name="newPwd" id="changeNewPwd">
+                                <div class="pencil" style="background-image: url(../image/penLine.png"></div>
+                            </div>
+                        </div>
+                        <div class="myPageModInputFormWrap">
+                            <div class="myPageModInputFormText">이름</div>
+                            <div class="mypageModInputFormData">
+                                <input type="text" value="가입한 아이디" readonly="readonly"
+                                       th:value="${#authentication.getPrincipal().userVO.getName()}">
+                                <div class="pencil" style="background-image: url(../image/penLine.png"></div>
+                            </div>
+                        </div>
+                        <div class="myPageModInputFormWrap">
+                            <div class="myPageModInputFormText">전화번호</div>
+                            <div class="mypageModInputFormData">
+                                <input type="text" name="phone" id="modifyPhone" placeholder="'-' 제외하고 입력해주세요.">
+                                <div class="pencil" style="background-image: url(../image/penLine.png"></div>
+                            </div>
+                        </div>
+                        <div class="myPageModInputFormWrapBtn" style="background-image: url(../image/modifybtnline.png">
+                            <button type="button" id="submitButton" class="myPageModBtn" onclick="button_event();">회원정보 수정</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

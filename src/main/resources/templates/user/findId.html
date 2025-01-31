@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/dist/css/findId.css}">
+<script type="text/javascript" th:src="@{/dist/js/findId.js}"></script>
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <div class="wrap" >
+            <div class="fi_wrap" style="background-image: url(../image/loginmain.jpg">
+                <h1 class="fi_title"> 아이디 찾기 </h1>
+                <section class="fi_input">
+                    <p class="fi_msg">가입하신 이름을 입력하세요.</p>
+                    <input type="text" class="fi_name" id="fi_name" placeholder="이름 입력하기...">
+                    <button type="button" class="fi_btn" id="findbtn">확인</button>
+                    <div class="fi_resultArea" id="resArea">
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </th:block>
+</th:block>
+

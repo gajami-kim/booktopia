@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.HeartMapper">
+
+    <insert id="insertHeart">
+        insert into heart(id,bno,heart_yn)
+        values(#{id},#{bno},#{heartYn})
+    </insert>
+
+    <select id="heart1User" resultType="com.booktopia.www.domain.HeartVO">
+        select * from heart where id=#{id} and bno=#{bno}
+    </select>
+
+    <select id="getUser" resultType="com.booktopia.www.domain.HeartVO">
+        select * from heart where id=#{id} and bno=#{bno} and heart_yn=1
+    </select>
+
+    <select id="getHeartYN" resultType="Integer">
+        select heart_yn from heart where bno=#{bno} and id=#{id}
+    </select>
+
+    <update id="deleteHeart">
+        update heart set heart_yn=0 where id=#{id} and bno=#{bno}
+    </update>
+
+    <update id="updateHeart">
+        update heart set heart_yn=1 where id=#{id} and bno=#{bno}
+    </update>
+
+    <select id="getcount" resultType="int">
+        select count(bno) from heart where bno=#{bno}
+    </select>
+
+    <delete id="adminDelHeart">
+        delete from heart where bno=#{bno}
+    </delete>
+</mapper>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<title>안녕하세요</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:ses="http://www/thymeleaf.org/extras/spring-security">
+<link rel="stylesheet" th:href="@{/dist/css/communityMain.css}">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block ses:authorize = "isAuthenticated()">
+    <th:block th:fragment="content">
+        <div class="wrap">
+            <div class="yhidden">
+            <div class="commVote">
+                <div class="commVoteTitle">VOTE</div>
+                <div class="commMonth"><p>6월의 토론주제</p></div>
+                <div class="commChoice">당신의 선택은?</div>
+                <div class="commTopic">도서 정가제 실시 찬성한다 vs 반대한다</div>
+                <div class="commViewVote">
+                    <input type="hidden" th:with="auth=${#authentication.getName()}" th:value="${auth}" name="id" id="commuUser">
+                    <!--찬성 버튼-->
+                    <div class="commVoteUp vote" id="voteUp">
+                        <button type="submit" class="upBtn voteBtn" name="voteResult" th:value="찬성" >
+                            <img th:src="@{/image/thumbs-3.png}" alt="투표이미지" id="upImg">
+                        </button>
+                    </div>
+                    <!--찬반 투표 바-->
+                    <div class="commVoteBar" >
+                        <div class="persent">
+                            <input type="hidden" th:value="${score}" class="socre">
+                        </div>
+                    </div>
+                    <!--반대 버튼-->
+                    <div class="commVoteDown vote">
+                        <button type="submit" class="downBtn voteBtn" name="voteResult" th:value="반대">
+                            <img th:src="@{/image/thumbs-3.png}" alt="투표이미지" id="downImg" />
+                        </button>
+                    </div>
+                </div>
+                    <div class="voteText">찬성<span>반대</span></div>
+            </div>
+
+            <div class="commLine">
+                <img th:src="@{/image/commLine.png}">
+            </div>
+            <!--카테고리라인-->
+            <div class="commBoard">
+                <div class="commBoardArea">
+                    <div class="commBoardTitle">COMMUNITY</div>
+                    <div class="commBoardtext">
+                        <p>사람들과 자유롭게 의견을 나눌 수 있는</p>
+                        <p>북토피아만의 커뮤니티로 초대합니다</p>
+                        <p>서로를 배려하고 존중하는 모습 부탁드립니다</p>
+                        <a th:href="@{/community/communityNotice}"><p class="commNotice">> 공지사항 확인하기</p></a>
+                    </div>
+                    <!--전체보기버튼-->
+                    <div class="commBoardAll">
+                        <a th:href="@{/community/communityListAll}">
+                            <span>전체보기 ></span>
+                        </a>
+                    </div>
+                    <!--커뮤니티카테고리-->
+                    <div class="CommBoardCate">
+                        <div class="commCategory-top">
+                            <div class="commCate1 commCate">
+                                <a th:href="@{/community/communityList(bCate='novel')}">
+                                <div class="commCatetext">
+                                    <p>소설</p>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="commCate2 commCate">
+                                <a th:href="@{/community/communityList(bCate='poem')}">
+                                <div class="commCatetext">
+                                    <p>시/에세이</p>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="commCate3 commCate">
+                                <a th:href="@{/community/communityList(bCate='finance')}">
+                                <div class="commCatetext">
+                                    <p>경제/경영</p>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="commCategory-bottom">
+                            <div class="commCate4 commCate">
+                                <a th:href="@{/community/communityList(bCate='human')}">
+                                <div class="commCatetext">
+                                    <p>인문</p>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="commCate5 commCate">
+                                <a th:href="@{/community/communityList(bCate='history')}">
+                                <div class="commCatetext">
+                                    <p>역사/문화</p>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="commCate6 commCate">
+                                <a th:href="@{/community/communityList(bCate='development')}">
+                                <div class="commCatetext">
+                                    <p>자기개발</p>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <script th:inline="javascript">
+            // th:with="auth=${#authentication.getName()}"
+            const user = document.getElementById('commuUser').value;
+            console.log("user >>>>>"+user);
+        </script>
+        <script th:inline="javascript">
+            async function getScore (){
+                try{
+                    const url = "/community/getScore";
+                    const config={
+                        method : "POST",
+                        headers :{
+                            "Content-type":"application/json; charset=UTF-8"
+                        }
+                    };
+
+
+
+                }catch (error){
+                    console.log(error);
+                }
+            }
+        </script>
+        <script th:src="@{/dist/js/voteButton.js}"></script>
+    </th:block>
+    </th:block>
+</th:block>

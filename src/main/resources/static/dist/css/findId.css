@@ -1,0 +1,58 @@
+.fi_wrap{
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.fi_title{
+        width: 85%;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.8em;
+        letter-spacing: 2px;
+        margin-top: 50px
+}
+
+.sendMsg{
+    text-shadow: 0 0 13px #60dd60;
+    color: gray;
+}
+
+.fi_input{
+       width: 100%;
+       height: 400px;
+       text-align: center;
+}
+.fi_msg{
+    padding: 20px;
+
+}
+
+.fi_name{
+       border: 1px solid;
+       padding: 10px;
+       border-radius: 30px;
+
+
+}
+.fi_btn{
+        padding: 12px;
+        border-radius: 20px;
+        box-shadow: 0 0 13px lightskyblue;
+
+}
+.fi_btn:hover{
+    box-shadow: 0 0 13px #fa87cc;
+}
+.fi_resultArea{
+   margin-top: 10px;
+}
+
+.fi_gotologin{
+    margin-top: 5px;
+    border-bottom: 1px solid;
+}

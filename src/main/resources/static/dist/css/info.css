@@ -1,0 +1,187 @@
+@font-face {
+    font-family: jalnan;
+    src: url(../font/Jalnan2.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* 배경색 css */
+.infoWrap {
+    padding: 0;
+    margin: 0;
+    min-height: 400vh;
+    background-color: rgb(255, 255, 255);
+    animation: body 1s linear;
+}
+@keyframes body {
+    to {
+        background-color: rgb(70, 105, 163);
+    }
+}
+
+.progress {
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+}
+
+:root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+/* 요소 css */
+
+.gotest{
+    margin-bottom: 100px;
+}
+
+.subinfo{
+    color: ivory;
+}
+
+.testbtn {
+    transition: 0.5s;
+    background-color: ivory;
+    opacity: 0.5;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 50px;
+}
+.testbtn:hover{
+    box-shadow: 0 0 10px #4cbefa;
+    color: white;
+    background-color: skyblue;
+    opacity: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto ;
+    height: 3468px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+
+.title {
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
+    word-spacing: 2px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.text {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s 0.5s ease-in;
+    margin-bottom: 45px;
+}
+
+.article.show .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.letter {
+    opacity: 0;
+    margin-bottom: 30px;
+    transform: translateY(100%);
+    color: #e7f6ff;
+    font-size: 3em;
+    font-family: jalnan;
+    text-shadow: 0 1px 0 #CCC, 0 2px 0 #C9C9C9, 0 3px 0 #BBB, 0 4px 0 #B9B9B9,
+    0 5px 0 #AAA, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+
+}
+
+.article.show .letter {
+    display: inline-block;
+    opacity: 1;
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes reveal {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.infoTitle {
+    font-family: jalnan;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 100px;
+    font-size: 5em;
+
+}
+
+.infoTitle {
+    color: #759daf;
+    opacity: 0;
+    animation: anime 1.9s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    animation-timing-function: ease_in_out;
+}
+
+
+@-webkit-keyframes anime {
+    from {
+        left: 10px;
+    }
+    to {
+        left: 50px;
+        opacity: 1;
+    }
+}
+
+/* 아이콘 */
+
+@keyframes circlemove{
+    0%,100%{
+        transform:translate(-50%,-50%);
+    }
+    50%{
+        transform:translate(-50%,-60%);
+    }
+}
+
+
+.iconbox{
+    top:50%;
+    cursor:pointer;
+    animation:circlemove 1.8s infinite linear;
+    margin-top: 170px;
+    margin-left: 200px;
+}
+.icon{
+    top:40%;
+    border-radius:50%;
+}

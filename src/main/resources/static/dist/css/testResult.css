@@ -1,0 +1,173 @@
+@font-face {
+    font-family: jalnan;
+    src: url(../font/Jalnan2.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+#testResult {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 30px auto 100px;
+    text-align: center;
+    font-size: 1.5em;
+    /* line-height: 40; */
+    display: flex;
+    justify-content: space-evenly;
+    /* box-shadow: 1px 2px 4px gray; */
+    border-radius: 29px;
+    padding-bottom: 30px;
+}
+
+.titleMsg{
+    text-align: center;
+    font-family: jalnan;
+    font-size: 1.4em;
+    letter-spacing: 3px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.titleMsg2{
+    text-align: left;
+    font-family: jalnan;
+    letter-spacing: 1px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 2em;
+    margin-left: 55px;
+}
+
+.bookWrap{
+    width: 236px;
+    height: 330px;
+    text-align: center;
+    margin: 10px auto;
+    padding-top: 10px;
+    display: contents;
+}
+
+.bookImg{
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    box-shadow: 6px 3px 8px #7d7d7d;
+}
+
+.bookImg:hover{
+    margin-top: -20px;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+li{
+    float: left;
+}
+
+.msg{
+    width: 50%;
+    height: 120px;
+    padding-top: 50px;
+    margin: 300px auto;
+    border: 1px solid;
+    border-radius: 10px
+}
+
+.msg a{
+    border: 1px solid;
+    line-height: 71px;
+    padding: 5px;
+    border-radius: 11px;
+}
+
+/* 인기도서 */
+
+.bestBookList {
+    width: 100%;
+}
+    .mybestbook {
+        background-color: #effcff;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 230px;
+        margin-bottom: 150px;
+        padding: 100px 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        box-shadow: inset 0 0 12px #bababa;
+        border-radius: 66px;
+}
+
+    .mybestbook2{
+        background-color: #feffef;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 230px;
+        margin-bottom: 150px;
+        padding: 100px 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        box-shadow: inset 0 0 12px #bababa;
+        border-radius: 66px;
+    }
+
+
+.bestBook{
+    height: 230px;
+    display: -webkit-inline-box;
+    width: 350px;
+    display: flex;
+
+
+}
+
+.bestbookimg{
+    width: 150px;
+    max-height: 250px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 4px #7d7d7d;
+}
+
+.bookinfo{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 185px;
+}
+
+.ranking{
+    color: white;
+    font-size: 3em;
+    font-family: 'SCDream4';
+    text-shadow: 0 0 4px black;
+}
+.bestbooktitle:hover{
+   border-bottom: 1px solid black;
+}
+
+/* 움직이는 텍스트 */
+
+.bblist{
+    display: flex;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.original{
+    animation: scroll 60s linear infinite;
+}
+
+.clone{
+    animation: scroll 20s linear infinite;
+    animation-delay: 10s;
+}

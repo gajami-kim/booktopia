@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<title>안녕하세요</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- css area-->
+<link rel="stylesheet" th:href="@{/dist/css/subInfo.css}">
+<!-- css area -->
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <div class="wrap">
+            <div class="subTopBox">
+                <p class="subTitle">
+                    <span>구</span>
+                    <span>독</span>
+                    <span>상</span>
+                    <span>품</span>
+                </p>
+                <p class="subTitle2">'북토피아' 에서 나만을 위한 맞춤 도서를 받아보세요!</p>
+            </div>
+            <th:block th:with="auth=${#authentication.getPrincipal().userVO}">
+            <div class="subBottomBox" th:style=" 'background-image: url(../image/subinfo2.png)' ">
+                <a th:href="@{/pay/getPay(month=1,id=${auth.getId()})}"><button type="button" class="subGoToPayBtn onem">GO</button></a>
+                <a th:href="@{/pay/getPay(month=3,id=${auth.getId()})}"><button type="button" class="subGoToPayBtn threem">GO</button></a>
+                <a th:href="@{/pay/getPay(month=6,id=${auth.getId()})}"><button type="button" class="subGoToPayBtn sixm">GO</button></a>
+            </div>
+            </th:block>
+        </div>
+    </th:block>
+</th:block>
+</html>

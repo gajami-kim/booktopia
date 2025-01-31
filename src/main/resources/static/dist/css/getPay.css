@@ -1,0 +1,193 @@
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream5;
+    src: url(../font/S-Core_Dream_OTF/SCDream5.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: jalnan;
+    src: url(../font/Jalnan2.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream6;
+    src: url(../font/S-Core_Dream_OTF/SCDream6.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.wrap{
+    flex-wrap: wrap;
+    font-family: SCDream4;
+}
+.payTitle {
+    width: 930px;
+    text-align: center;
+    font-size: 2em;
+    margin: 45px auto 75px;
+
+}
+
+
+.payTitle p{
+    font-family: "SCDream6", SCDream6;
+}
+
+.paySubBox {
+    width: 930px;
+    margin: 0 auto;
+}
+
+.paySubDiv, .payUserDiv, .payInfoDiv, .payMethodDiv, .payCouponDiv {
+    font-family: 'SCDream5';
+    font-weight: bold;
+    font-size: 18px;
+}
+.paySubRight {
+    width: 76px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+.paySubInfoText {
+    font-size: 11px;
+    color: gray;
+    margin: 3px 1px;
+}
+
+.paySubInner, .payUserInner {
+    border: 1px solid gainsboro;
+    padding: 14px 14px 7px;
+    line-height: 1.6;
+    margin-top: 12px;
+    border-radius: 13px;
+    font-size: 15px;
+}
+.payUserBox, .payInfoBox, .payMethodBox, .payCouponBox {
+    width: 930px;
+    margin: 49px auto;
+}
+.payMethodDiv {
+    text-align: center;
+    font-size: 21px;
+    margin: 34px 0 25px;
+    font-family: 'SCDREAM5';
+    font-weight: bold;
+}
+
+
+input#ordName, #ordPhone, #addrDetailInput, #ordMemo {
+    background: #f1f1f1bd;
+    width: 98%;
+    padding: 8px 11px 8px;
+    border-radius: 10px;
+    margin: 1px 0 14px;
+    outline: none;
+}
+
+input#addrInput {
+    background: #f1f1f1bd;
+    width: 39%;
+    padding: 6px 9px 6px;
+    border-radius: 10px;
+    margin: 5px 0 6px;
+}
+
+.payGetAddrBtn {
+    width: 153px;
+    padding: 6px;
+    font-family: SCDream4;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #232323;
+    background: #e2e2e2bd;
+}
+
+.payInfoBox {
+    width: 930px;
+    margin: 48px auto;
+}
+
+.payInfoInner {
+    border: 1px solid gainsboro;
+    padding: 20px;
+    line-height: 2.5;
+    margin-top: 12px;
+    border-radius: 13px;
+    font-size: 16px;
+}
+.won {
+    float: right;
+}
+.totalAmountDiv {
+    font-size: 19px;
+    font-weight: bold;
+}
+.payMethodInner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+}
+.payM {
+    width: 437px;
+    border: 1px solid gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 14px;
+    text-align: center;
+    line-height: 23px;
+}
+.kakaopaydiv {
+    display: inline-block;
+    padding-top: 5px;
+    margin-left: -138px;
+}
+.kakaoPayText.payMText {
+    width: 171px;
+    margin: -26px 0 0 135px;
+}
+img{
+    width: 45px;
+}
+.paycoM img {
+    margin-left: -29px;
+}
+.payMethodBtn{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+.payM {
+    border: 1px solid gainsboro;
+}
+.paymentBtn {
+    width: 930px;
+    margin: 0 auto 30px;
+}
+hr{
+    border-color: rgba(220, 220, 220, 0.22);
+}
+#coupon{
+    width: 930px;
+    height: 50px;
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-family: 'SCDream4';
+    margin: 15px 0 0px;
+    outline: none;
+    border-color: gainsboro;
+    appearance: none;
+    background: url("/image/arrow3.png") no-repeat 891px  /2%;
+}
+.payStar {
+    margin-left: 2px;
+    color: #db0000;
+}

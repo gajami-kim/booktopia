@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/dist/css/info.css}">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+<div class="infoWrap">
+    <section class="container">
+        <article class="article">
+            <h2 class="title">
+                <span class="letter">WELCOME TO BOOKTOPIA!</span>
+            </h2>
+            <p class="text"> 북토피아에 오신 여러분을 환영합니다. <br>
+                북토피아는 여러분의 독서 취향을 찾아드리고, <br>
+                그에 맞는 여러가지 도서를 선별해 매달 배송해드리는 1:1 퍼스널 서비스를 제공합니다. <br>
+                북토피아를 구독하시고 한 달에 두 권씩 내 취향에 딱 맞는 책을 받아보세요!</p>
+        </article>
+
+        <div class="iconbox">
+            <div class="icon">
+                <div class="book">
+                    <img src="../image/openbook.png" alt="">
+                </div>
+            </div>
+        </div>
+        <article class="article">
+            <h2 class="title"> <span class="letter">더 쉽게,</span></h2>
+            <h2 class="title"> <span class="letter delay" data-delay="0.3">간편하게!</span></h2>
+            <h2 class="title"> <span class="letter delay" data-delay="0.6">내 취향 찾기</span></h2>
+            <p class="text"><a class="testbtn" th:href="@{/booktopiaTest/test}">취향테스트 하러 가기 </a></p>
+        </article>
+
+        <div class="iconbox">
+            <div class="icon">
+                <div class="book">
+                    <img src="../image/lovemsg.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <article class="article">
+            <h2 class="title"> <span class="letter">취향을 찾으셨나요?</span></h2>
+            <p class="text subinfo">북토피아는 취향을 찾아드리는 데서 멈추지 않고,<br>
+                여러분들이 직접 서점에 가서 책을 고르는 수고까지 덜어드립니다.<br>
+                매 달 정기배송으로 여러분과 천생연분인 책을 만나보세요. <br>
+                다음 배송일이 기다려집니다!</p>
+            <p class="text"><a class="testbtn gotest" th:href="@{/subscribe/info}">정기구독 하러 가기 </a></p>
+        </article>
+    </section>
+</div>
+<script th:inline="javascript">
+    window.addEventListener('scroll', () => {
+        document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    }, false);
+</script>
+        <script th:inline="javascript">
+            const articles = document.querySelectorAll(".article");
+
+            const articleObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            articles.forEach(article => {
+                articleObserver.observe(article);
+            });
+
+            const delays = document.querySelectorAll('.delay');
+
+            delays.forEach((delay) => {
+                const delayTime = delay.getAttribute("data-delay");
+                delay.style.animationDelay = `${delayTime}s`
+            })
+        </script>
+</th:block>
+</th:block>
+

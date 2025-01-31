@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<title>Booktopia</title>
+<html lang="en">
+<!-- css area-->
+
+<!-- css area -->
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <div class="wrap">
+<!--            <div class="main">-->
+<!--                <div class="main-slid">-->
+<!--                    <a href="#" class="icon1"><img src="/image/backicon.png"></a>-->
+<!--                    <div class="slid-img">슬라이드 이미지</div>-->
+<!--                    <a href="#" class="icon2"><img src="/image/fronticon.png"></a>-->
+<!--                </div>-->
+
+            <!--챗봇-->
+            <div class="chatBotContain" >
+                <div id="chatBotText" class="chatBotText" style="display: none">
+                    <div class="textTop">
+                        <span>북토피아 챗봇 서비스</span>
+                        <button type="button" id="textBtn">X</button>
+                    </div>
+                    <div class="textBody" th:style=" 'background-image: url(../image/msgArea.png)' ">
+                        <p class="AnserText"></p>
+                    </div>
+                    <div class="textFoot">
+                        <button type="button" class="txtF" id="chatbtn1">BookTopia?</button>
+                        <button type="button" class="txtF" id="chatbtn2">구독상품 문의</button>
+                        <button type="button" class="txtF" id="chatbtn3">홈페이지 오류 문의</button>
+                        <button type="button" class="txtF" id="chatbtn4">회원가입 / 로그인 문의</button>
+                        <button type="button" class="txtF" id="chatbtn5">커뮤니티 문의</button>
+                        <button type="button" class="txtF" id="chatbtn6">배송 문의</button>
+                    </div>
+                </div>
+                <div class="chatBotDiv">
+                    <div id="btn">
+                        <img class="chatBotIcon" th:src="@{/image/chatbot.png}"> <br>
+<!--                        <p>빠른상담</p>-->
+                    </div>
+                </div>
+            </div>
+
+<!--                &lt;!&ndash; booktopia 간단 소개 부분&ndash;&gt;-->
+<!--                <div class="main-simpleInfo">-->
+<!--                    <div class="simpleInfo">-->
+<!--                        <div class="Info Adv1">소개1</div>-->
+<!--                        <div class="Info Adv1">소개2</div>-->
+<!--                        <div class="Info Adv1">소개3</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash;도서취향 검사 부분&ndash;&gt;-->
+<!--                <div class="bookTopia">-->
+<!--                    <div class="bookTopia-img"><img src="#"></div>-->
+<!--                    <div class="bookTopia-detail">-->
+<!--                        <p>내가 원하던 바로 그책!</p>-->
+<!--                        <p>나만의 맞춤 도서를 받아 볼 수 있다?!</p>-->
+<!--                        <button type="button"><a href="/booktopiaTest/test">도서 취향 검사하러 가기</a></button>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash;커뮤니티 부분&ndash;&gt;-->
+<!--                <div class="commu">-->
+<!--                    <div class="commu-detail">-->
+<!--                        <p>다양한 사람들과의 토론을 통해 느끼는</p>-->
+<!--                        <p>색다른 매력을 느껴보세요!</p>-->
+<!--                        <button type="button"><a href="/community/communityMain">커뮤니티 바로가기</a></button>-->
+<!--                    </div>-->
+<!--                    <div class="commu-img"><img src="#"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="test" th:style=" 'background-image: url(../image/mainnew2.png)' "></div>
+            <div class="copyRight"> ⓒ2024, Team KKOY All right reserved.</div>
+        </div>
+
+    </th:block>
+</th:block>
+</html>

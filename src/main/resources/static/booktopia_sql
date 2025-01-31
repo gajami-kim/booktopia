@@ -1,0 +1,265 @@
+--회원 DB
+CREATE TABLE user (
+id varchar(200) NOT NULL,
+pwd VARCHAR(200),
+email VARCHAR(200),
+name VARCHAR(200),
+phone VARCHAR(200),
+address VARCHAR(200),
+user_del VARCHAR(1) DEFAULT 'N',
+user_reg DATETIME DEFAULT now(),
+user_up DATETIME DEFAULT now(),
+user_type VARCHAR(200),
+access_token VARCHAR(1000),
+PRIMARY KEY(id));
+
+
+--권한 DB
+CREATE TABLE auth (
+id VARCHAR(200) NOT NULL,
+role VARCHAR(200) DEFAULT 'ROLE_USER');
+
+--문의내역 DB
+CREATE TABLE qna (
+qna_num INT AUTO_INCREMENT PRIMARY KEY,
+id VARCHAR(200),
+qna_title VARCHAR(500),
+qna_content TEXT,
+qna_answer TEXT,
+qna_reg_at DATETIME DEFAULT NOW(),
+qna_mod_at DATETIME
+);
+
+
+--책 목록 DB
+CREATE TABLE book(
+book_code INT NOT NULL,
+book_title VARCHAR(200) ,
+book_writer VARCHAR(200) ,
+book_cate VARCHAR(200) ,
+result_type varchar(1),
+book_story VARCHAR(300),
+book_img varchar(500),
+PRIMARY KEY(book_code));
+
+
+--취향검사 결과 저장용 DB
+create table booktopia (
+btp_no int auto_increment,
+id varchar(200),
+birth varchar(200),
+gender varchar(1),
+test_at datetime default now(),
+btn_result int,
+primary key(btp_no));
+
+
+--결제 DB
+CREATE TABLE pay(
+merchant_uid VARCHAR(200),
+item_name varchar(200),
+total_amount int default 0,
+sale_amount int default 0,
+cou_no int,
+approved_at DATETIME default now());
+
+
+--주문내역 DB
+CREATE TABLE order_info(
+merchant_uid VARCHAR(300),
+imp_uid VARCHAR(200),
+id varchar(200) not null,
+ord_name varchar(200),
+ord_email varchar(200),
+ord_phone varchar(200),
+ord_addr varchar(200),
+ord_regdate datetime default now(),
+primary key(merchant_uid));
+
+
+--쿠폰 사용내역 DB
+CREATE TABLE coupon_use (
+merchant_uid varchar(200),
+id VARCHAR(200) NOT NULL,
+cou_no INT NOT NULL,
+cou_use VARCHAR(20) DEFAULT 'N');
+
+
+--쿠폰 내역 DB(어드민)
+create table ad_coupon(
+cou_no int NOT NULL auto_increment,
+ad_cou_name varchar(200),
+ad_cou_period varchar(200),
+ad_cou_date datetime default now(),
+ad_cou_sale float,
+ad_cou_info varchar(500),
+primary key(cou_no));
+
+
+--배송현황 DB
+create table delivery (
+deli_no int auto_increment,
+merchant_uid varchar(300) not null,
+id varchar(200) not null,
+item_name varchar(200),
+deli_date datetime default now(),
+deli_status varchar(20) not null default '배송준비중',
+primary key(deli_no));
+
+
+--구독권 정보 DB
+CREATE TABLE subscribe_info(
+ship_no INT NOT NULL,
+sub_in_month INT,
+sub_in_price INT,
+PRIMARY KEY(ship_no));
+
+
+--게시판 DB
+CREATE TABLE board(
+bno bigint NOT NULL auto_increment,
+id varchar(200) NOT NULL,
+b_title varchar(200),
+b_writer varchar(200),
+b_content text,
+b_reg_date datetime default now(),
+b_up_date datetime,
+b_read_cnt int default 0,
+b_cmt_cnt int default 0,
+b_heart_cnt int default 0,
+b_is_del varchar(1) default 'N',
+b_cate varchar(200),
+b_mainImg varchar(500),
+primary key(bno));
+
+
+--댓글 DB
+CREATE TABLE comment (
+cno bigint NOT NULL auto_increment,
+bno bigint NOT NULL,
+c_writer varchar(200),
+c_content text,
+c_reg_date datetime default now(),
+primary key(cno));
+
+
+--대댓글 DB
+CREATE TABLE recomment (
+rc_cno int NOT NULL auto_increment,
+cno bigint NOT NULL,
+bno bigint,
+rc_writer varchar(200) NOT NULL,
+rc_content text,
+rc_reg_date datetime default now(),
+primary key(rc_cno));
+
+
+--좋아요 DB
+create table heart(
+hno bigint NOT NULL auto_increment,
+id varchar(200) NOT NULL,
+bno bigint NOT NULL,
+heart_yn tinyint default 1,
+primary key(hno));
+
+
+--투표 DB
+create table vote (
+id varchar(200),
+vote_result varchar(10));
+
+--투표 기본값 저장용 DB
+create table system_info (
+score int default 50);
+
+
+--파일 DB
+create table file(
+uuid varchar(256) NOT NULL,
+save_dir varchar(256) NOT NULL,
+file_name varchar(256) NOT NULL,
+file_size bigint NOT NULL,
+file_type int NOT NULL default 0,
+primary key(uuid));
+
+
+--챗봇 DB
+create table chatbot(
+chat_no int not null,
+chat_ans text,
+chat_type varchar(100),
+primary key(chat_no));
+
+
+
+-- 외래키 추가
+ALTER TABLE auth ADD CONSTRAINT fk_auth_id FOREIGN KEY(id) REFERENCES user(id);
+ALTER TABLE coupon_use ADD CONSTRAINT fk_cou_use_id FOREIGN KEY(id) REFERENCES user(id);
+ALTER TABLE heart ADD CONSTRAINT fk_heart_id FOREIGN KEY(id) REFERENCES user(id);
+ALTER TABLE heart ADD CONSTRAINT fk_heart_bno FOREIGN KEY(bno) REFERENCES board(bno);
+ALTER TABLE board ADD CONSTRAINT fk_board_id FOREIGN KEY(id) REFERENCES user(id);
+ALTER TABLE comment ADD CONSTRAINT fk_comment_id FOREIGN KEY(bno) REFERENCES board(bno);
+ALTER TABLE recomment ADD CONSTRAINT fk_recomment_id FOREIGN KEY(cno) REFERENCES comment(cno);
+ALTER TABLE pay ADD CONSTRAINT fk_pay_id FOREIGN KEY(merchant_uid) REFERENCES order_info(merchant_uid);
+
+
+
+--기본 삽입 데이터
+insert into system_info value(score=50);
+
+insert into ad_coupon (ad_cou_name, ad_cou_period, ad_cou_sale, ad_cou_info)
+values
+('1년 구독 할인쿠폰', '3년', 0.5, '1년 이상 누적 구독시, 구독권 50% 할인'),
+('신규 회원 할인쿠폰', '1개월', 0.1, '신규가입 구독권 10% 할인');
+
+insert into chatbot values
+(1, 'BookTopia', 'BookTopia 관련 내용'),
+(2, '구독상품 문의', '구독상품 관련 내용'),
+(3, '홈페이지 오류 문의', '홈페이지 오류 관련 내용'),
+(4, '회원가입/로그인 문의', '회원가입/로그인 관련 내용'),
+(5, '커뮤니티 문의', '커뮤니티 문의 관련 내용'),
+(6, '배송문의', '배송문의 관련 내용');
+
+insert into subscribe_info values(1,1,12900);
+insert into subscribe_info values(2,3,32700);
+insert into subscribe_info values(3,6,59400);
+
+INSERT INTO board(id, b_title, b_writer, b_content, b_reg_date, b_cate)
+VALUES
+('qansd5', '세계사의 전환점과 현대 사회', 'jimyung', '세계사는 여러 전환점을 거쳐 현재의 사회를 형성해 왔습니다. 역사적 사건들은 우리가 현대 사회의 이해를 깊이 있게 하는 중요한 자료들을 제공합니다.', NOW(), 'history'),
+('qansd5', '역사적 인물의 행적과 영향력', 'jimyung', '역사적 인물들은 자신들의 시대를 뛰어넘어 긴 영향력을 끼쳤습니다. 그들의 행적과 사상은 우리에게 많은 교훈을 제공합니다.', NOW(), 'history'),
+('qansd5', '혁명과 사회 변화의 이해', 'jimyung', '혁명은 사회 구조와 인간 행동에 깊은 변화를 일으키는 중요한 요소입니다. 역사적 혁명들은 우리가 사회 변화를 이해하고 예측하는 데 도움을 줍니다.', NOW(), 'history'),
+('qansd5', '전쟁과 평화의 미학', 'jimyung', '전쟁과 평화는 인류의 역사적인 모습을 그립니다. 이러한 이벤트들은 우리가 인간 본성과 사회적 상호작용에 대해 깊이 있는 통찰을 얻게 합니다.', NOW(), 'history'),
+('qansd5', '역사적 경제 모델의 발전', 'jimyung', '역사적 경제 모델은 어떻게 현대 경제 시스템의 기초가 되었는지 설명합니다. 이러한 발전은 우리가 경제적 성장과 변화를 이해하는 데 중요한 역할을 합니다.', NOW(), 'history'),
+('qansd5', '종교와 정치의 교차점', 'jimyung', '종교와 정치는 역사적으로 긴밀하게 얽혀 있었습니다. 이러한 관계는 우리가 세계 각국의 정치적 상황을 이해하고 예측하는 데 중요한 통찰을 제공합니다.', NOW(), 'history'),
+('qansd5', '역사적 인식의 변화와 사회적 발전', 'jimyung', '역사적 인식은 시간이 흐름에 따라 변화해 왔습니다. 이러한 변화는 우리가 과거의 실수를 피하고 미래를 위한 결정을 내리는 데 도움을 줍니다.', NOW(), 'history'),
+('qansd5', '지리와 역사의 연결', 'jimyung', '지리는 역사적 사건들의 맥락을 이해하는 데 중요한 역할을 합니다. 지리적 배경은 역사적 사건들을 설명하고 그들의 결과를 분석하는 데 도움을 줍니다.', NOW(), 'history'),
+('qansd5', '사회적 정의와 인권의 진보', 'jimyung', '사회적 정의와 인권은 역사적으로 어떻게 발전해 왔는지를 이해하는 데 중요한 역할을 합니다. 이러한 진보는 우리가 민주주의와 평등을 실현하는 데 도움을 줍니다.', NOW(), 'history'),
+('qansd5', '역사적 상징의 의미와 상징학적 해석', 'jimyung', '역사적 상징들은 우리가 특정 문화나 시대의 의미를 이해하는 데 도움을 줍니다. 이러한 해석은 우리가 다른 문화와 상호작용하는 데 필수적인 지식을 제공합니다.', NOW(), 'history');
+
+
+INSERT INTO board(id, b_title, b_writer, b_content, b_reg_date, b_cate)
+VALUES
+('qansd5', '성공적인 리더십의 요소', 'admin', '성공적인 리더십은 목표 설정, 실행능력, 팀 빌딩 등 다양한 요소가 조화를 이루어야 합니다. 이를 통해 개인과 조직의 발전을 이룰 수 있습니다.', NOW(), 'development'),
+('qansd5', '자기관리와 목표 달성 전략', 'admin', '자기관리는 시간 관리, 스트레스 관리, 목표 설정 등을 포함합니다. 이를 통해 개인의 성장과 발전을 이룰 수 있으며, 자신의 잠재력을 최대화할 수 있습니다.', NOW(), 'development'),
+('qansd5', '창의적 문제 해결 능력 강화', 'admin', '창의적 문제 해결 능력은 새로운 아이디어 도출, 다양한 시각에서의 문제 접근 등을 포함합니다. 이는 개인의 혁신력을 증진시키고 발전 가능성을 높입니다.', NOW(), 'development'),
+('qansd5', '커뮤니케이션 스킬의 중요성', 'admin', '커뮤니케이션 스킬은 명확하고 효과적인 의사 전달을 위한 능력을 의미합니다. 이는 개인이 다른 사람과 협력하고 팀에서의 역할을 효율적으로 수행하는 데 도움을 줍니다.', NOW(), 'development'),
+('qansd5', '지속적인 학습과 개발의 필요성', 'admin', '지속적인 학습은 기술 업데이트, 전문 지식 확보 등을 통해 개인의 전문성을 유지하고 개발할 수 있는 능력을 의미합니다. 이는 변화하는 환경에서 경쟁력을 유지하는 데 중요합니다.', NOW(), 'development'),
+('qansd5', '심리적 강화와 스트레스 관리', 'admin', '심리적 강화는 자기 인식, 감정 관리, 스트레스 관리 등을 통해 내적 강점을 개발하고 성취감을 높이는 데 중요한 역할을 합니다. 이는 개인의 삶의 질을 향상시키는 데 기여합니다.', NOW(), 'development'),
+('qansd5', '효과적인 결정 전략과 실행', 'admin', '효과적인 결정 전략은 정보 수집, 분석, 대안 평가 등을 포함합니다. 이는 개인이 복잡한 상황에서도 결정을 내리고 실행할 수 있는 능력을 키우는 데 중요합니다.', NOW(), 'development'),
+('qansd5', '인간관계 구축과 유지 전략', 'admin', '인간관계 구축은 이해심, 존중, 협력 등을 통해 팀 내외의 사람들과 원활하게 상호작용하는 능력을 의미합니다. 이는 개인의 조직 내 위치와 협업 능력을 개발하는 데 중요합니다.', NOW(), 'development'),
+('qansd5', '전략적 사고와 문제 해결 능력', 'admin', '전략적 사고는 장기적인 목표 설정과 그에 따른 계획 수립, 문제 해결 전략의 개발 등을 포함합니다. 이는 개인이 조직의 방향성을 이해하고 이를 실현할 수 있는 능력을 키우는 데 중요합니다.', NOW(), 'development'),
+('qansd5', '비즈니스 환경에서의 리더십', 'admin', '비즈니스 환경에서의 리더십은 조직의 비전을 이해하고 효과적으로 전파하는 능력을 의미합니다. 이는 개인이 조직의 성과를 최적화하고 지속 가능한 성장을 이룰 수 있도록 돕는 역할을 합니다.', NOW(), 'development');
+
+
+INSERT INTO board(id, b_title, b_writer, b_content, b_cate, b_mainImg) VALUES
+('qansd5', '넛지: 똑똑한 선택을 이끄는 힘', 'qansd55', '넛지는 우리가 일상에서 내리는 작은 결정들이 큰 변화를 가져올 수 있음을 강조한다. 리처드 탈러와 캐스 선스타인의 연구는 선택 설계의 중요성을 잘 보여주며, 다양한 예시를 통해 이를 실감나게 전달한다.', 'finance', ''),
+('qansd5', '블랙 스완', 'qansd55', '나심 니콜라스 탈레브는 예측 불가능한 사건들이 어떻게 경제와 사회에 큰 영향을 미치는지 설명한다. 블랙 스완은 우리에게 불확실성에 대비하는 법과 리스크 관리의 중요성을 일깨워준다.', 'finance', ''),
+('qansd5', '돈의 심리학', 'qansd55', '모건 하우절의 돈의 심리학은 돈과 인간 행동의 관계를 심도 있게 분석한다. 재정적 의사결정의 심리적 요인을 탐구하며, 투자와 저축에 대한 새로운 시각을 제공한다.', 'finance', ''),
+('qansd5', '부자 아빠 가난한 아빠', 'qansd55', '로버트 기요사키는 두 아버지의 대조적인 경제 관점을 통해 재정적 독립과 투자에 대한 중요한 교훈을 전달한다. 재정 교육의 중요성을 강조하며, 자산 구축의 기초를 잘 설명한다.', 'finance', ''),
+('qansd5', '제로 투 원', 'qansd55', '피터 틸은 창업과 혁신의 중요성을 강조하며, 새로운 시장을 창출하는 방법을 논의한다. 기존의 틀을 벗어난 사고와 독창성이 성공의 열쇠임을 일깨워주는 책이다.', 'finance', ''),
+('qansd5', '생각의 속도', 'qansd55', '빌 게이츠는 기술 발전이 비즈니스와 경제에 미치는 영향을 분석하며, 미래를 대비하는 전략을 제시한다. 빠르게 변화하는 시대에 필요한 사고방식과 적응력을 강조한다.', 'finance', ''),
+('qansd5', '자본론', 'qansd55', '칼 마르크스의 자본론은 자본주의 경제 구조와 그 문제점을 비판적으로 분석한다. 노동 가치 이론과 잉여 가치 개념을 통해 경제 시스템의 근본적인 이해를 돕는다.', 'finance', ''),
+('qansd5', '거대한 전환', 'qansd55', '칼 폴라니는 시장 경제의 발전과 그로 인한 사회적 변화들을 역사적으로 분석한다. 경제와 사회의 상호작용을 깊이 있게 탐구하며, 시장의 역할과 한계를 재고하게 한다.', 'finance', ''),
+('qansd5', '지식 자본론', 'qansd55', '아이마이츠와 오토마즈는 지식 경제 시대에 지식이 어떻게 자본으로 작용하는지 설명한다. 지식의 중요성과 이를 활용한 기업 전략을 제시하며, 현대 경제의 핵심을 파헤친다.', 'finance', ''),
+('qansd5', '대중의 지혜', 'qansd55', '제임스 수로위키는 대중의 집단지성이 어떻게 개별 전문가보다 뛰어난 결과를 도출할 수 있는지 설명한다. 다양한 사례를 통해 협력과 공유의 가치를 강조한다.', 'finance', '');

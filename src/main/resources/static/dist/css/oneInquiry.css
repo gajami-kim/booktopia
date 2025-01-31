@@ -1,0 +1,81 @@
+/* Container for the entire layout */
+.qnawrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1400px;
+    height: 600px;
+    margin: 60px auto; /* Center and add margin */
+}
+
+/* Left form container */
+.qnaleftform {
+    width: 1000px; /* Width adjusted for better alignment */
+    height: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 40px; /* Increased spacing between forms */
+}
+
+
+/* Form styling */
+.qnaformwrap {
+    width: 750px; /* Fixed width for the form container */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+
+/* Input styling */
+.qnainput {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.qnacontenttext {
+    width: 100px;
+    flex-shrink: 0; /* Prevent shrinking */
+    margin-right: 15px; /* Adjusted spacing between label and input */
+}
+
+.qnainput > input,
+.qnainput > textarea {
+    flex-grow: 1; /* Expand to fill available space */
+    height: 40px; /* Fixed height for input */
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px; /* Adjust font size */
+    box-sizing: border-box; /* Include padding and border in width */
+    resize: none;
+    outline : none;
+    font-family: 'SCDream4'/* Disable resizing for textarea */
+}
+
+.qnainput > textarea {
+    height: 300px;
+
+}
+
+/* Button styling */
+.QnaBtn {
+    background-color: #4c8d6ff7;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    float: right;
+}
+
+.QnaBtn:hover {
+    background-color: #2e6c4ff7;
+}

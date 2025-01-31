@@ -1,0 +1,167 @@
+@font-face {
+    font-family: SCDream3;
+    src: url(../font/S-Core_Dream_OTF/SCDream3.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream5;
+    src: url(../font/S-Core_Dream_OTF/SCDream5.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream8;
+    src: url(../font/S-Core_Dream_OTF/SCDream8.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+/*메인 테스트*/
+.maindot{
+    position: absolute;
+}
+.mainImg{
+    width: 1300px;
+    height: 780px;
+    background-color: white;
+    z-index: 1000;
+}
+.whiteBox{
+    width: 150px;
+    height: 130px;
+    background-color: white;
+    position: absolute;
+    right: 220px;
+    bottom: 75px;
+}
+.BooktopiaLogo{
+    width: 1500px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.headerCateIn{
+    font-family: SCDream8;
+}
+/*메인 테스트*/
+
+.main{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.main-slid{
+    background-color: blanchedalmond;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.main-slid>img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.main-slid>.icon1{
+    transform: translate(10px, 170px);
+}
+.main-slid> .icon2{
+    transform: translate(-10px, 170px);
+}
+.slid-img{
+    background-color: azure;
+    width: 1000px;
+    text-align: center;
+    line-height: 400px;
+}
+
+.main-simpleInfo{
+    background-color: rgb(234, 212, 255);
+    height: 300px;
+    position: relative;
+}
+
+.simpleInfo{
+    background-color: rgb(1, 78, 78);
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    position: absolute;
+    transform: translateX(200px);
+    display: flex;
+    justify-content: space-around;
+}
+.Info{
+    background-color: cornsilk;
+    width: 230px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+}
+.bookTopia{
+    background-color: yellowgreen;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bookTopia-img{
+    width: 300px;
+    height: 300px;
+    background-color: wheat;
+    line-height: 300px;
+    position: absolute;
+    transform: translate(-300px, 50px);
+}
+.bookTopia-detail{
+    position: absolute;
+    transform: translate(140px, 110px);
+    line-height: 50px;
+}
+.commu {
+    background-color: brown;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.commu-detail{
+    position: absolute;
+    transform: translate(-300px, 110px);
+    line-height: 50px;
+}
+.commu-img{
+    width: 300px;
+    height: 300px;
+    background-color: wheat;
+    line-height: 300px;
+    position: absolute;
+    transform: translate(300px, 50px);
+}
+
+.test{
+   width: 100%;
+   height: 800px;
+   margin: 0 auto;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+
+}
+.copyRight{
+    font-family: SCDream5;
+    width: 1400px;
+    text-align: center;
+}
+
+.adminpagealink{
+    display: inline;
+
+}

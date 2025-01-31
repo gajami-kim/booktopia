@@ -1,0 +1,219 @@
+@font-face {
+    font-family: SCDream3;
+    src: url(../font/S-Core_Dream_OTF/SCDream3.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream5;
+    src: url(../font/S-Core_Dream_OTF/SCDream5.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream6;
+    src: url(../font/S-Core_Dream_OTF/SCDream6.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: jalnan;
+    src: url(../font/Jalnan2.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: cafe;
+    src: url(../font/Cafe24Ssurround-v2.0.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+.wrap {
+    height: 800px;
+    overflow: hidden;
+}
+.commVote{
+    width: 1000px;
+    height: 310px;
+    margin: 50px auto 0;
+    display: block;
+ }
+.commVoteTitle{
+    font-family: jalnan;
+    font-size: 33px;
+    height: 30px;
+    text-align: center;
+}
+.commMonth{
+    width: 800px;
+    height: 20px;
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.commMonth p{
+    font-size: 20px;
+    font-family: SCDream5;
+}
+.commChoice{
+    width: 800px;
+    height: 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+.commTopic{
+    width: 700px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+    font-family: cafe;
+    border:1px solid black;
+    border-radius: 4px;
+    line-height: 50px;
+}
+.commViewVote{
+    height: 100px;
+    margin: 10px 0 0 6px;
+    display: flex;
+    justify-content: center;
+    clear: both;
+}
+.voteBtn{
+    border: none;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(100,149,237,0);
+    cursor: pointer;
+}
+.voteBtn img{
+    width: 50px;
+    height: 50px;
+}
+.commVoteDown img{
+    transform: rotate(180deg);
+    margin: 12px 0 0 7px;
+}
+.commVoteUp img{
+    margin: 11px 0 0 -10px;
+}
+.vote div{
+    width: 50px;
+}
+.commVoteUp div{
+    margin-top: 4px;
+}
+.commVoteDown div{
+    margin-top: 5px;
+    margin-left: 17px;
+}
+.voteText{
+    margin-top: -20px;
+    margin-left: 110px;
+    height: 10px;
+}
+.voteText span{
+    margin-left: 735px;
+}
+/*바닥(퍼센트)*/
+.commVoteBar{
+    height: 20px;
+    width: 700px;
+    background-color: #0075ab;
+    display: flex;
+    margin-top: 35px;
+    border-radius: 30px;
+}
+/*채워지는값*/
+.persent {
+    height: 20px;
+    width: 350px;
+    background-color: #fda4a3;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.commLine img{
+    margin-top: -22px;
+    margin-left: 204px;
+    width: 970px
+}
+
+/*보드*/
+.commBoard{
+    width: 1000px;
+    height: 380px;
+    margin: 75px auto;
+}
+.commBoardArea{
+    display: flex;
+    clear: both;
+}
+.commBoardTitle{
+    font-family: jalnan;
+    font-size: 33px;
+    height: 30px;
+}
+.commBoardtext{
+    width: 643px;
+    height: 330px;
+    margin-left: -218px;
+    line-height: 35px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+.commNotice{
+    font-size: 16px;
+    color: #919191;
+    width: 145px;
+}
+.commNotice:hover{
+    color: black;
+    font-weight: bold;
+}
+.commBoardAll{
+    float: right;
+    width: 130px;
+    position: absolute;
+    right: 315px;
+    top: 600px;
+}
+.commBoardAll{
+    font-family: SCDream3;
+    font-size: 13px;
+}
+.CommBoardCate{
+    width: 740px;
+    margin-top: 50px;
+    font-size: 18px;
+    line-height: 5;
+}
+.commCatetext p:hover{
+    background-color: #ffffe3;
+}
+.commCategory-top{
+    display: flex;
+    justify-content: space-around;
+    clear: both;
+    width: 100%;
+    height: 135px;
+}
+.commCategory-bottom{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 132px;
+}
+.commCatetext p{
+    width: 103px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid;
+    padding: 15px;
+    line-height: 69px;
+    height: 69px;
+    box-shadow: 3px 6px 8px 0px gainsboro;
+    font-family: cafe;
+    font-size: 19.5px;
+    border-radius: 82px;
+}

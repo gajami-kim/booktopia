@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.ReCommentMapper">
+    <insert id="postromment">
+        insert into recomment (cno, bno, rc_writer, rc_content)
+        values (#{cno},#{bno},#{rcWriter},#{rcContent})
+    </insert>
+
+    <select id="getReCommentList" resultType="com.booktopia.www.domain.RecommentVO">
+        select * from recomment where cno=#{cno}
+    </select>
+
+    <delete id="deleteFromBoard">
+        delete from recomment where bno=#{bno}
+    </delete>
+
+    <delete id="deleteReComment">
+        delete from recomment where cno=#{cno}
+    </delete>
+
+    <select id="rcCount" resultType="int">
+        select count(rc_cno) from recomment where cno=#{cno}
+    </select>
+
+    <select id="getreCommentCount" resultType="int">
+        select count(rc_cno) from recomment
+    </select>
+
+    <select id="adminreCommtneList" resultType="com.booktopia.www.domain.RecommentVO">
+        select * from recomment
+    </select>
+
+    <delete id="adminDelRecomment">
+        delete from recomment where bno=#{bno}
+    </delete>
+
+    <select id="getadreComCount" resultType="int">
+        select count(bno) from recomment where bno=#{bno}
+    </select>
+</mapper>

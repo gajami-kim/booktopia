@@ -1,0 +1,304 @@
+@font-face {
+    font-family: SCDream3;
+    src: url(../font/S-Core_Dream_OTF/SCDream3.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: SCDream5;
+    src: url(../font/S-Core_Dream_OTF/SCDream5.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+.commListBtn{
+    float: right;
+    margin:-27px 204px;
+    font-size: 14.5px;
+    color: gray;
+}
+.commDeArea{
+    width: 940px;
+    border-bottom: 1px solid #dadada;
+    border-top: 1px solid #dadada;
+    padding: 0 30px;
+    margin: 60px auto 0;
+}
+.commDeCate{
+    width: 940px;
+    height: 25px;
+    font-family: SCDream4;
+    font-size: 20px;
+    color: #3b3b3b;
+    border-bottom: 1px solid #b7b7b7;
+    margin-top: 40px;
+    padding-bottom: 10px;
+}
+.commDeTitle{
+    /*background-color: lightcoral;*/
+    width: 1000px;
+    height: 55px;
+    margin: 0 auto ;
+    font-size: 24px;
+    font-family: SCDream5;
+    line-height: 55px;
+    padding-bottom: 10px;
+}
+.commDetTitle{
+    font-family: SCDream5;
+}
+.commDeWriterInfo{
+    width: 1000px;
+    height: 20px;
+    margin: 0 auto;
+    display: flex;
+}
+.commDeWriter, .commDeRegdate{
+    height: 20px;
+    font-family: SCDream3;
+    font-size: 15px;
+    color: #4c4c4c;
+}
+.commDeImgArea{
+    width: 1000px;
+    margin: 0 auto;
+}
+/*수정 삭제 버튼*/
+.commBtnArea{
+    font-size: 15px;
+    height: 40px;
+    width: 170px;
+    margin: 20px 0 0 1050px;
+}
+.commModBtn, .commDelBtn{
+    width: 65px;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid #7a7a7a;
+    border-radius: 3px;
+    background-color: white;
+}
+.commModBtn:hover{
+    border: 1px solid darkgray;
+    color: darkgray;
+}
+.commDelBtn:hover{
+    border: 1px solid #db1f1f;
+    color: #db1f1f;
+}
+.commDelBtn{
+    margin-left: 10px;
+}
+
+/*좋아요*/
+.commHeartArea{
+    width: 40px;
+    margin: 25px 0 30px 434px;
+    text-align: center;
+    height: 40px;
+    border: 1px solid;
+    padding: 15px;
+    border-radius: 50px;
+}
+.whiteHeart{
+    width: 115px;
+    height: 115px;
+    margin-top: -33px;
+    margin-left: -41px;
+}
+.hrtBtn{
+    background-color: #ffffff00;
+    cursor: pointer;
+    outline: none;
+}
+.redHeart{
+    width: 47px;
+    margin: -1px 0 0 -3px;
+}
+
+/*댓글*/
+.commImg, .commImg2{
+    width: 30px;
+}
+.commImg img,.commImg2 img{
+    width: 30px;
+    height: 30px;
+}
+.commDeCommentArea{
+    margin-top: 20px;
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 55px;
+}
+.commNoDeContent{
+    width: 820px;
+    margin-top: 35px;
+}
+.commDeContent{
+    margin-top: 15px;
+}
+.commNoDeContent p, .commDeContent p {
+    padding-bottom: 31px;
+    line-height: 26px;
+}
+.comm-commArea{
+    background-color: rgba(241, 241, 241, 0.5);
+    width: 940px;
+    margin: 20px auto 50px;
+    padding: 30px;
+}
+.commDeComment{
+    margin: 0 auto;
+}
+.commComInfo{
+    margin:-28px 0 0 35px;
+}
+.commComInfo span:nth-of-type(2),.commDeReInfo span:nth-of-type(2) {
+    font-size: 11px;
+}
+.commDe-Content{
+    margin-top: 10px;
+    width: 800px;
+    line-height: 22px;
+}
+.comm-CommInputArea{
+    background-color: white;
+    width: 940px;
+    margin: 20px auto;
+}
+.comm-CommInput{
+    width: 940px;
+    height: 195px;
+}
+.comm-Comment, #recommContent,#cmtModContent{
+    font-family: SCDream4;
+    border: none;
+    resize: none;
+    outline: none;
+}
+.comm-Comment{
+    width: 889px;
+    height: 100px;
+    padding-left: 21px;
+    margin-top: 18px;
+    font-size: 15px;
+}
+.comm-CommRegBtn{
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 850px;
+    width: 68px;
+    height: 40px;
+    cursor: pointer;
+}
+.commDe-Writer, .commDe-Writer span{
+    font-size: 15px;
+}
+.cmtBtn{
+    width: 100px;
+    font-size: 13.5px;
+    margin: 5px 0 0 28px;
+}
+#cmtModContent{
+    width: 805px;
+    height: 50px;
+    margin-left: 5px;
+    padding: 8px 8px 0;
+}
+#comDelBtn, #cmtModBtn{
+    border: 1px solid #919191;
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+#commModBtn{
+    margin: 2px 0 0 741px;
+    padding: 5px;
+    width: 73px;
+    border: 1px solid #919191;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+/*대댓*/
+.commDeReCommentArea{
+    margin: 13px 0 0 30px;
+    border-top: 1px solid #d9d9d9d1;
+    padding-top: 10px;
+}
+.commDe-ReComment{
+    float: right;
+    border: 1px solid #919191;
+    border-radius:2.5px;
+    padding: 5px;
+}
+.commDeReInfo{
+    margin: -28px 0 0 35px;
+}
+/*대댓글 달기*/
+.commDe-ReComment{
+    font-size: 13px;
+    background-color: rgba(241, 241, 241, 0.5);
+}
+#recommendBtn{
+    cursor: pointer;
+    background-color: rgba(145, 145, 145, 0);
+}
+.commDe-ReComment:hover{
+    background-color: #ebebeb;
+}
+#recommContent{
+    font-size: 14px;
+    margin: 5px 0 0 31px;
+    padding: 10px;
+    width: 800px;
+    border-radius: 3px;
+    height: 50px;
+}
+/*대댓글 등록버튼*/
+button#recommBtn {
+    float: right;
+    margin-top: 49px;
+    margin-right: 46px;
+    border: 1px solid #919191;
+    border-radius: 2.5px;
+    padding: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.sticker{
+    position: absolute;
+    z-index: -1000;
+    opacity: 0.3;
+}
+img.stickerBC {
+    top: 173px;
+    position: absolute;
+    left: -100px;
+    width: 340px;
+}
+img.stickerP1 {
+    position: absolute;
+    top: 440px;
+    left: 1220px;
+    width: 300px;
+}
+img.stickerS3 {
+    top: 428px;
+    position: absolute;
+    left: 1213px;
+    width: 79px;
+}
+img.stickerS5 {
+    position: absolute;
+    left: 0;
+    top: 670px;
+    width: 151px;
+}

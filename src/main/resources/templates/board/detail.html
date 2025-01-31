@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<title>안녕하세요</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<link rel="stylesheet" th:href="@{/dist/css/communityDetail.css}">
+<!--마크다운 라이브러리-->
+<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+<script th:src="@{/dist/js/markdown.js}"></script>
+<link rel="stylesheet" th:href="@{/dist/css/communityDetailMarkdown.css}">
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <th:block th:with="auth=${#authentication.getPrincipal().userVO}"}>
+            <input type="hidden" class="socialID" th:value="${auth.getUserType()}">
+        <div class="wrap">
+            <div class="sticker">
+                <img th:src="@{/image/sticker_bc.png}" class="stickerBC">
+                <img th:src="@{/image/sticker_pla1-removebg-preview.png}" class="stickerP1">
+                <img th:src="@{/image/sticker_star3-removebg-preview.png}" class="stickerS3">
+                <img th:src="@{/image/sticker_star5-removebg-preview.png}" class="stickerS5">
+            </div>
+            <!--목록으로 돌아가기-->
+            <div class="commListBtn"><a th:href="@{/community/communityListAll}">목록으로 돌아가기 <img th:src="@{/image/arrow_icon.png}" width="11px" height="11px"></a></div>
+            <div class="commDeArea">
+                <input type="hidden" th:value="${auth.getEmail()}" class="commDeUserEmail">
+                <input type="hidden" th:value="${auth.getId()}" class="commDeUserId">
+                <!--작성자, 등록일 하나로-->
+                <div class="commDeCate" th:switch="${bvo.bCate}">
+                    <span th:case="novel" th:text="'소설'"></span>
+                    <span th:case="finance" th:text="'경제/경영'"></span>
+                    <span th:case="human" th:text="'인문'"></span>
+                    <span th:case="history" th:text="'역사/문화'"></span>
+                    <span th:case="poem" th:text="'시/에세이'"></span>
+                    <span th:case="development" th:text="'자기개발'"></span>
+                </div>
+                <div class="commDeTitle">
+                    <div class="commDetTitle">[[${bvo.bTitle}]]</div>
+                </div>
+                <div class="commDeWriterInfo">
+                    <span class="commDeWriter">작성자 : [[${bvo.bWriter}]]&nbsp·&nbsp 등록일 : &nbsp</span>
+                    <th:block th:if="${bvo.getBUpDate() eq null}">
+                        <span th:text="${#strings.substring(bvo.bRegDate,0,16)}" class="commDeRegdate"></span>
+                    </th:block>
+                    <th:block th:if="${bvo.getBUpDate() ne null}">
+                        <span class="commDeRegdate">[[${#strings.substring(bvo.bUpDate,0,16)}]](수정)</span>
+                    </th:block>
+                </div>
+                <!--이미지 있을 때 내용-->
+                <div class="commDeImgArea" th:if="${bvo.bMainImg!=''}">
+                    <div class="commDeContent">
+                        [[${bvo.bContent}]]
+                    </div>
+                    <img th:src="@{|/upload/${bvo.bMainImg}|}" class="commDeImg">
+                </div>
+                <!--이미지 없을 때 내용-->
+                <div class="commDeNoImgContent" th:unless="${bvo.bMainImg!=''}">
+                    <div class="commNoDeContent">
+                        [[${bvo.bContent}]]
+                    </div>
+                </div>
+                <!--좋아요-->
+                <div class="commHeartArea">
+                    <button type="submit" class="hrtBtn">
+                        <div th:if="${hvo eq 0}" class="whiteHeartA">
+                            <img th:src="@{/image/heart_white.png}" class="whiteHeart">
+                        </div>
+                        <div th:if="${hvo eq 1}">
+                            <img th:src="@{/image/heart.png}" class="redHeart">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!--수정/삭제 버튼-->
+            <th:block th:with="auth=${#authentication.getName()}">
+                <div th:if="${auth eq bvo.bWriter}" class="commBtnArea">
+                    <a th:href="@{/board/modify(bno=${bvo.getBno()})}"><button type="button" class="commModBtn">수정</button></a>
+                    <button type="button" class="commDelBtn" onclick="deleteBoard()">삭제</button>
+                </div>
+            </th:block>
+            <div class="comm-commArea">
+                <!--댓글출력란-->
+                <div class="commDeComment">
+                    <div class="commDeCommentCtn">댓글</div>
+                    <div class="commDeOneComment">
+                        <div class="commDe-ComInfo">
+                            <div class="commDe-Writer"></div>
+                            <div class="commDe-RegDate"></div>
+                        </div>
+                        <div class="commDe-Content"></div>
+                        <!--대댓글-->
+                        <div class="commDe-ReComment"></div>
+                    </div>
+                </div>
+                <!--댓글입력란-->
+                <div class="comm-CommInputArea">
+                    <input id="cmtWriter" th:value="${auth.getId()}" type="hidden">
+                    <div class="comm-CommInput">
+                        <textarea type="text" id="cmtContent" name="comm-Comment" class="comm-Comment" placeholder="댓글을 입력해주세요"></textarea>
+                        <button type="button" id="cmtAddBtn" class="comm-CommRegBtn">등록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script th:inline="javascript">
+            const bnoVal = '[[${bvo.bno}]]';
+        </script>
+        <script th:src="@{/dist/js/boardComment.js}"></script>
+        <script>spreadCommentList(bnoVal);</script>
+        <script th:src="@{/dist/js/heart2.js}"></script>
+        <script>
+            function deleteBoard() {
+                const delCon = confirm("게시글을 삭제하시겠습니까?");
+                console.log(delCon);
+                if (delCon === true) {
+                    window.location.href = "/board/delete?bno=" + bnoVal
+                    alert('삭제되었습니다');
+                }
+            }
+        </script>
+        </th:block>
+    </th:block>
+</th:block>

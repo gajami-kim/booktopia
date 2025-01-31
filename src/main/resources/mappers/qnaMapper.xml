@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.QnaMapper">
+
+        <insert id="insertqna">
+            insert into qna(id,qna_title,qna_content,qna_reg_at)values(#{id},#{qnaTitle},#{qnaContent},now())
+        </insert>
+
+        <select id="getqnalist" resultType="com.booktopia.www.domain.QnaVO">
+            select * from qna where id=#{id} order by qna_reg_at desc
+        </select>
+
+        <select id="qnaCount" resultType="int">
+            select count(id) from qna
+        </select>
+
+        <select id="getList" resultType="com.booktopia.www.domain.QnaVO">
+            select * from qna
+            order by qna_reg_at desc
+        </select>
+
+        <select id="oneUserList" resultType="com.booktopia.www.domain.QnaVO">
+            select * from qna where qna_num=#{qnaNum}
+        </select>
+
+        <update id="updateAnswer">
+            update qna set qna_answer=#{qnaAnswer}, qna_mod_at = now() where qna_num = #{qnaNum}
+        </update>
+
+        <update id="updateStatus">
+            update qna set qna_status = '답변완료' where qna_num = #{qnaNum}
+        </update>
+
+        <select id="getStatus" resultType="String">
+            select qna_status from qna where qna_num=#{qnaNum}
+        </select>
+</mapper>

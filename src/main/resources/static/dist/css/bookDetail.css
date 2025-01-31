@@ -1,0 +1,144 @@
+@font-face {
+    font-family: SCDream5;
+    src: url(../font/S-Core_Dream_OTF/SCDream5.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+.bookDe {
+    height: 1500px;
+}
+.bkimg {
+    float: left;
+    position: sticky;
+    top: 60px;
+}
+.bkimg img{
+    width: 480px;
+    margin: 73px 0 0 70px;
+}
+
+.bkRight {
+    float: right;
+    margin:68px 40px 0 0;
+}
+.bkCate{
+    font-size: 18px;
+    width: 125px;
+    height: 16px;
+    margin-left: 5px;
+}
+.bkTitle{
+    font-size: 40px;
+    width: 650px;
+    margin-top: 30px;
+    font-family: SCDream5;
+}
+.bkt19, .bkt24{
+    line-height: 50px;
+}
+.bkStory{
+    margin: 80px 0 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3a3a3a;
+}
+.bks4, .bks19, .bks30, .bks32{
+    line-height: 30px;
+}
+.bkWrite{
+    font-size: 17px;
+    margin-top: 25px;
+}
+.bkLink{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.ji{
+    color: gray;
+    font-size: 13px;
+    padding-left: 6px;
+}
+.joinLink{
+    font-size: 19px;
+    margin-top: 10px;
+    padding-bottom: 19px;
+    color: #5a5a5a;
+}
+.bkIndex{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 0 25px 0;
+}
+.bki{
+    margin-bottom: 45px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 11;
+    width: 600px;
+}
+.bkMoreBtn{
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 41px;
+    line-height: 33px;
+}
+.bkMoreBtn:hover{
+    box-shadow: 0px 11px 8px -8px rgba(194, 194, 194, 0.27);
+}
+.bkMoreBtn img, .bkLessBtn img{
+    width: 10px;
+    height: 10px;
+    transform: rotate(90deg);
+    margin-left: 11px;
+}
+.bkLessBtn img{
+    transform: rotate(270deg);
+}
+.bkLessBtn{
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 41px;
+    line-height: 33px;
+}
+.bkLessBtn:hover{
+    box-shadow: 0px 11px 8px -8px rgba(194, 194, 194, 0.27);
+}
+.bki p{
+    line-height: 1.7;
+    margin-bottom: 27px;
+    color: #3e3e3e;
+}
+.bold{
+    font-weight: bold;
+}
+
+
+.aladin,.yes24,.kyobo{ color: gray }
+ .aladin:hover, .yes24:hover, .kyobo:hover{
+color: black;
+font-weight: bold;
+}
+.yes24, .kyobo{
+margin-left: 97px;
+}
+hr{
+margin-top: 40px;
+opacity: 0.2;
+}
+.bkStoryDetail{
+width: 600px;
+line-height: 1.7;
+font-size: 17px;
+}
+.bkStoryDetail p{
+margin-top: 45px;
+color: #525252;
+}

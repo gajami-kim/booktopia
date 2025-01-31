@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.booktopia.www.repository.OrderInfoMapper">
+
+    <insert id="insertRegister">
+        INSERT INTO order_info (imp_uid, id, merchant_uid, ord_email, ord_name, ord_phone, ord_addr)
+        values (#{impUid}, #{id}, #{merchantUid}, #{ordEmail}, #{ordName}, #{ordPhone}, #{ordAddr})
+    </insert>
+
+<!--    <insert id="insert">-->
+<!--    </insert>-->
+    <select id="getSuccessPayInfo" resultType="com.booktopia.www.domain.DTO.OrderInfoDTO">
+        select * from order_info where merchant_uid=#{merchantUid}
+    </select>
+
+    <select id="selectOrderInfo" resultType="com.booktopia.www.domain.DTO.OrderInfoDTO">
+        SELECT *
+        FROM order_info AS o
+        JOIN pay AS p ON o.merchant_uid = p.merchant_uid
+        WHERE o.id = #{id};
+    </select>
+
+    <select id="orderList" resultType="com.booktopia.www.domain.OrderInfoVO">
+        select * from order_info
+    </select>
+
+    <select id="selectsublist">
+        SELECT *
+        FROM order_info AS o
+        JOIN pay AS p ON o.merchant_uid = p.merchant_uid
+        WHERE o.id = #{id}
+        ORDER BY p.approved_at desc
+        LIMIT 1;
+    </select>
+
+    <select id="adminOrderList" resultType="com.booktopia.www.domain.OrderInfoVO">
+        select * from order_info
+        limit #{pageStart}, #{qty}
+    </select>
+
+</mapper>

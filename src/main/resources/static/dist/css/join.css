@@ -1,0 +1,337 @@
+@font-face {
+    font-family: SCDream4;
+    src: url(../font/S-Core_Dream_OTF/SCDream4.otf) format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.wrap {
+    width: 1400px;
+    font-family:SCDream4;
+    display: ruby-text;
+}
+
+#id{
+    width: 259px;
+}
+
+/* 체크박스 추가구문 */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  margin: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 850px;
+}
+
+.wrap .logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.wrap .logo h1 {
+  margin: 0;
+  font-size: 35px;
+}
+
+.wrap .contents {
+  width: 100%;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+#form__wrap {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 14px;
+      display: flex;
+      justify-content: space-around;
+}
+
+#form__wrap .terms__check__all {
+      margin-bottom: 35px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: baseline;
+      align-content: space-around;
+  }
+
+
+#form__wrap .terms__check__all label {
+      margin-left: 3px;
+      text-decoration: underline;
+      text-align: center;
+      margin: 0 auto;
+}
+
+.terms__list .terms__box {
+  margin: 20px 0;
+}
+
+.contents label {
+  font-weight: 700;
+}
+
+label.required::after {
+  margin-left: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #0086ff;
+  content: "(필수)";
+}
+
+.terms__list .terms__content {
+  height: 88px;
+  overflow: auto;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #dadada;
+  background: #fff;
+  font-size: 12px;
+    margin-bottom: 20px;
+    line-height: 18px;
+}
+
+
+.terms__list .terms__content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.terms__list .terms__content::-webkit-scrollbar-thumb {
+    border-radius: 18px;
+    width: 5px;
+    background-color: #b8b8b8;
+}
+
+
+.terms__list .terms__content::-webkit-scrollbar-track {
+    background-color: #b2b2b200;
+    box-shadow: inset 0 0 5px #c8c8c8;
+    border-radius: 10px;
+}
+
+.next-button {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  background-color: #242222;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.2s;
+}
+
+.next-button:hover:enabled {
+  background-color: #a3a2a2;
+}
+
+.next-button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    min-width: 280px;
+    padding: 20px;
+  }
+
+  #form__wrap {
+    max-width: 460px;
+    width: 100%;
+  }
+}
+
+.innerDiv{
+    width: 80%;
+        padding-left: 119px;
+        padding-right: 50px;
+        text-align: -webkit-center;
+    }
+
+
+/* 여기까지 */
+
+.joinAgreeContent>input{
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+}
+.join{
+  justify-content: center;
+      width: 68%;
+      height: 200px;
+      margin: 0 auto;
+      padding-top: 20px;
+}
+.joinCheckIdBtn{
+    border: 0;
+    background-color: transparent;
+    float: right;
+}
+
+/* 필수 항목 표시 */
+.joinStar{
+    color: red;
+}
+
+#buttonContainer{
+    width: 200px;
+}
+
+#buttonContainer:hover{
+    cursor: pointer;
+}
+
+#joinCheckIdBtn{
+    border: 1px solid;
+    width: 71px;
+    height: 29px;
+    margin-top: 9px;
+    border-radius: 10px;
+}
+
+.joinArea{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.joinArea>input{
+    width: 340px;
+    height: 30px;
+    box-sizing: border-box;
+    outline: hidden;
+    border: 1px solid;
+    border-radius: 13px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.joinTextBox{
+    display: flex;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.joinCheckBox{
+    width: 30px;
+    height: 25px;
+}
+
+
+.joinWrapPage {
+    width: 100%;
+    height: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.joinAgreePage {
+   width: 100%;
+       display: flex;
+       justify-content: center;
+       text-align: center;
+       margin-top: 30px;
+       margin-bottom: 20px;
+
+}
+
+.joinAgreeContent{
+    width: inherit;
+    overflow: hidden;
+}
+.joinAgreeContent>input{
+    height: 30px;
+    width: inherit;
+    box-sizing: border-box;
+}
+
+.joinAllPage {
+       text-align: center;
+       width: 93%;
+       height: 350px;
+       display: flex;
+       flex-direction: column;
+       align-items: stretch;
+       margin-right: 200px;
+   }
+
+
+
+.joinSocialBtn {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.joinSocialBtn>div {
+    margin: 0 5px 0 5px;
+}
+
+.joinSocialBtn>div>a>img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+.joinJoinBtn{
+    width: 200px;
+    height: 50px;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 50px;
+ }
+ .joinJoinBtn>button{
+     width: 120px;
+     border: 0;
+     line-height: 50px;
+     text-align: 50px;
+     background-color: white;
+     border-radius: 25px;
+     box-shadow: 0 0 13px lightskyblue;
+ }
+.joinJoinBtn>button:hover{
+    box-shadow: 0 0 13px #c6e7ad;
+    cursor: pointer;
+ }
+
+ .joinduplicationBtn{
+    width: 100px;
+ }
+
+.joinTitleText{
+    width: 300px;
+    height: 25px;
+}
+
+.joinTitleText h1{
+    font-size: 1.5em;
+        letter-spacing: 2px;
+        font-weight: bold;
+}
+/* ------------------------------------------------------------------------------ */
+
+/* 실패/성공 메세지 미리 가려놓기 */
+.hide {
+    display: none;
+}
+.strongPassword-message, .failure-message2,.mismatch-message{
+    color: red;
+    box-sizing: border-box;
+}
+.success-message{
+    color: limegreen;
+}

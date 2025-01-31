@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<title>안녕하세요</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<link rel="stylesheet" th:href="@{/dist/css/communityList.css}">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!--마크다운 라이브러리-->
+<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+<script th:src="@{/dist/js/markdown.js}"></script>
+<th:block th:replace="~{layout2 :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <th:block th:with="auth=${#authentication.getPrincipal().userVO}">
+        <!--공지-->
+        <div class="wrap">
+            <div class="sticker">
+                <img th:src="@{/image/sticker_bc.png}" class="stickerBC">
+                <img th:src="@{/image/sticker_book.png}" class="stickerBook">
+                <img th:src="@{/image/sticker_cat.png}" class="stickerCat">
+                <img th:src="@{/image/sticker_d.png}" class="stickerD">
+                <img th:src="@{/image/sticker_line-removebg-preview.png}" class="stickerL1">
+                <img th:src="@{/image/sticker_line2-removebg-preview.png}" class="stickerL2">
+                <img th:src="@{/image/sticker_n.png}" class="stickerN">
+                <img th:src="@{/image/sticker_oc-removebg-preview.png}" class="stickerOC">
+                <img th:src="@{/image/sticker_pen.png}" class="stickerPEN">
+                <img th:src="@{/image/sticker_pla1-removebg-preview.png}" class="stickerP1">
+                <img th:src="@{/image/sticker_pla2-removebg-preview.png}" class="stickerP2">
+                <img th:src="@{/image/sticker_star-removebg-preview.png}" class="stickerS1">
+                <img th:src="@{/image/sticker_star-removebg-preview.png}" class="stickerS1-2">
+                <img th:src="@{/image/sticker_star3-removebg-preview.png}" class="stickerS3">
+                <img th:src="@{/image/sticker_star4-removebg-preview.png}" class="stickerS4">
+                <img th:src="@{/image/sticker_star5-removebg-preview.png}" class="stickerS5">
+                <img th:src="@{/image/sticker_tu.png}" class="stickerT">
+            </div>
+            <!--검색창-->
+            <form th:action="@{/community/communityListAll}" method="get">
+                <div>
+                    <select th:name="type" class="commSelect commSearchArea">
+                        <option th:selected="${ph.pgvo.type==null?true:false}">선택</option>
+                        <option th:value="wtc" th:selected="${ph.pgvo.type=='wtc'?true:false}">전체</option>
+                        <option th:value="w" th:selected="${ph.pgvo.type=='w'?true:false}">작성자</option>
+                        <option th:value="t" th:selected="${ph.pgvo.type=='t'?true:false}">제목</option>
+                        <option th:value="c" th:selected="${ph.pgvo.type=='c'?true:false}">게시글</option>
+                    </select>
+                    <input type="text" class="commSeaBar commSearchArea" th:value="${ph.pgvo.keyword}" name="keyword" placeholder="검색어를 입력해주세요">
+                    <input type="hidden" name="pageNo" th:value="1">
+                    <input type="hidden" name="qty" th:value="${ph.pgvo.qty}">
+                    <button type="submit" class="commSeaBtn">
+                        <img th:src="@{/image/search_icon.png}" width="15px" height="15px">
+                    </button>
+                </div>
+            </form>
+            <div class="commListAll">
+                <a th:href="@{/community/communityListAll}">
+                    <span class="commListAllText">전체보기 ></span>
+                </a>
+            </div>
+            <div class="commNoticeLine">
+                <span class="NoticeBlock">공지</span>
+                <a th:href="@{/community/communityNotice}">
+                    <div class="NoticeTitle">북토피아 커뮤니티 이용안내 및 공지사항</div>
+                </a>
+            </div>
+            <!--카테고리선택가능라인-->
+            <!--아이콘 작게해서 한줄로 6개 모두 나타내가-->
+            <div class="commCateLine">
+                <div class="commCateChoice1 commCateChoice">
+                    <a th:href="@{/community/communityList(bCate='novel')}">
+                        <span>📖</span><span>소설</span>
+                    </a>
+                </div>
+                <div class="commCateChoice2 commCateChoice">
+                    <a th:href="@{/community/communityList(bCate='poem')}">
+                        <span>📜</span><span>시/에세이</span>
+                    </a>
+                </div>
+                <div class="commCateChoice3 commCateChoice">
+                    <a th:href="@{/community/communityList(bCate='finance')}">
+                        <span>💰</span><span>경제/경영</span>
+                    </a>
+                </div>
+                <div class="commCateChoice4 commCateChoice">
+                    <a th:href="@{/community/communityList(bCate='human')}">
+                        <span>👩‍👨‍👧‍👦</span><span>인문</span>
+                    </a>
+                </div>
+                <div class="commCateChoice5 commCateChoice">
+                    <a th:href="@{/community/communityList(bCate='history')}">
+                        <span>🎪</span><span>역사/문화</span>
+                    </a>
+                </div>
+                <div class="commCateChoice6 commCateChoice">
+                    <a th:href="@{/community/communityList(bCate='development')}">
+                        <span>⏲</span><span>자기개발</span>
+                    </a>
+                </div>
+            </div>
+            <!--글쓰기 버튼-->
+            <div class="commRegBtn">
+                <a th:href="@{/board/register}">
+                    <img th:src="@{/image/pencil.png}" alt="글쓰기 아이콘">
+                    <p>글쓰기</p>
+                </a>
+            </div>
+            <!--게시판 리스트-->
+            <div class="commAllList">
+            <div class="commListArea" th:each="bvo:${blist}">
+                <div class="commListContent">
+                    <div class="commTitle">
+                        <th:block th:switch="${bvo.bCate}">
+                            <a th:href="@{/board/detail(bno=${bvo.getBno()},id=${auth.getId()})}">
+                                <span th:case="novel" th:text="'[소설]'"></span>
+                                <span th:case="finance" th:text="'[경제/경영]'"></span>
+                                <span th:case="human" th:text="'[인문]'"></span>
+                                <span th:case="history" th:text="'[역사/문화]'"></span>
+                                <span th:case="poem" th:text="'[시/에세이]'"></span>
+                                <span th:case="development" th:text="'[자기개발]'"></span>
+                                [[${bvo.bTitle}]]
+                            </a>
+                        </th:block>
+                    </div>
+                    <div class="commWriter">
+                        [[${bvo.bWriter}]]•
+                        <th:block th:if="${bvo.getBUpDate() eq null}">
+                            <span th:text="${#strings.substring(bvo.bRegDate,0,16)}"></span>
+                        </th:block>
+                        <th:block th:if="${bvo.getBUpDate() ne null}">
+                            <span>[[${#strings.substring(bvo.bUpDate,0,16)}]](수정)</span>
+                        </th:block>
+                    </div>
+                    <div class="commContent">
+                        <a th:href="@{/board/detail(bno=${bvo.getBno()},id=${auth.getId()})}">[[${bvo.bContent}]]</a>
+                    </div>
+                    <div class="commImg" th:if="${bvo.bMainImg!=''}">
+                        <img th:src="@{|/upload/${bvo.bMainImg}|}">
+                    </div>
+                    <div class="commCntInfo">
+                        <div class="commCmtCnt commCnt">댓글 [[${bvo.bCmtCnt}]]</div>
+                        <div class="commHeartCnt commCnt">좋아요 [[${bvo.bHeartCnt}]]</div>
+                        <div class="commReadCnt commCnt">조회수 [[${bvo.bReadCnt}]]</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!--검색결과 없을때 출력-->
+            <div th:if="${ph.totalCount < 1}" class="commNon">
+                <p>검색된 게시물이 없습니다.</p>
+            </div>
+            <!--top버튼-->
+            <div class="commTopBtnArea">
+                <div class="commTopBtnSticky">
+                    <a href="#"><button type="button" class="commTopBtn">
+                        <img th:src="@{/image/arrow_icon.png}">
+                    </button></a>
+                </div>
+            </div>
+            <!-- 페이지네이션 -->
+            <div class="commPage">
+                <!--카테고리별 페이징-->
+                    <ul th:if="${ph.totalCount eq cateCtn}" class="commPaging">
+                        <th:block th:with="bCate=${blist[0].getBCate()}">
+                            <!--이전-->
+                            <li th:if="${ph.prev}" class="commPagingLi">
+                                <a th:href="@{/community/communityList(bCate=${bCate},pageNo=${ph.startPage-1},qty=${ph.pgvo.qty}
+                            ,type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}"><span>&laquo;</span></a>
+                            </li>
+                            <!--페이징-->
+                            <th:block th:each="i: ${#numbers.sequence(ph.startPage,ph.endPage)}">
+                                <li class="commPagingLi">
+                                    <a th:href="@{/community/communityList(bCate=${bCate},pageNo=${i},qty=${ph.pgvo.qty},
+                                type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" th:style="${ph.pgvo.pageNo==i?'color:#068ec5':''}">[[${i}]]</a>
+                                </li>
+                            </th:block>
+                            <!--다음-->
+                            <li th:if="${ph.next}" class="commPagingLi">
+                                <a th:href="@{/community/communityList(bCate=${bCate},pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},
+                            type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}">
+                                    <span>&raquo;</span>
+                                </a>
+                            </li>
+                        </th:block>
+                    </ul>
+
+                <ul th:if="${ph.totalCount eq AllcateCtn}" class="commPaging">
+                    <!--이전-->
+                    <li th:if="${ph.prev}" class="commPagingLi">
+                        <a th:href="@{/community/communityListAll(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty}
+                        ,type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}"><span>&laquo;</span></a>
+                    </li>
+                    <!--페이징-->
+                    <th:block th:each="i: ${#numbers.sequence(ph.startPage,ph.endPage)}">
+                        <li class="commPagingLi">
+                            <a th:href="@{/community/communityListAll(pageNo=${i},qty=${ph.pgvo.qty},
+                            type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" th:style="${ph.pgvo.pageNo==i?'color:#068ec5':''}">[[${i}]]</a>
+                        </li>
+                    </th:block>
+                    <!--다음-->
+                    <li th:if="${ph.next}" class="commPagingLi">
+                        <a th:href="@{/community/communityListAll(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},
+                        type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}">
+                            <span>&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </th:block>
+    </th:block>
+</th:block>
