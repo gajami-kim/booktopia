@@ -66,14 +66,14 @@ select를 이용하여 쿠폰을 선택하면 해당 쿠폰정보와 할인금�
 ![북토피아 게시글삭제](https://github.com/user-attachments/assets/44b1694f-217e-402f-ab92-25c96560ba29)
 게시글 삭제시 댓글, 대댓글, 하트도 같이 삭제
 
-#### 파일 등록
+#### - 파일 등록
 ![북토피아 파일 출력](https://github.com/user-attachments/assets/7a29c683-b926-40b8-bef8-7122ecf212d9)
 ![북토피아 파일 저장](https://github.com/user-attachments/assets/bc847e1e-391a-4ec7-9121-31ec3f5b4041)
 ![북토피아 파일 업로드 컨트롤러](https://github.com/user-attachments/assets/e2da8c48-66b8-4ad7-81cf-e0833981b4b1)
 ![북토피아 파일 db](https://github.com/user-attachments/assets/ca82b516-a4ce-4180-8daf-ec29b20469e4)
 
 
-#### 마크다운 적용
+#### - 마크다운 적용
 ![북토피아 마크다운](https://github.com/user-attachments/assets/eb23c68c-02a8-4c47-b8ac-fda6c9a192d4)
 
 #
@@ -83,8 +83,8 @@ select를 이용하여 쿠폰을 선택하면 해당 쿠폰정보와 할인금�
 
 #
 ## 댓글
-#### 댓글 
+#### - 댓글 
 ![댓글](https://github.com/user-attachments/assets/475cec5b-9321-4ffd-9fc3-588bf0512f20)
 
-#### 대댓글
+#### - 대댓글
 ![대댓글](https://github.com/user-attachments/assets/55ef4257-3d71-4fef-8241-49383cb4c2a0)
