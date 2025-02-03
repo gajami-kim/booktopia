@@ -17,51 +17,42 @@ callinfo(payId.innerText).then(result => {
     addrtwo.value = result.address.substring(result.address.indexOf("/") + 1);
 });
 
-const kakaoPayBtn = document.getElementById('kakaoPayBtn');
-const tossBtn = document.getElementById('tossBtn');
-const paycoBtn = document.getElementById('paycoBtn');
-const kgBtn = document.getElementById('kgBtn');
 const tossCss = document.querySelector('.tossM');
 const kakaoCss = document.querySelector('.kakaoPayM');
 const paycoCss = document.querySelector('.paycoM');
 const kgCss = document.querySelector('.kgM');
 
-let pg;
 /*css 변경하는 이벤트*/
-document.addEventListener('click',(e)=>{
-    if(e.target.id==='kakaoPayBtn'){
-        changeCss(kakaoCss);
-        changeNonCss(tossCss,paycoCss,kgCss);
-        pg='kakaopay.TC0ONETIME';
-        request_pay(pg);
-    } else if(e.target.id==='tossBtn'){
-        changeCss(tossCss);
-        changeNonCss(kakaoCss,paycoCss,kgCss);
-        pg='tosspayments.iamporttest_3';
-        request_pay(pg);
-    } else if(e.target.id==='paycoBtn') {
-        changeCss(paycoCss);
-        changeNonCss(kakaoCss,tossCss,kgCss);
-        alert('현재 사용할 수 없는 결제 수단입니다.');
-    } else if(e.target.id==='kgBtn'){
-        changeCss(kgCss);
-        changeNonCss(kakaoCss,paycoCss,tossCss);
-        pg='html5_inicis.INIpayTest';
-        request_pay(pg);
+document.addEventListener('click', (e) => {
+    const payButtons = {
+        kakaoPayBtn: {css: kakaoCss, nonCss: [tossCss, paycoCss, kgCss], pg: 'kakaopay.TC0ONETIME'},
+        tossBtn: {css: tossCss, nonCss: [kakaoCss, paycoCss, kgCss], pg: 'tosspayments.iamporttest_3'},
+        paycoBtn: {css: paycoCss, nonCss: [kakaoCss, tossCss, kgCss], alertMsg: '현재 사용할 수 없는 결제 수단입니다.'},
+        kgBtn: {css: kgCss, nonCss: [kakaoCss, paycoCss, tossCss], pg: 'html5_inicis.INIpayTest'}
+    };
+
+    const button = payButtons[e.target.id];
+
+    if (button) {
+        changeCss(button.css);
+        changeNonCss(button.nonCss);
+        if (button.alertMsg) {
+            alert(button.alertMsg);
+        } else {
+            request_pay(button.pg);
+        }
     }
-})
+});
 
-
-function changeCss(payM){
-    payM.style.cssText="border:2px solid #a7cdff; box-shadow:0px 0px 12px gainsboro; font-weight:bold;";
+function changeCss(payM) {
+    payM.style.cssText = "border:2px solid #a7cdff; box-shadow:0px 0px 12px gainsboro; font-weight:bold;";
 }
-function changeNonCss(payM1,payM2,payM3){
-    payM1.style.cssText="border:1px solid gainsboro; padding10px; border-radius:10px; font-weight:none;" +
-        "margin-top:14px; text-align:center; line-height:23px; width:437px; box-shadow:none";
-    payM2.style.cssText="border:1px solid gainsboro; padding10px; border-radius:10px; font-weight:none;" +
-        "margin-top:14px; text-align:center; line-height:23px; width:437px; box-shadow:none";
-    payM3.style.cssText="border:1px solid gainsboro; padding10px; border-radius:10px; font-weight:none;" +
-        "margin-top:14px; text-align:center; line-height:23px; width:437px; box-shadow:none";
+
+function changeNonCss(payMArray) {
+    payMArray.forEach((payM) => {
+        payM.style.cssText = "border:1px solid gainsboro; padding:10px; border-radius:10px; font-weight:none;" +
+            "margin-top:14px; text-align:center; line-height:23px; width:437px; box-shadow:none";
+    });
 }
 
 function request_pay(pg){
@@ -211,18 +202,20 @@ async function getToken(){
         console.log(error);
     }
 }
-let salePercent=0;
+
 let couNo=0;
+
+const coupons  = {
+    '신규가입 구독권 10% 할인' : {couNo:2, discountRate:0.1},
+    '신규회원 1개월 구독권 99% 할인' : {couNo:3, discountRate:0.99},
+    '6월 내 구독권 결제 시, 10% 할인' : {couNo:4, discountRate:0.1},
+    '북토피아 창립기념 쿠폰 30% 할인' : {couNo:2, discountRate:0.3},
+    '1년 이상 누적 구독시, 구독권 50% 할인' : {couNo:1, isInvalid: true},
+    'choiceCoupon' : {couNo:null, discountRate:0}
+}
+
 function discountAmount(amount){
     const coupon = $('select#coupon').val();
-
-    const coupons = {
-        '신규가입 구독권 10% 할인': { discountRate: 0.1, couNo: 2 },
-        '1년 이상 누적 구독시, 구독권 50% 할인 쿠폰': { discountRate: 0.5, couNo: 1 },
-        '신규회원 1개월 구독권 99% 할인': { discountRate: 0.99, couNo: 3 },
-        '6월 내 구독권 결제 시, 10% 할인': { discountRate: 0.1, couNo: 4 },
-        '북토피아 창립기념 쿠폰 30% 할인': { discountRate: 0.3, couNo: 5 }
-    };
 
     const selectedCoupon = coupons[coupon];
 
@@ -239,15 +232,6 @@ document.getElementById('coupon').addEventListener('change',()=>{
     const payAmount = document.querySelector('.priceDiv').value;
     const discountDiv = document.querySelector('.discountAmount');
     const amountDiv = document.querySelector('.amountDiv');
-
-    const coupons  = {
-        '신규가입 구독권 10% 할인' : {couNo:2, discountRate:0.1},
-        '신규회원 1개월 구독권 99% 할인' : {couNo:3, discountRate:0.99},
-        '6월 내 구독권 결제 시, 10% 할인' : {couNo:4, discountRate:0.1},
-        '북토피아 창립기념 쿠폰 30% 할인' : {couNo:2, discountRate:0.3},
-        '1년 이상 누적 구독시, 구독권 50% 할인' : {couNo:null, isInvalid: true},
-        'choiceCoupon' : {couNo:null, discountRate:0}
-    }
 
     const selectedCoupon = coupons[couponName];
 
