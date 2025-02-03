@@ -10,32 +10,18 @@ document.getElementById('cmtAddBtn').addEventListener('click',()=>{
         document.getElementById('cmtContent').focus();
         return false;
     } else {
-        if(socialId!='일반'){
-            let cmtData = {
-                bno:bnoVal,
-                cWriter:commDeUserEmail,
-                cContent:cContent
-            }
-            postComment(cmtData).then(result=>{
-                if(result=="1") {
-                    document.getElementById('cmtContent').value='';
-                    spreadCommentList(bnoVal);
-                }
-            })
-        } else {
-            let cmtData = {
-                bno:bnoVal,
-                cWriter: commDeUserId,
-                cContent:cContent
-            }
-            postComment(cmtData).then(result=>{
-                if(result=="1") {
-                    document.getElementById('cmtContent').value='';
-                    spreadCommentList(bnoVal);
-                }
-            })
-        }
+        let cmtData = {
+            bno: bnoVal,
+            cWriter: (socialId !== '일반') ? commDeUserEmail : commDeUserId,
+            cContent: cContent
+        };
 
+        postComment(cmtData).then(result => {
+            if(result === "1") {
+                document.getElementById('cmtContent').value = '';
+                spreadCommentList(bnoVal);
+            }
+        });
     }
 })
 
@@ -121,31 +107,18 @@ document.addEventListener('click',(e)=>{
                 alert("댓글을 입력해주세요.")
                 document.getElementById('recommContent').focus();
             } else {
-                if(commDeUserEmail==null||commDeUserEmail==''){
-                    let reCmtData = {
-                        cno:cno,
-                        bno:bnoVal,
-                        rcWriter:commDeUserId,
-                        rcContent:document.getElementById('recommContent').value
+                let reCmtData = {
+                    cno: cno,
+                    bno: bnoVal,
+                    rcWriter: commDeUserEmail || commDeUserId,
+                    rcContent: document.getElementById('recommContent').value
+                };
+
+                postReCommentToServer(reCmtData).then(result => {
+                    if(result === '1') {
+                        spreadCommentList(bnoVal);
                     }
-                    postReCommentToServer(reCmtData).then(result=>{
-                        if(result==='1'){
-                            spreadCommentList(bnoVal)
-                        }
-                    })
-                } else {
-                    let reCmtData = {
-                        cno:cno,
-                        bno:bnoVal,
-                        rcWriter:commDeUserEmail,
-                        rcContent:document.getElementById('recommContent').value
-                    }
-                    postReCommentToServer(reCmtData).then(result=>{
-                        if(result==='1'){
-                            spreadCommentList(bnoVal)
-                        }
-                    })
-                }
+                });
             }
         })
     }

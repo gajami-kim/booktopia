@@ -99,6 +99,15 @@ public class BoardController {
         return "redirect:/community/communityListAll";
     }
 
+    @DeleteMapping("/heart/delete/{bno}/{id}")
+    @ResponseBody
+    public String deleteHeart(@PathVariable("bno") long bno, @PathVariable("id")String id){
+        bsv.deleteHeartCnt(bno);
+
+        int isOk = hsv.deleteHeart(bno, id);
+        return isOk>0?"1":"0";
+    }
+
     @PostMapping("/heart/{bno}")
     @ResponseBody
     public String heart(@RequestBody HeartVO hvo, @PathVariable("bno") long bno) {
@@ -125,15 +134,6 @@ public class BoardController {
             return "0";
         } return "1";
 
-    }
-
-    @DeleteMapping("/heart/delete/{bno}/{id}")
-    @ResponseBody
-    public String deleteHeart(@PathVariable("bno") long bno, @PathVariable("id")String id){
-        bsv.deleteHeartCnt(bno);
-
-        int isOk = hsv.deleteHeart(bno, id);
-        return isOk>0?"1":"0";
     }
 
 
