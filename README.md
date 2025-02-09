@@ -68,10 +68,10 @@ __4. [댓글](#댓글)__ <br>
   유효성 검사 변수 isValid를 true로 변경하도록 설정하였습니다.
 - 유효성 검사 통과 시 게시글 데이터는 서버로 전송되어 DB에 저장 및 업로드 할 수 있습니다.
 ![북토피아 글쓰기 셀렉트문](https://github.com/user-attachments/assets/e73639a7-14a1-4de6-bfbf-66a58e0015e5)
-![북토피아 toast js 데이터](https://github.com/user-attachments/assets/2454eeb5-2512-4626-a828-07ede05476db)
+![북토피아 toast js 유효성검사](https://github.com/user-attachments/assets/67ff6f67-a137-4150-8f39-717bff7006d2)
 
-- 작성자는 소셜 유저와 일반 유저를 구분하여 소셜 유저의 경우 이메일을, 
-  일반 유저는 아이디를 작성자로 저장하도록 하였습니다.
+- 작성자는 소셜 유저와 일반 유저를 구분하여 소셜 유저의 경우 이메일을, 일반 유저는 아이디를 작성자로 저장하도록 하였습니다.
+![북토피아 toast js 데이터](https://github.com/user-attachments/assets/2454eeb5-2512-4626-a828-07ede05476db)
 
 
 - 게시글 수정 및 삭제가 가능하도록 하였습니다.
