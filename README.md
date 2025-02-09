@@ -31,11 +31,11 @@ __4. [댓글](#댓글)__ <br>
 - 해당 방법을 이용해 아임포트 request 데이터를 보낼 때 pg사(결제방법)을 함께 전송합니다.
   현재 payco는 결제를 제한하였습니다.
 - 결제 금액을 검증한 뒤 요청 금액과 DB 속 저장된 구독권 금액이 같으면 결제를 진행합니다.
-![북토피아 pg 저장](https://github.com/user-attachments/assets/f1973ec4-faa1-46c2-9f44-681dc28278a0) <br>
+![북토피아 pg 저장](https://github.com/user-attachments/assets/f1973ec4-faa1-46c2-9f44-681dc28278a0) <br><br>
 - 결제 번호(merchant_uid), 구독권 이름(item_name), 총 결제금액(total_amount), 할인금액(sale_amount), 사용한 쿠폰 번호(cou_no), 결제시간(approve_at)을 저장합니다.
-![북토피아 결제DB](https://github.com/user-attachments/assets/98ef8851-7f9f-4844-bf6c-9b1c76651473) <br>
+![북토피아 결제DB](https://github.com/user-attachments/assets/98ef8851-7f9f-4844-bf6c-9b1c76651473) <br><br>
 - 결제가 정보가 저장되면 주문번호(imp_uid)를 포함한 주문자 정보를 추가적으로 저장합니다. 
-![북토피아 주문DB](https://github.com/user-attachments/assets/f904b4fc-f5d5-4369-ae7d-87aa623d951d) <br>
+![북토피아 주문DB](https://github.com/user-attachments/assets/f904b4fc-f5d5-4369-ae7d-87aa623d951d) <br><br>
 여기서 저장된 주문번호는 차후 결제 취소, 환불 등에 사용될 수 있습니다. <br><br>
 
 #### - 쿠폰 사용
