@@ -70,7 +70,8 @@ __4. [댓글](#댓글)__ <br>
 ![북토피아 글쓰기 셀렉트문](https://github.com/user-attachments/assets/e73639a7-14a1-4de6-bfbf-66a58e0015e5)
 ![북토피아 toast js 데이터](https://github.com/user-attachments/assets/2454eeb5-2512-4626-a828-07ede05476db)
 
-- 작성자는 소셜 유저와 일반 유저를 구분하여 소셜 유저의 경우 이메일을, 일반 유저는 아이디를 작성자로 저장하도록 하였습니다.
+- 작성자는 소셜 유저와 일반 유저를 구분하여 소셜 유저의 경우 이메일을, 
+  일반 유저는 아이디를 작성자로 저장하도록 하였습니다.
 ![북토피아 toast js 유효성검사](https://github.com/user-attachments/assets/0f4530f7-332a-434e-ad9a-2a46b335e054)
 
 - 게시글 수정 및 삭제가 가능하도록 하였습니다.
