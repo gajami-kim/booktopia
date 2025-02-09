@@ -28,10 +28,11 @@ __4. [댓글](#댓글)__ <br>
 ## 결제 기능
 #### - 결제하기
 PG사와 버튼 클릭에 의한 CSS 변경을 위해 결제 수단을 객체로 저장하였습니다.
-![북토피아 pg 저장](https://github.com/user-attachments/assets/f1973ec4-faa1-46c2-9f44-681dc28278a0)
 
 해당 방법을 이용해 아임포트 request 데이터를 보낼 때 pg사(결제방법)을 함께 전송합니다.
 현재 payco는 결제를 제한하였습니다.
+![북토피아 pg 저장](https://github.com/user-attachments/assets/f1973ec4-faa1-46c2-9f44-681dc28278a0)
+
 
 결제 금액을 검증한 뒤 요청 금액과 DB 속 저장된 구독권 금액이 같으면 결제를 진행합니다.
 결제 번호(merchant_uid), 구독권 이름(item_name), 총 결제금액(total_amount), 할인금액(sale_amount), 사용한 쿠폰 번호(cou_no), 결제시간(approve_at)을 저장합니다.
